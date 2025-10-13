@@ -79,5 +79,42 @@ In this task, you will create a new workspace in Microsoft Fabric.
 
 ![](../media/mang-e1-g18.png)
 
+#### Task 7: Open Your Report in Microsoft Fabric
+1. Sign in to Microsoft Fabric.
+2. Navigate to your **workspace** and open the report where you want to add the visual.
+3. In the **Visualizations** pane (right side), click the **Card visual icon**.
+4. A blank card visual will appear on the canvas.
+5. In the **Data** pane, expand the dataset **copilot_org_metrics**.
+6. Check the field **total_active_users** to bind it to the card visual.
 
+![](../media/img2.png)
+
+#### Finalize Your Card Visual
+1. The card visual will now display the value of **total_active_users** (e.g., `12`).You can resize or reposition the card on the canvas.
+2. Click the **Format** pane (paint roller icon).
+3. Adjust **title**, **font size**, **background color**, and other settings as needed.
+
+![](../media/img3.png)
+
+> **Tip:** You can add more visuals (tables, charts) by selecting other icons in the **Visualizations** pane and dragging fields from the **Data** pane.
+
+
+
+#### Change Column Data Type
+To update the data type of a column in Power BI within Microsoft Fabric, follow these steps:
+
+1. In your Power BI report, click **Open data model** from the top menu.This will take you to the data model view where you can manage tables and columns.
+
+   ![](../media/img4.png)
+
+2. In the data model view, find the table **copilot_org_metrics**.
+3. From this table, select the column **total_engaged_users** that you want to modify.
+4. On the right-hand side, in the **Properties** pane, look for the **Data type** dropdown.
+5. Click the dropdown and choose **Whole number** from the list.This ensures the column stores numeric values without decimals.
+
+   ![](../media/img5.png)
+
+6. A confirmation dialog will appear warning that changing the data type may cause loss of data or precision.Click **Yes** to proceed with the change
+
+   ![](../media/img6.png)
 
