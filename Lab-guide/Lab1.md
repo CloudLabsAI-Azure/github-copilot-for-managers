@@ -98,8 +98,6 @@ In this task, you will create a new workspace in Microsoft Fabric.
 
 > **Tip:** You can add more visuals (tables, charts) by selecting other icons in the **Visualizations** pane and dragging fields from the **Data** pane.
 
-
-
 #### Change Column Data Type
 To update the data type of a column in Power BI within Microsoft Fabric, follow these steps:
 
@@ -117,4 +115,61 @@ To update the data type of a column in Power BI within Microsoft Fabric, follow 
 6. A confirmation dialog will appear warning that changing the data type may cause loss of data or precision.Click **Yes** to proceed with the change
 
    ![](../media/img6.png)
+
+## Exercise 2: 
+#### Task 1: Build and Customize Card Visuals
+1. Sign in to Microsoft Fabric.
+2. Open your workspace and launch the report editor.
+3. In the **Visualizations** pane, click the **Card visual icon** to add a card to the canvas.
+4. In the **Data** pane, expand the dataset **copilot_org_metrics**.
+5. Select the field **total_active_users** to bind it to the card visual.
+
+![](../media/img7.png)
+
+6. Resize or reposition the card as needed.
+7. Click the **Format** pane (paint roller icon).
+8. Customize the card with title, font size, background color, etc.
+
+![](../media/img8.png)
+
+9. Repeat steps 3–5 to add another card visual for **total_engaged_users**.
+
+![](../media/img9.png)
+
+10. Add a third card visual and bind it to the field **Adoption Rate**.
+
+![](../media/img10.png)
+
+#### Task 2: Modify Column Data Type
+1. Click **Open data model** from the top menu.
+
+![](../media/img11.png)
+
+2. In the data model view, locate the table **copilot_org_metrics**.
+3. Select the column **total_engaged_users**.
+
+![](../media/img12.png)
+
+4. In the **Properties** pane, click the **Data type** dropdown.
+5. Select **Whole number**.
+
+![](../media/img13.png)
+
+6. Confirm the change when prompted.
+
+![](../media/img14.png)
+
+#### Task 3: Create and Use Measures
+1. In the data model view, click the **ellipsis (three dots)** next to the table name.
+2. Select **New measure**.
+
+!.png)
+
+3. Enter the formula:
+   ```DAX
+   Adoption Rate =
+   DIVIDE(
+       SUM('copilot_org_metrics'[total_engaged_users]),
+       SUM('copilot_org_metrics'[total_active_users])
+   )
 
