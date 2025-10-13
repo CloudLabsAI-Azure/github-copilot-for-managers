@@ -42,3 +42,42 @@ In this task, you will create a new workspace in Microsoft Fabric.
     - Click **Apply**.
 
 ![](../media/mang-e1-g10.png)
+
+
+### Task 3: Create and Upload Data File
+
+1. Click **Create**, then select **Get Data**.  
+
+![](../media/img.png)
+
+2. Click **Browse** to upload your file.  
+
+![](../media/mang-e1-g23.png)
+
+3. After upload, click **Next** for CSV and JSON files.  
+
+![](../media/mang-e1-g24.png)
+
+### Task 5: Transform Data Using Power Query
+- Switch mode to **Editing** from Viewing.  
+
+> Additional Actions
+> - Click **Open data model** to view or edit the model.  
+!Open Data Model
+
+> - Click **Get data** inside the semantic model to add more sources.  
+![Get Data Inside Model
+
+![](../media/mang-e1-g21.png)
+
+- Apply transformations in Power Query and click **Save**.  
+
+![](../media/mang-e1-g25.png)
+
+### Task 6: Create Report
+- After transformations, click **Create a report**.  
+
+![](../media/mang-e1-g18.png)
+
+
+
