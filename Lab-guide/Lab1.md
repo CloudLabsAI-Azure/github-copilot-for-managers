@@ -7,7 +7,7 @@ In this task, you will activate the Microsoft Fabric free trial.
 1. Click on your **Profile icon** (top-right corner) in Microsoft Fabric or Power BI.
 2. In the profile pane, locate the **Free trial** button and click it.
 
-![](media/mang-e1-g3.png)
+(![](../media/mang-e1-g3.png)
 
 3. Review the trial details and select **Trial capacity region** (default is usually **West US 2**). 
 -Select **Activate**, then click **OK** when you see **Successfully upgraded to Microsoft Fabric** .
