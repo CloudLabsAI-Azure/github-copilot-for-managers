@@ -1,153 +1,149 @@
-# Create and Publish Power BI Dashboards & Reports
+# GitHub Copilot for Managers
 
-### Overall Estimated Duration: 4 Hours
+### Overall Estimated Duration: 1 Hour
 
 ## Overview
 
-In this lab, you will learn how to create and publish Power BI dashboards and reports. Utilizing a pre-created report, you will go through the steps to publish it to the Power BI Service. The lab covers essential skills such as applying conditional formatting, adding logos, importing custom visuals, and applying custom themes. Additionally, you will explore how to use bookmarks to enhance storytelling within your reports. Detailed instructions, along with visual aids and screenshots, guide you through each step of the process, ensuring you gain practical experience with Power BI's powerful features.
+In this lab, you will configure and visualize organization-level **GitHub Copilot** adoption and impact. Using a pre-prepared report with **Copilot Activity (CSV)** and **Copilot Metrics (JSON)**, you’ll publish to the Power BI Service and assemble an executive-friendly view. You’ll practice essentials like adding KPIs, weekly trends, and cohort slicers, and you’ll use lightweight measures (e.g., adoption rate, estimated time saved) to communicate value clearly. Step-by-step instructions with screenshots guide you throughout.
 
 ## Objective
 
-Understand report creation and dashboard management in Power BI. By the end of this lab, you will gain insights on:
+Understand how to measure and communicate Copilot adoption and impact. By the end of this lab, you will be able to:
 
-- **Create and Publish a Report:** Develop a comprehensive Power BI report, incorporating conditional formatting, custom visuals, and themes, and publish it to the Power BI Service.
-- **Build and Organize a Dashboard:** Construct and organize a Power BI dashboard to effectively visualize and present data from the report.
-- **Enhance Report Presentation:** Utilize features such as custom logos, conditional formatting, and bookmarks to create an engaging and informative report narrative.
+- **Create & Publish a Report:** Build a concise dashboard from Copilot Activity CSV and Metrics JSON and publish it to the Power BI Service.
+- **Build & Organize a Dashboard:** Add KPIs and trends (active vs. engaged, suggestions vs. acceptances, chat usage), plus editor/language filters.
+- **Enhance Presentation:** Apply branding touches (logos/themes optional), use simple ROI and adoption-rate measures, and prepare a one-page executive readout.
 
 ## Pre-requisites
 
-- Basic Knowledge of Power BI
-- Access to Power BI Desktop and Service
-- Understanding of Report Design Principles
+- Basic knowledge of Power BI
+- Access to **Power BI Desktop** and **Power BI Service**
+- Read access to sample **Copilot Activity CSV** and **Copilot Metrics JSON** (provided)
 
 ## Architecture
 
-In this lab, you'll start with a pre-created Power BI report and follow a structured process to enhance and publish it. Initially, you will apply conditional formatting to highlight important data points within the report. Next, you'll add logos to the visuals and filters to incorporate branding elements. After that, you'll import and integrate custom visuals to enrich the data representation. You will then apply a custom theme to ensure the report aligns with specific design guidelines. To enhance storytelling, you'll use bookmarks to create a narrative flow within the report. Finally, you'll publish the completed report to the Power BI Service for sharing and collaboration. Detailed instructions and visual aids will guide you through each step, ensuring you gain practical experience with Power BI's features.
+You’ll start from a pre-created Power BI report wired to two sources:
+1. **Copilot Activity (CSV):** Per-user adoption fields (e.g., suggestions, acceptances, last activity, editor/language cohorts).
+2. **Copilot Metrics (JSON):** Org-level daily metrics (active users, engaged users, suggestions, acceptances, chat, PR summaries).
+
+You’ll add visuals for **KPIs**, **weekly trends**, and **cohorts**, and then publish to the Power BI Service. Optionally, you’ll apply a theme and capture screenshots for an executive readout.
 
 ## Architecture Diagram
 
-![image](../media/arch1.PNG )
+![](../media/arch1.PNG)
 
 ## Explanation of Components
 
-- **Pre-Created Report:** A Power BI report with existing data and visuals, used as the foundation for further customization and enhancement tasks.
+- **Copilot Activity (CSV):** Per-user aggregates that support developer-level and cohort charts (acceptances, suggestions, last activity, editor, language).
+- **Copilot Metrics (JSON):** Daily org-level counts for active/engaged users, suggestions vs. acceptances, chat usage, and PR assistant activity.
+- **Power BI Service:** Cloud platform to publish, manage access, and share dashboards with leadership.
 
-- **Conditional Formatting:** A technique used to modify the appearance of report visuals based on data-driven conditions, highlighting key information.
-
-- **Custom Visuals:** Specialized visual elements imported into Power BI to offer unique data representations and enhance the visual appeal of the report.
-
-- **Power BI Service:** The cloud-based platform where the completed report is published for sharing, collaboration, and online access.
-  
 ## Getting Started with the Lab
- 
+
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-  ![02](../media/12062025(0)new.png)
+![](../media/12062025(0)new.png)
 
 ## Virtual Machine & Lab Guide
- 
+
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
- 
+
 ## Exploring Your Lab Resources
- 
+
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-   ![image](../media/power-02new.png)
+![](../media/power-02new.png)
 
 ## Utilizing the Split Window Feature
- 
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-   ![image](../media/power-03new.png)
-   
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
+
+![](../media/power-03new.png)
+
 ## Managing Your Virtual Machine
 
 On the **Resources (1)** tab, use the **Action buttons (2)** next to your VM. Feel free to **start**, **stop**, or **restart** your Virtual Machine as needed. Your experience is in your hands!
 
-   ![image](../media/power-04new.png)
+![](../media/power-04new.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![image](../media/zoomnew1.png)
+![](../media/zoomnew1.png)
 
 ## Let's Get Started with Power BI Portal
- 
-1. On the Lab VM, open **Microsoft Edge** from the desktop. In a new tab, navigate to **Microsoft Fabric** by copying and pasting the following URL into the address bar:
 
-   ```
-   https://app.powerbi.com/
-   ```
+1. On the Lab VM, open **Microsoft Edge** from the desktop. In a new tab, navigate to **Microsoft Fabric** by copying and pasting the following URL into the address bar: https://app.powerbi.com/
 
-2. On the **Enter your email, we'll check if you need to create a new account** tab, you will see the login screen, in that enter the following email/username, and click on **Submit**.
- 
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
- 
-     ![image](https://github.com/user-attachments/assets/f38ad1be-223e-4973-907b-d1e3c4af5e5a)
+2. On the **Enter your email, we'll check if you need to create a new account** screen, enter:
 
-3. Now enter the following password and click on **Sign in**.
- 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
- 
-     ![image](https://github.com/user-attachments/assets/33088d9e-37b0-4c5e-95d7-9c991ab8ced3)
-     
-1. If you see the pop-up **Stay Signed in?**, select **No**.
+- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-   ![02](../media/12062025(3).png)
+![](../media/pbi-login-1.png)
 
-1. You should be able to view the Power BI Portal.
+3. Enter the password and click **Sign in**.
 
-   ![image](https://github.com/user-attachments/assets/c70e25c2-4172-4818-b393-c479bf24595a)
+- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. Once logged in, navigate to **Settings (1)** icon and select **Admin portal (2)** under **Governance and insights** section.
+![](../media/pbi-login-2.png)
 
-    ![02](../media/15.png) 
+4. If prompted **Stay Signed in?**, select **No**.
 
-1. In the **Tenant settings** (**(1)**), search for **map** **(2)**, then expand the **Map and filled map visuals** **(3)**. If the toggle is not already enabled, switch it to **Enabled** **(4)**, and click **Apply** **(5)** to save the changes.
+![](../media/12062025(3).png)
 
-    ![](../media/image103.png) 
+5. You should now see the **Power BI Portal**.
 
-1. Open the **Power BI Desktop** located on the desktop of your lab environment.
+![](../media/pbi-portal.png)
 
-    ![](../media/image105.png) 
+6. Once logged in, navigate to **Settings (1)** and select **Admin portal (2)** under **Governance and insights**.
 
-1. Click on the **Sign-in icon** located in the top-right corner.
+![](../media/15.png)
 
-    ![](../media/image200.png) 
+7. In **Tenant settings (1)**, search for **map (2)**, expand **Map and filled map visuals (3)**. If the toggle is not enabled, switch to **Enabled (4)** and click **Apply (5)**.
 
-1. Once the "Enter your email address" dialog appears, copy the **Username** and paste it into the **Email** field of the dialog and select **Continue**.
+![](../media/image103.png)
 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+8. Open **Power BI Desktop** from the desktop of your lab environment.
 
-     ![02](../media/image106.png)
+![](../media/image105.png)
 
-1. After clicking Continue, you will be prompted to sign in again. Please use the credentials provided below to log in.
+9. Click the **Sign-in** icon (top-right).
 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+![](../media/image200.png)
 
-     ![02](../media/image101.png)
+10. In **Enter your email address**, paste:
 
-1. Enter password and **Sign in**
+ - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+ Then select **Continue**.
 
-     ![02](../media/image102.png)
+ ![](../media/image106.png)
 
-1. For the pop-up **Automatically sign in to all desktop apps and websites on this device?** window, select **No,this app only**
+11. When prompted again, sign in with:
 
-   ![02](../media/image107.png)
+ - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+ ![](../media/image101.png)
+
+12. Enter the password and **Sign in**.
+
+ - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+ ![](../media/image102.png)
+
+13. For the prompt **Automatically sign in to all desktop apps and websites on this device?**, select **No, this app only**.
+
+ ![](../media/image107.png)
 
 ## Support Contact
 
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat.
 
-Learner Support Contacts:
+**Learner Support Contacts:**
+- Email: cloudlabs-support@spektrasystems.com  
+- Live Chat: https://cloudlabs.ai/labs-support
 
-- Email Support: cloudlabs-support@spektrasystems.com
-  
-- Live Chat Support: https://cloudlabs.ai/labs-support
-
-Click **Next** from the bottom right corner to embark on your Lab journey!
+Click **Next** at the bottom-right to begin your lab journey!
 
 ## Happy Learning!!
