@@ -139,4 +139,48 @@ You will be able to complete the following tasks:
 1. On the report page, select the new **Card (1)**, expand **copilot_org_metrics (2)**, and check **Adoption Rate (3)** to bind the measure.  
 
     ![](../media/man-e1-g30.png)
-   
+
+![](../media/man-e1-g31.png)
+
+1. On the **Report** canvas, insert a **Line chart** from **Visualizations**.  
+
+![](../media/man-e1-g32.png)
+
+1. With the line chart selected, bind fields from **copilot_org_metrics**:  
+   - **X-axis:** `date`  
+   - **Y-axis:** `total_active_users` → **Sum**  
+   - **Secondary y-axis:** `total_engaged_users` → **Sum**  
+
+![](../media/man-e1-g33.png)
+
+1. Add a **Slicer** visual to the canvas.  
+
+![](../media/man-e1-g34.png)
+
+1. Set the slicer **Field** to `date` from **copilot_org_metrics**.  
+
+![](../media/man-e1-g35.png)
+
+1. Insert a **Stacked bar chart** (blank placeholder will appear).  
+
+![](../media/man-e1-g36.png)
+
+1. In **Fields**, expand **copilot_org_metrics**. If a node is nested, right-click it and choose **Expand all** to reveal inner fields.  
+
+![](../media/man-e1-g37.png)
+
+1. Configure the bar chart:  
+   - **Y-axis:** `total_engaged_users`  
+   - **X-axis:** **Count of** `copilot_ide_chat.editors`  
+
+![](../media/man-e1-g38.png)
+
+1. Insert a **Donut chart**.  
+
+![](../media/man-e1-g39.png)
+
+1. Populate the donut chart:  
+   - **Legend:** `copilot_ide_chat.total_engaged_users`  
+   - **Values:** **Count of** `copilot_dotcom_chat.total_engaged_users`  
+
+![](../media/man-e1-g40.png)
