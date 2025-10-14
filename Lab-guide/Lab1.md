@@ -92,3 +92,51 @@ You will be able to complete the following tasks:
    
    ![](../media/man-e1-g20.png)
 
+1. When prompted with **Data type change**, select **Yes** to proceed.
+
+   ![](../media/man-e1-g21.png)
+
+1. Back in the **Report** canvas, select the second **Card (1)** and, in **copilot_org_metrics (2)**, check **total_engaged_users (3)**. The card should now show **Sum of total_engaged_users**. 
+
+   ![](../media/man-e1-g22.png)
+
+1. From the top bar, choose **Open data model** to switch to the model view.  
+
+   ![](../media/man-e1-g23.png)
+
+1. In **Model** view, select the **copilot_org_metrics** table to view its fields and properties. 
+
+   ![](../media/man-e1-g24.png)
+
+1. Create a new measure: select the **…** menu on **copilot_org_metrics** and choose **New measure**.  
+
+   ![](../media/man-e1-g25.png)
+
+1. In the formula bar, enter the following DAX for **Adoption Rate**, then click the **checkmark** to validate:  
+
+   ```
+   Adoption Rate =
+   DIVIDE(
+       SUM('copilot_org_metrics'[total_engaged_users]),
+       SUM('copilot_org_metrics'[total_active_users])
+   )
+   ```
+
+    ![](../media/man-e1-g26.png)
+
+1. With the **Adoption Rate** measure selected, format it as a percentage: set **Format = Percentage** and turn **Percentage format** to **Yes** (optionally set **Decimal places = 0**).  
+
+   ![](../media/man-e1-g27.png)
+
+1. Return to the **Report** canvas and insert a new **Card** visual.  
+
+   ![](../media/man-e1-g28.png)
+
+1. (If needed) Ensure **total_active_users** is numeric: in **Model** view, select **total_active_users (1)** → open **Data type (2)** → choose **Whole number (3)**.  
+
+   ![](../media/man-e1-g29.png)
+
+1. On the report page, select the new **Card (1)**, expand **copilot_org_metrics (2)**, and check **Adoption Rate (3)** to bind the measure.  
+
+    ![](../media/man-e1-g30.png)
+   
