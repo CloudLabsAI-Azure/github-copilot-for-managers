@@ -3,97 +3,88 @@
 
 ### Task 1: Establish Baseline Metrics
 
-1. **Create a new page for executives**  
-   - At the bottom, click **+** to add a page → rename to **Executive Dashboard**.  
-   - In **View ▸ Canvas settings**, set **Type = 16:9** for widescreen layout.  
+1. On the **Visualizations** pane, switch to **Build visual** and insert a **Card** visual. 
 
-    ![](../media/git_co_man-e1-g1.png)
+   ![](../media/git_co_man-e1-g40.png)
 
-2. **Bring over your core visuals**  
-   - From your adoption page, copy/paste these onto **Executive Dashboard**:  
-     - **Cards**: *Active Users*, *Engaged Users*, *Adoption Rate*, *Time Saved (hrs)*, *Chat Interactions*.  
-     - **Line chart**: *Total Acceptances vs Date* (keep dual-axis with *Total Suggestions* if used).  
-     - **Clustered bar**: *Top users by Total Acceptances*.  
-     - **Donut**: *Acceptances by language_primary*.  
-     - **Table**: detail table.  
-   - Arrange in a clean 2-row layout: **KPI strip at top**, **charts middle**, **table bottom**.  
+1. With the new card selected **(1)**, in **Data** expand your dataset and check **Active Users (2)**. It will land in **Fields (3)** for the card.  
 
-   ![](../media/git_co_man-e1-g2.png)
+   ![](../media/git_co_man-e1-g41.png)
 
-3. **Add slicers for executive filtering**  
-   - Add **Slicer** for **date** (use *Between* type) and place top-left.  
-   - Add **Slicer** for **editor_primary** and **language_primary** (Tile style) next to date.  
-   ![](../media/git_co_man-e1-g3.png)
+1. Confirm the card displays the KPI value for **Active Users**.  
 
-4. **Create ROI callout measures (simple, no parameters)**  
-   - In **copilot_org**, create:  
-     ```DAX
-     -- Adjust the 75 to your org’s fully-loaded hourly rate (currency-agnostic).
-     Estimated Cost Savings =
-       [Time Saved (hrs)] * 75
-     ```
-   - Format **Estimated Cost Savings** as **Currency** (0–0 dp).  
-   ![](../media/git_co_man-e1-g4.png)
+   ![](../media/git_co_man-e1-g42.png)
 
-5. **Add ROI cards**  
-   - Insert **Card** → bind to **Time Saved (hrs)**. Title: **Hours Saved**.  
-   - Insert **Card** → bind to **Estimated Cost Savings**. Title: **Est. Cost Savings**.  
-   - Place these on the right side of the KPI strip.  
-   ![](../media/git_co_man-e1-g5.png)
+1. Resize the card as needed using the bottom-right drag handle so it reads cleanly on the canvas.  
 
-6. **Add an “Assumptions” text box**  
-   - Insert **Text box** (top-right, under ROI cards) → paste:  
-     ```
-     Assumptions:
-     • 10 seconds saved per acceptance
-     • Hourly rate = 75 (adjust per org)
-     • Filters on this page recalculate savings
-     ```
-   - Reduce opacity slightly so it reads as a note.  
-   ![](../media/git_co_man-e1-g6.png)
+   ![](../media/git_co_man-e1-g43.png)
 
-7. **Polish titles & formatting**  
-   - For each visual, set **Title** to a business-friendly name (e.g., “Adoption Rate”, “Top Acceptors”, “Acceptances Over Time”).  
-   - Cards: **Display units = None**, **Decimal places = 2** for percentages.  
-   - Align visuals (multi-select → **Format ▸ Align / Distribute**).  
-   ![](../media/git_co_man-e1-g7.png)
+1. Add a second **Card** visual for **Engaged Users** (repeat the insert step).
 
-8. **(Optional) Add Smart narrative summary**  
-   - Insert **Smart narrative** visual → Power BI autogenerates key takeaways.  
-   - Edit the text to include: adoption highlights, spikes, and cohort insights.  
-   ![](../media/git_co_man-e1-g8.png)
+   ![](../media/git_co_man-e1-g44.png)
 
-9. **Bookmark a “Default Executive View”**  
-   - Clear slicers to your standard timeframe (e.g., **Last 30 days**).  
-   - **View ▸ Bookmarks ▸ Add** → name **Executive Default** → enable **Data** + **Display**.  
-   ![](../media/git_co_man-e1-g9.png)
+1. With the second card selected **(1)**, select **Engaged Users (3)** from **copilot_org (2)** to populate the KPI.  
+   ![](../media/git_co_man-e1-g45.png)
 
----
+1. Insert a third **Card** visual for **Adoption Rate**. 
+
+   ![](../media/git_co_man-e1-g46.png)
+
+1. Populate the third card with the **Adoption Rate** measure **(3)**. Verify it appears in **Fields (4)** and renders on the canvas **(1)**.  
+
+   ![](../media/git_co_man-e1-g47.png)
+
+1. With the **Adoption Rate** card selected **(1)**, open **Format visual (paint roller) (2)** → **Visual (3)** and set:  
+   - **Display units:** **None (4)**  
+   - **Value decimal places:** **2 (5)**  
+   > **Tip:** Turning off display units avoids “K/M” abbreviations that can hide important precision for percentage KPIs.  
+   
+   ![](../media/git_co_man-e1-g48.png)
+
+1. Still on the **Adoption Rate** card, go to **Format visual** → **General (3)**. Under **Apply settings to (4)** make sure **Adoption Rate** is selected, then set:  
+    - **Format:** **Percentage (5)**  
+    - **Decimal places:** **2 (6)**  
+    > **Note:** If your measure already returns a fraction (e.g., 0.42), formatting as **Percentage** renders **42.00%** without changing the underlying calculation.
+    
+    ![](../media/git_co_man-e1-g49.png)
+
+1. **Add “Time Saved (hrs)” KPI card**  
+    In **Visualizations**, keep **Build visual** selected and click the **Card** visual.  
+    
+    ![](../media/git_co_man-e1-g50.png)
+
+1. **Bind the Time Saved (hrs) measure**  
+    Select the new card, then in **Data** check **Time Saved (hrs)** so it appears in **Fields** and renders on the canvas.  
+    
+    ![](../media/git_co_man-e1-g51.png)
+
+1. **Add a “Chat Interactions” KPI card**  
+    With **Build visual** selected, click **Card** again to insert another card.  
+    
+    ![](../media/git_co_man-e1-g52.png)
 
 ### Task 2: Compute Improvement Ratios
 
-1. **Create a one-page summary (optional separate page)**  
-   - Add a new page **Executive Summary**.  
-   - Insert **Text box** with these sections and fill from your visuals:  
-     - **Top Performers** (developers/teams with highest *Total Acceptances*).  
-     - **Overall Gains** (Adoption Rate, Hours Saved, Est. Cost Savings).  
-     - **Cohorts for Coaching** (Bottom 10 acceptors / low adoption segments).  
-     - **Next Steps** (training plan, editor rollouts, language-specific tips).  
-   ![](../media/git_co_man-e1-g10.png)
+1. In **Visualizations (1)**, click the **Slicer** visual (2) to insert a slicer onto the page.
 
-2. **Export or publish for leadership**  
-   - **Export ▸ PDF** for a static deck handout; or **Export ▸ PowerPoint** to present live.  
-   - **Home ▸ Publish** to Power BI Service → choose workspace.  
-   ![](../media/git_co_man-e1-g11.png)
+   ![](../media/git_co_man-e1-g60.png)
 
-3. **Share with stakeholders**  
-   - In Power BI Service, open the report → **Share** → enter leadership emails, add a short note, and include the **Executive Default** bookmark in your message.  
-   ![](../media/git_co_man-e1-g12.png)
+1. With the slicer selected (1), set **Field (2)** to **editor_primary** to filter by IDE/editor.
 
-4. **Recommend actions (paste into your mail/Teams post)**  
-   - **Train low-adoption cohort**: schedule a 60-min Copilot workshop for Bottom 10 users.  
-   - **IDE focus**: prioritize the editor with highest **Acceptance Rate %** for rollout.  
-   - **Language playbook**: replicate prompts/libraries seen in top-performing languages.  
-   - **Quarterly goal**: +10% **Adoption Rate** and +5% **PR Throughput** vs baseline.
+   ![](../media/git_co_man-e1-g61.png)
 
-> You now have a polished **Executive Dashboard** with clear **ROI callouts**, plus a **shareable summary** to drive the Copilot rollout strategy.
+1. Format the slicer: select the slicer (1) → go to **Format visual (2)** → **Visual (3)** → expand **Slicer settings (4)** → set **Style (5)** to **Tile**.
+
+   ![](../media/git_co_man-e1-g62.png)
+
+1. Insert another **Slicer**: in **Visualizations (1)** choose **Slicer (2)** to add a second slicer.
+
+   ![](../media/git_co_man-e1-g63.png)
+
+1. With the new slicer selected (1), set **Field (2)** to **language_primary** to filter by primary language.
+
+   ![](../media/git_co_man-e1-g64.png)
+
+1. Format the language slicer to tiles: select the slicer (1) → **Format visual (2)** → **Visual (3)** → set **Style (4)** to **Tile**.
+
+   ![](../media/git_co_man-e1-g65.png)
