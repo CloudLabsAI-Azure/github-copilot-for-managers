@@ -265,54 +265,42 @@ In this task, you’ll add the DAX measures that power all “must-ship” visua
     
     ![](/mnt/data/git_co_man-e1-g58.png)
 
-1. **Compare Suggestions vs. Acceptances per user**  
-    Keep **Y-axis = user_login** and set **X-axis** to **Total Suggestions** *and* **Total Acceptances** to render both measures side-by-side. 
-    
-    ![](/mnt/data/git_co_man-e1-g59.png)
+1. On the **Report** canvas, select the horizontal **Clustered bar chart (1)**. In **Visualizations** → **Y-axis (2)** drag **user_login**. In **X-axis**, add **Total Suggestions (3)** and **Total Acceptances (4)**.
 
-> **Design note:** Keep your KPI cards left-aligned for at-a-glance context and place interactive visuals (line + bars) to the right for deeper exploration.
+   ![](../media/git_co_man-e1-g59.png)
 
-### 21) Add a slicer for IDE/Editor
-1. In **Visualizations ▸ Build visual**, click **Slicer**.
-2. Draw the slicer on the canvas (top-right area).
-3. In the **Field** well, add **editor_primary**.
+1. In **Visualizations (1)**, click the **Slicer** visual (2) to insert a slicer onto the page.
 
-    ![](/mnt/data/git_co_man-e1-g60.png)
+   ![](../media/git_co_man-e1-g60.png)
 
-### 22) Format the editor slicer as tiles
-1. With the slicer selected, open **Format visual** (paint-roller icon).
-2. Go to **Visual ▸ Slicer settings**.
-3. Under **Options**, set **Style = Tile**.
+1. With the slicer selected (1), set **Field (2)** to **editor_primary** to filter by IDE/editor.
 
-    ![](/mnt/data/git_co_man-e1-g61.png)
+   ![](../media/git_co_man-e1-g61.png)
 
-### 23) Add a slicer for Primary Language
-1. In **Visualizations**, click **Slicer** again and draw a second slicer below the first.
-2. In the **Field** well, add **language_primary**.
+1. Format the slicer: select the slicer (1) → go to **Format visual (2)** → **Visual (3)** → expand **Slicer settings (4)** → set **Style (5)** to **Tile**.
 
-    ![](/mnt/data/git_co_man-e1-g62.png)
+   ![](../media/git_co_man-e1-g62.png)
 
-### 24) Format the language slicer as tiles
-1. With the language slicer selected, open **Format visual**.
-2. Go to **Visual ▸ Slicer settings**.
-3. Under **Options**, set **Style = Tile**.
+1. Insert another **Slicer**: in **Visualizations (1)** choose **Slicer (2)** to add a second slicer.
 
-    ![](/mnt/data/git_co_man-e1-g63.png)
+   ![](../media/git_co_man-e1-g63.png)
 
-### 25) (Optional placeholder) Insert a Table visual
-1. In **Visualizations**, click **Table**.
-2. Place it in the open space (leave unconfigured for now).
+1. With the new slicer selected (1), set **Field (2)** to **language_primary** to filter by primary language.
 
-    ![](/mnt/data/git_co_man-e1-g64.png)
+   ![](../media/git_co_man-e1-g64.png)
 
-### 26) Insert a Donut chart
-1. In **Visualizations**, click **Donut chart**.
-2. Draw it in the lower open area of the page.
+1. Format the language slicer to tiles: select the slicer (1) → **Format visual (2)** → **Visual (3)** → set **Style (4)** to **Tile**.
 
-    ![](/mnt/data/git_co_man-e1-g67.png)
+   ![](../media/git_co_man-e1-g65.png)
 
-### 27) Configure the Donut chart
-1. In the **Legend** well, add **language_primary**.
-2. In the **Values** well, add **Total Acceptances**.
-3. Confirm the visual title shows **Total Acceptances by language_primary** and that slice labels and the legend appear.
+1. Insert a **Table** visual: in **Visualizations (1)** click **Table (2)** to add a summary table (we’ll bind fields in a later step).
 
+   ![](../media/git_co_man-e1-g66.png)
+
+1. Insert a **Donut chart**: in **Visualizations (1)** click **Donut chart (2)** to add a distribution visual.
+
+   ![](../media/git_co_man-e1-g67.png)
+
+1. With the **Donut chart (1)** selected, set **Legend (2)** to **language_primary** and **Values (3)** to **Total Acceptances** to show acceptances by language.
+
+   ![](../media/git_co_man-e1-g68.png)
