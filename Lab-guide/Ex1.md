@@ -1,6 +1,6 @@
 # Exercise 1 — Enable & Access Copilot Usage Reports (Read-only)
 
-## Task 1: Generate the Activity report
+## Task 1: Activate Reporting Features
 
 1. In the top-right of GitHub, click your **profile picture (1)** → select **Organizations (2)**.
 
@@ -21,6 +21,8 @@
 1. On **Access management**, open **Get Usage report (1)** → choose **Activity report (new) (2)**.
 
    ![](../media/gt-co-ex1-g5.png)
+
+## Task 2: Download Usage Data
 
 1. Confirm the green banner **“Your activity report is being generated…”** appears.  
 
