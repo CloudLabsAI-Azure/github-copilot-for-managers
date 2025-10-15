@@ -1,7 +1,26 @@
-## Exercise 3 — Calculate Productivity Improvements
-*Duration: 15 Minutes*
+## Exercise 3: Calculate Productivity Improvements
 
-### Task 1: Establish Baseline Metrics
+### Estimated Duration: 20 Minutes
+
+## Overview
+
+In this exercise, you will translate raw adoption measures into manager-ready productivity indicators. You’ll surface baseline KPI cards (Active Users, Engaged Users, Adoption Rate, Time Saved, Chat Interactions) and introduce slicers that allow stakeholders to segment performance by editor and language. These assets help quantify early value and identify optimization focus areas.
+
+## Objectives
+
+You will be able to complete the following tasks:
+
+- Task 1: Establish baseline KPI metrics (create core cards for visibility)
+- Task 2: Compute improvement ratios (add contextual slicers for comparative analysis)
+
+## Prerequisites
+
+- Completion of Exercise 2 with core measures already created (Active Users, Engaged Users, Adoption Rate, Time Saved (hrs), Chat Interactions).
+- Power BI report file open with the `copilot_org` dataset loaded.
+
+## Task 1: Establish Baseline Metrics
+
+In this task, you will build a concise KPI deck using Card visuals to surface the most critical adoption and productivity signals for leadership dashboards.
 
 1. On the **Visualizations** pane, switch to **Build visual** and insert a **Card** visual. 
 
@@ -63,7 +82,9 @@
     
     ![](../media/git_co_man-e1-g52.png)
 
-### Task 2: Compute Improvement Ratios
+## Task 2: Compute Improvement Ratios
+
+In this task, you will add interactive slicers enabling comparative analysis (e.g., how adoption differs by editor or language) to contextualize the baseline KPIs and guide targeted enablement strategies.
 
 1. In **Visualizations (1)**, click the **Slicer** visual (2) to insert a slicer onto the page.
 
@@ -88,3 +109,24 @@
 1. Format the language slicer to tiles: select the slicer (1) → **Format visual (2)** → **Visual (3)** → set **Style (4)** to **Tile**.
 
    ![](../media/git_co_man-e1-g65.png)
+
+## Notes
+
+- Ensure all measures come from the same semantic model to avoid duplicated logic.
+- Arrange KPI cards in a consistent left-to-right reading order: Adoption Rate, Active Users, Engaged Users, Time Saved (hrs), Chat Interactions (or adapt to your executive priorities).
+- Consider conditional formatting (color rules) once thresholds for “healthy adoption” are defined.
+- Slicers can be synchronized across pages later if you build a multi-page report.
+
+<validation step="ex3-validate-productivity" />
+
+> **Validation Instructions**
+> - Click the Validate button for this exercise in the lab environment UI.
+> - Confirm all KPI cards render expected values and slicers filter them dynamically.
+> - If validation fails, verify that prerequisite measures were created in Exercise 2.
+> - For assistance email: cloudlabs-support@spektrasystems.com.
+
+## Summary
+
+In this exercise, you elevated core adoption metrics into a productivity-focused KPI layout and added segmentation controls (editor and language) to support comparative insights. This prepares the ground for advanced efficiency modeling and trend storytelling in subsequent exercises.
+
+### You have successfully completed this exercise. Please continue to the next one >>

@@ -1,6 +1,28 @@
-## Exercise 2 — Analyze Manger Adoption Metrics
+## Exercise 2: Analyze Manager Adoption Metrics
 
-### Task 1: Import Data into Analytics Tool
+### Estimated Duration: 45 Minutes
+
+## Overview
+
+In this exercise, you will load the raw Copilot organization usage export, define core analytic measures in Power BI (or a similar BI tool), and build initial visuals to understand suggestion activity, acceptance quality, user engagement, and early adoption patterns. These measures become the building blocks for executive dashboards in later exercises.
+
+## Objectives
+
+You will be able to complete the following tasks:
+
+- Task 1: Import usage data into the analytics tool
+- Task 2: Create core DAX measures (suggestions, acceptances, acceptance rate, interactions, time saved, active users, adoption rate)
+- Task 3: Visualize adoption trends (line and bar charts)
+
+## Prerequisites
+
+- Successful completion of Exercise 1 with `copilot_org.csv` (or similarly named) downloaded.
+- Power BI Desktop installed (or equivalent analytical environment supporting DAX-style measures).
+- Basic familiarity with navigating the Power BI interface.
+
+## Task 1: Import Data into Analytics Tool
+
+In this task, you will load the exported Copilot usage CSV into Power BI so that the data model is available for creating reusable analytical measures. This establishes the semantic foundation for all subsequent adoption and performance insights.
 
 1. Launch **Power BI Desktop** from the desktop.
 
@@ -26,7 +48,7 @@
 
    ![](../media/git_co_man-e1-g19.png)
 
-### Task 2: Create Core Measures
+## Task 2: Create Core Measures
 
 In this task, you’ll add the DAX measures that power all “must-ship” visuals. Follow each step and confirm the green checkmark in the formula bar before moving on.
 
@@ -171,6 +193,8 @@ In this task, you’ll add the DAX measures that power all “must-ship” visua
 
 ## Task 3: Visualize Adoption Trends
 
+In this task, you will build core visuals (line and bar charts) that surface temporal adoption patterns and relative developer contribution. These visuals help stakeholders quickly spot growth, plateaus, and outliers for targeted enablement actions.
+
 A. Line chart — “Suggestions Accepted” by Developer (weekly view)
 
 1. On the **Report** canvas, insert a **Line chart**.  
@@ -206,3 +230,24 @@ B. Bar chart — “Top/Bottom” developers by accepted suggestions
 1. (Alt. binding view) On the canvas, select the horizontal **Clustered bar chart (1)**. In **Visualizations**, drag **user_login** to **Y-axis (2)**, and add **Total Suggestions (3)** plus **Total Acceptances (4)** to **X-axis** for side-by-side comparison.  
 
    ![](../media/git_co_man-e1-g59.png)
+
+## Notes
+
+- If a field name differs (e.g., table not named `copilot_org`), adjust measure references accordingly.
+- Consider hiding raw numeric columns after creating measures to reduce accidental drag-and-drop usage.
+- The heuristic for **Time Saved (hrs)** (10 seconds per acceptance) can be tuned later—keep logic centralized in a single measure for easy adjustment.
+- Adoption vs. Engagement: Define **Engaged Users** explicitly (e.g., threshold of N acceptances or chat interactions) before showcasing Adoption Rate to leadership.
+
+<validation step="ex2-validate-analytics" />
+
+> **Validation Instructions**
+> - Click the Validate button for this exercise in the lab environment UI.
+> - Ensure all listed measures compile without errors and visuals render data.
+> - If validation fails, re-check table/field names and measure syntax.
+> - For assistance email: cloudlabs-support@spektrasystems.com.
+
+## Summary
+
+In this exercise, you ingested raw Copilot usage data, authored core analytical measures, and produced foundational visuals to surface acceptance performance and user activity. These assets establish a reusable semantic layer for later dashboards and deeper adoption analytics.
+
+### You have successfully completed this exercise. Please continue to the next one >>
