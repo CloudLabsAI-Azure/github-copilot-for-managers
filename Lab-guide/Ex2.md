@@ -1,186 +1,179 @@
-# Exercise 1: Activate Fabric Trial & Load Copilot Activity Data
+## Exercise 2 — Analyze Manger Adoption Metrics
 
-### Estimated Duration: 45 Minutes
+### Task 1: Load the Copilot org CSV into Power BI
 
-## Overview
-In this exercise, you’ll enable the Microsoft Fabric trial (if prompted), upload **copilot_activity_report.csv** in Power BI Service, create a semantic model, and switch your report view to **Editing** so you’re ready to build visuals.
+1. Launch **Power BI Desktop** from the desktop.
 
-## Objectives
-You will be able to complete the following tasks:
+   ![](../media/git_co_man-e1-g1.png)
 
-- **Task 1:** Activate Microsoft Fabric trial  
+1. On the **Home** screen, select **Blank report**.
 
-## Task 1: Activate Microsoft Fabric trial
+   ![](../media/git_co_man-e1-g2.png)
 
-1. In the Power BI Service, select your **Profile** avatar (top-right). Click **Free trial**.
-    
-   ![](../media/man-e1-g1.png)
+1. Go to the **Home (1)** tab and click **Get data (2)**.
 
-1. In **Activate your 60-day free Fabric trial capacity**, keep the default **Trial capacity region** and select **Activate**.
-    
-   ![](../media/man-e1-g2.png)
+   ![](../media/git_co_man-e1-g3.png)
 
-1. When you see **Successfully upgraded to Microsoft Fabric**, select **OK**.
-   
-   ![](../media/man-e1-g3.png)
+1. In **Get Data**, choose **Text/CSV (1)** and select **Connect (2)**.
 
-  > **Note:** If you already have Fabric enabled, continue to Task 2.
+   ![](../media/git_co_man-e1-g16.png)
 
-1. From **Home**, select **Get Data**.
-    
-   ![](../media/man-e1-g4.png)
+1. In the file picker, browse to **C:\\LabFiles (1)**, select **copilot_org (2)**, and click **Open (3)**.
 
-1. Choose **CSV**.
-   
-   ![](../media/man-e1-g5.png)
+   ![](../media/git_co_man-e1-g17.png)
 
-1. On **Connection settings**, keep **Upload file** selected. Upload **copilot_activity_report.csv** and select **Next**.
-    
-   ![](../media/man-e1-g6.png)
+1. In the preview dialog, confirm the delimiter is **Comma** and click **Load**.
 
-1. In **Power Query**, review the preview (no changes needed). Select **Create a report**.
-    
-   ![](../media/man-e1-g7.png)
+   ![](../media/git_co_man-e1-g19.png)
 
-1. In **Semantic model name**, enter `Copilot_Activity`, then select **Create**.
-   
-   ![](../media/man-e1-g8.png)
+### Task 2: Create Core Measures (KPI + Trend foundations)
 
-1. In the report header, select **Open data model**.
-    
-   ![](../media/man-e1-g9.png)
+In this task, you’ll add the DAX measures that power all “must-ship” visuals. Follow each step and confirm the green checkmark in the formula bar before moving on.
 
-1. In the model view, switch from **Viewing** to **Editing**.
-    
-   ![](../media/man-e1-g10.png)
+> **Why measures?**  
+> Measures are reusable calculations evaluated in filter context (e.g., by date, editor, language, or user). This keeps your model lean and your visuals consistent.
 
-1. In **Model view**, on the **Home** tab click **Get data**.
-   
-   ![](../media/man-e1-g11.png)
+---
 
-1. On **Choose data source**, under **Upload file**, click **Browse…** and select `copilot_org_metrics.json`.
-    
-   ![](../media/man-e1-g12.png)
+1. In the **Data** pane, right-click your table **copilot_org (1)** → choose **New measure (3)**.
 
-1. Verify **Connection settings** show the uploaded file, keep **Authentication kind: Organizational account**, then click **Next**.
-    
-   ![](../media/man-e1-g13.png)
+   ![](../media/git_co_man-e1-g20.png)
 
-1. In **Power Query**, confirm the table name is **copilot_org_metrics (1)** and click **Save (2)** to load the shaped table.  
-   ![](../media/man-e1-g14.png)
+2. In the formula bar, create **Total Suggestions** (1) and click **✔ (2)**.
 
-1. Back on the report canvas, in **Visualizations**, select the **Card** visual.
-    
-   ![](../media/man-e1-g15.png)
+   Text to paste:  
+   Total Suggestions = SUM('copilot_org'[suggestions])
 
-1. In **Data** → expand **copilot_org_metrics (1)** and check **total_active_users (2)** to populate the first card.
-   
-   ![](../media/man-e1-g16.png)
+   ![](../media/git_co_man-e1-g21.png)
 
-1. With an empty area selected on the canvas, click **Card** again to add a second KPI placeholder (3).
-    
-   ![](../media/man-e1-g17.png)
+3. Confirm **Total Suggestions** appears under your table.
 
-1. With the second card selected, in **Data** → **copilot_org_metrics (2)**, check **total_engaged_users (3)** to bind it.
-    
-   ![](../media/man-e1-g18.png)
+   ![](../media/git_co_man-e1-g22.png)
 
-1. Click **Open data model** at the top of the report.  
-   ![](../media/man-e1-g19.png)
+> **Note:** If your table name is different, replace `'copilot_org'` in formulas accordingly.
 
-1. In **Model** view, select **copilot_org_metrics → total_engaged_users (1)**, then in **Properties** change **Data type** from **Text** to **Whole number (2)**.
-   
-   ![](../media/man-e1-g20.png)
+---
 
-1. When prompted with **Data type change**, select **Yes** to proceed.
+4. Add another measure: right-click **copilot_org** → **New measure**.
 
-   ![](../media/man-e1-g21.png)
+   ![](../media/git_co_man-e1-g23.png)
 
-1. Back in the **Report** canvas, select the second **Card (1)** and, in **copilot_org_metrics (2)**, check **total_engaged_users (3)**. The card should now show **Sum of total_engaged_users**. 
+5. Create **Total Acceptances** and click **✔**.
 
-   ![](../media/man-e1-g22.png)
+   Text to paste:  
+   Total Acceptances = SUM('copilot_org'[acceptances])
 
-1. From the top bar, choose **Open data model** to switch to the model view.  
+   ![](../media/git_co_man-e1-g24.png)
 
-   ![](../media/man-e1-g23.png)
+---
 
-1. In **Model** view, select the **copilot_org_metrics** table to view its fields and properties. 
+6. Add another measure: **New measure**.
 
-   ![](../media/man-e1-g24.png)
+   ![](../media/git_co_man-e1-g25.png)
 
-1. Create a new measure: select the **…** menu on **copilot_org_metrics** and choose **New measure**.  
+7. Create **Acceptance Rate %** and click **✔**.
 
-   ![](../media/man-e1-g25.png)
+   Text to paste:  
+   Acceptance Rate % = DIVIDE([Total Acceptances], [Total Suggestions])
 
-1. In the formula bar, enter the following DAX for **Adoption Rate**, then click the **checkmark** to validate:  
+   ![](../media/git_co_man-e1-g26.png)
 
-   ```
-   Adoption Rate =
-   DIVIDE(
-       SUM('copilot_org_metrics'[total_engaged_users]),
-       SUM('copilot_org_metrics'[total_active_users])
+> **Note:** `DIVIDE` safely handles divide-by-zero compared to `/`.
+
+---
+
+8. Add another measure: **New measure**.
+
+   ![](../media/git_co_man-e1-g27.png)
+
+9. Create **Chat Interactions** and click **✔**.
+
+   Text to paste:  
+   Chat Interactions =  
+   SUM('copilot_org'[ide_chat_interactions]) +  
+   SUM('copilot_org'[dotcom_chat_interactions])
+
+   ![](../media/git_co_man-e1-g28.png)
+
+10. (If needed) Use **New measure** again from the table menu.
+
+   ![](../media/git_co_man-e1-g29.png)
+
+---
+
+11. Create **Time Saved (hrs)** using the 10-seconds-per-acceptance heuristic, then click **✔**.
+
+   Text to paste:  
+   Time Saved (hrs) = DIVIDE( SUM('copilot_org'[acceptances]) * 10, 3600 )
+
+   ![](../media/git_co_man-e1-g30.png)
+
+12. Add another measure: **New measure** from **copilot_org**.
+
+   ![](../media/git_co_man-e1-g31.png)
+
+13. Create **Active Users** and click **✔**.  
+    Counts distinct users with any activity (suggestions OR chat OR PR summaries) in current filter context.
+
+   Text to paste:  
+   Active Users =  
+   VAR Users = VALUES('copilot_org'[user_login])  
+   RETURN  
+   COUNTROWS(  
+       FILTER(  
+           Users,  
+           CALCULATE(  
+               SUM('copilot_org'[suggestions]) +  
+               SUM('copilot_org'[ide_chat_interactions]) +  
+               SUM('copilot_org'[dotcom_chat_interactions]) +  
+               SUM('copilot_org'[pr_summaries_created])  
+           ) > 0  
+       )  
    )
-   ```
 
-    ![](../media/man-e1-g26.png)
+   ![](../media/git_co_man-e1-g32.png)
 
-1. With the **Adoption Rate** measure selected, format it as a percentage: set **Format = Percentage** and turn **Percentage format** to **Yes** (optionally set **Decimal places = 0**).  
+> **Note:** This measure respects slicers/filters (Editor, Language, Date). If you filter to a team/week, *Active Users* reflects only that slice.
 
-   ![](../media/man-e1-g27.png)
+---
 
-1. Return to the **Report** canvas and insert a new **Card** visual.  
+14. Add another measure: **New measure**.
 
-   ![](../media/man-e1-g28.png)
+   ![](../media/git_co_man-e1-g33.png)
 
-1. (If needed) Ensure **total_active_users** is numeric: in **Model** view, select **total_active_users (1)** → open **Data type (2)** → choose **Whole number (3)**.  
+15. (Alternate menu view) **New measure** also appears in the compact context menu.
 
-   ![](../media/man-e1-g29.png)
+   ![](../media/git_co_man-e1-g34.png)
 
-1. On the report page, select the new **Card (1)**, expand **copilot_org_metrics (2)**, and check **Adoption Rate (3)** to bind the measure.  
+16. (Reference) Ensure your **Active Users** formula matches before proceeding.
 
-    ![](../media/man-e1-g30.png)
+   ![](../media/git_co_man-e1-g35.png)
 
-![](../media/man-e1-g31.png)
+---
 
-1. On the **Report** canvas, insert a **Line chart** from **Visualizations**.  
+17. Create **Adoption Rate** and click **✔**.  
+    Formula: Engaged Users ÷ Active Users. (You’ll add **Engaged Users** next task if not already present; for now wire the measure.)
 
-![](../media/man-e1-g32.png)
+   Text to paste:  
+   Adoption Rate = DIVIDE([Engaged Users], [Active Users])
 
-1. With the line chart selected, bind fields from **copilot_org_metrics**:  
-   - **X-axis:** `date`  
-   - **Y-axis:** `total_active_users` → **Sum**  
-   - **Secondary y-axis:** `total_engaged_users` → **Sum**  
+   ![](../media/git_co_man-e1-g36.png)
 
-![](../media/man-e1-g33.png)
+> **Note:** If **Engaged Users** isn’t created yet, you can paste this now; it will light up once that measure exists.
 
-1. Add a **Slicer** visual to the canvas.  
+---
 
-![](../media/man-e1-g34.png)
+### Format the measures (make them exec-friendly)
 
-1. Set the slicer **Field** to `date` from **copilot_org_metrics**.  
+18. Select **Acceptance Rate %** and set **Format = Percentage (1)** and **Decimal places = 2 (2)**.
 
-![](../media/man-e1-g35.png)
+   ![](../media/git_co_man-e1-g37.png)
 
-1. Insert a **Stacked bar chart** (blank placeholder will appear).  
+19. Select **Time Saved (hrs)** and set **Format = Decimal number (1)** and **Decimal places = 2 (2)**.
 
-![](../media/man-e1-g36.png)
+   ![](../media/git_co_man-e1-g38.png)
 
-1. In **Fields**, expand **copilot_org_metrics**. If a node is nested, right-click it and choose **Expand all** to reveal inner fields.  
+20. Select **Adoption Rate** and set **Format = Percentage (1)** and **Decimal places = 2 (2)**.
 
-![](../media/man-e1-g37.png)
+   ![](../media/git_co_man-e1-g39.png)
 
-1. Configure the bar chart:  
-   - **Y-axis:** `total_engaged_users`  
-   - **X-axis:** **Count of** `copilot_ide_chat.editors`  
-
-![](../media/man-e1-g38.png)
-
-1. Insert a **Donut chart**.  
-
-![](../media/man-e1-g39.png)
-
-1. Populate the donut chart:  
-   - **Legend:** `copilot_ide_chat.total_engaged_users`  
-   - **Values:** **Count of** `copilot_dotcom_chat.total_engaged_users`  
-
-![](../media/man-e1-g40.png)
