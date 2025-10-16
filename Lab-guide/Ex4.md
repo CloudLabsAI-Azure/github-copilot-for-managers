@@ -1,6 +1,6 @@
 ## Exercise 4: Report and Drive Adoption
 
-### Estimated Duration: 25 Minutes
+### Estimated Duration: 15 Minutes
 
 ## Overview
 
@@ -118,3 +118,4 @@ In this task, you will create a concise executive readout and package shareable 
 In this exercise, you built a leadership-ready Copilot adoption and ROI dashboard, added dynamic parameters for scenario modeling, and prepared an actionable executive readout. These assets enable data-driven prioritization of enablement and productivity initiatives.
 
 ### You have successfully completed this exercise. Thank you for advancing through the lab series >>
+
