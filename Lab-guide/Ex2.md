@@ -105,8 +105,7 @@ In this task, you’ll add the DAX measures that power all “must-ship” visua
 
 1. Create **Chat Interactions** and click **✔**.
 
-   ```
-   Text to paste:  
+   ``` 
    Chat Interactions =  
    SUM('copilot_org'[ide_chat_interactions]) +  
    SUM('copilot_org'[dotcom_chat_interactions])
@@ -133,8 +132,7 @@ In this task, you’ll add the DAX measures that power all “must-ship” visua
 1. Create **Active Users** and click **✔**.  
     Counts distinct users with any activity (suggestions OR chat OR PR summaries) in current filter context.
 
-   ```
-   Text to paste:  
+   ``` 
    Active Users =  
    VAR Users = VALUES('copilot_org'[user_login])  
    RETURN  
@@ -170,8 +168,9 @@ In this task, you’ll add the DAX measures that power all “must-ship” visua
 1. Create **Adoption Rate** and click **✔**.  
     Formula: Engaged Users ÷ Active Users. (You’ll add **Engaged Users** next task if not already present; for now wire the measure.)
 
-   Text to paste:  
+   ``` 
    Adoption Rate = DIVIDE([Engaged Users], [Active Users])
+   ```
 
    ![](../media/git_co_man-e1-g36.png)
 
