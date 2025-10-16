@@ -1,6 +1,6 @@
 ## Exercise 2: Analyze Manager Adoption Metrics
 
-### Estimated Duration: 45 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 
