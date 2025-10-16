@@ -90,32 +90,36 @@ In this task, you will create a concise executive readout and package shareable 
 
 1. Format & align: Display units = None (cards); percentage KPIs Decimal = 1; page size 16:9, clean layout.
 
-1. (Optional) Bookmark default view: clear slicers to target timeframe → create bookmark with Data + Display.
+### Task: Publish the Power BI report to the Power BI Service
 
-> Acceptance checklist: ROI cards responsive to slicers, improvement bar ranks throughput change, trend line shows adoption over time, KPI row includes hours & savings measures.
+1. In **Power BI Desktop**, select **File** from the top-left menu.  
 
-1. Draft exec readout (optional separate page): include sections Snapshot KPIs, Highlights, Recommendations (30 days), Data Sources.  
+   ![](../media/gt-co-ex1-g8.png)
 
-1. Share/publish: export PDF or PowerPoint; publish to service and share with leadership referencing default bookmark.
+1. In the left pane, select **Publish (1)**, then on the right choose **Publish to Power BI (2)**. 
 
-## Notes
+   ![](../media/gt-co-ex1-g9.png)
 
-- Adjust Seconds Saved & Hourly Rate to match real organization baselines for credible ROI.
-- Consider adding an alternate savings scenario (conservative vs aggressive) via another measure.
-- Bookmark multiple views (Adoption Focus, Productivity Focus) for faster storytelling.
-- Keep an audit log of assumption changes when presenting quarterly results.
+1. When prompted **Do you want to save your changes?**, select **Save**.  
 
-<validation step="ex4-validate-dashboard" />
+   ![](../media/gt-co-ex1-g10.png)
 
-> **Validation Instructions**
-> - Click Validate for this exercise in the lab UI.
-> - Ensure parameter slicers, ROI measures, trend & improvement visuals, and core KPI cards exist.
-> - If validation fails, confirm measure names and parameter values.
-> - Assistance: cloudlabs-support@spektrasystems.com.
+1. In **Save this file**, confirm the name (e.g., `Copilot_PowerBI.pbix`) and select **Save**.  
+
+   ![](../media/gt-co-ex1-g11.png)
+
+1. In **Publish to Power BI**, choose **My workspace (1)** and select **Select (2)**. 
+
+   ![](../media/gt-co-ex1-g12.png)
+
+1. After publishing succeeds, select **Got it**. (You can use the link to open the report in Power BI.)  
+
+   ![](../media/gt-co-ex1-g13.png)
 
 ## Summary
 
 In this exercise, you built a leadership-ready Copilot adoption and ROI dashboard, added dynamic parameters for scenario modeling, and prepared an actionable executive readout. These assets enable data-driven prioritization of enablement and productivity initiatives.
 
 ### You have successfully completed this exercise. Thank you for advancing through the lab series >>
+
 
