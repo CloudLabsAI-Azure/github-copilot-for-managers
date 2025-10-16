@@ -74,67 +74,37 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 ## Let's Get Started with Power BI Portal
 
-1. On the Lab VM, open **Microsoft Edge** from the desktop. In a new tab, navigate to **Microsoft Fabric** by copying and pasting the following URL into the address bar: https://app.powerbi.com/
+1. On the Lab VM, Open **Power BI Desktop** from the desktop of your lab environment.
 
-2. On the **Enter your email, we'll check if you need to create a new account** screen, enter:
+    ![](../media/image105.png)
 
-- **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+1. Click the **Sign-in** icon (top-right).
 
-![](../media/pbi-login-1.png)
+    ![](../media/image200.png)
 
-3. Enter the password and click **Sign in**.
+1. In **Enter your email address**, paste:
 
-- **Password:** <inject key="AzureAdUserPassword"></inject>
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-![](../media/pbi-login-2.png)
+1. In Then select **Continue**.
 
-4. If prompted **Stay Signed in?**, select **No**.
+    ![](../media/image106.png)
 
-![](../media/12062025(3).png)
+1. When prompted again, sign in with:
 
-5. You should now see the **Power BI Portal**.
+     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-![](../media/pbi-portal.png)
+        ![](../media/image101.png)
 
-6. Once logged in, navigate to **Settings (1)** and select **Admin portal (2)** under **Governance and insights**.
+1. Enter the password and **Sign in**.
 
-![](../media/15.png)
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-7. In **Tenant settings (1)**, search for **map (2)**, expand **Map and filled map visuals (3)**. If the toggle is not enabled, switch to **Enabled (4)** and click **Apply (5)**.
+        ![](../media/image102.png)
 
-![](../media/image103.png)
+1. For the prompt **Automatically sign in to all desktop apps and websites on this device?**, select **No, this app only**.
 
-8. Open **Power BI Desktop** from the desktop of your lab environment.
-
-![](../media/image105.png)
-
-9. Click the **Sign-in** icon (top-right).
-
-![](../media/image200.png)
-
-10. In **Enter your email address**, paste:
-
- - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
- Then select **Continue**.
-
- ![](../media/image106.png)
-
-11. When prompted again, sign in with:
-
- - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
- ![](../media/image101.png)
-
-12. Enter the password and **Sign in**.
-
- - **Password:** <inject key="AzureAdUserPassword"></inject>
-
- ![](../media/image102.png)
-
-13. For the prompt **Automatically sign in to all desktop apps and websites on this device?**, select **No, this app only**.
-
- ![](../media/image107.png)
+    ![](../media/image107.png)
 
 ## Support Contact
 
