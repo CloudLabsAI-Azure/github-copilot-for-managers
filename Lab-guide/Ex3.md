@@ -1,6 +1,6 @@
 ## Exercise 3: Calculate Productivity Improvements
 
-### Estimated Duration: 20 Minutes
+### Estimated Duration: 15 Minutes
 
 ## Overview
 
