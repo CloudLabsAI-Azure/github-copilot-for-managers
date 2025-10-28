@@ -153,6 +153,35 @@ In this task, you’ll add the DAX measures that power all “must-ship” visua
 
 > **Note:** This measure respects slicers/filters (Editor, Language, Date). If you filter to a team/week, *Active Users* reflects only that slice.
 
+1. Add another measure: **New measure** from **copilot_org** for Engaged Users.
+
+   ![](../media/git_co_man-e1-g31.png)
+
+   ```
+   Engaged Users =
+   VAR Users = VALUES('copilot_org'[user_login])
+   VAR AcceptThreshold = 1
+   VAR ChatThreshold   = 1
+   VAR PRThreshold     = 0
+   RETURN
+   COUNTROWS(
+       FILTER(
+           Users,
+           CALCULATE( SUM('copilot_org'[acceptances]) ) >= AcceptThreshold
+           || CALCULATE( SUM('copilot_org'[ide_chat_interactions]) + SUM('copilot_org'[dotcom_chat_interactions]) ) >= ChatThreshold
+           || CALCULATE( SUM('copilot_org'[pr_summaries_created]) ) >= PRThreshold
+       )
+   )
+   ```
+1. Add another measure: **New measure** from **copilot_org** for Total Interactions.
+
+   ![](../media/git_co_man-e1-g31.png)
+
+      ```
+      Total Interactions =
+      [Chat Interactions] + SUM('copilot_org'[pr_summaries_created])
+      ```
+
 1. Add another measure: **New measure**.
 
    ![](../media/git_co_man-e1-g33.png)
