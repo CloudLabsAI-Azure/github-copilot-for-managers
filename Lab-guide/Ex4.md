@@ -219,7 +219,7 @@ In this task, you'll publish the dashboard to Power BI Service so it can be shar
    ![](../media/gt-co-ex1-g12.png)
 
 1. When prompted to save changes, click **Save** and provide a meaningful filename like:
-   `GitHub_Copilot_Executive_Dashboard.pbix`
+   `Copilot_PowerBI`
 
    ![](../media/gt-co-ex1-g11.png)
 
@@ -250,5 +250,6 @@ In this task, you'll publish the dashboard to Power BI Service so it can be shar
 ## Summary
 
 In this exercise, you created a comprehensive executive dashboard that transforms Copilot usage data into clear business value metrics. You calculated ROI based on productivity improvements, created scenario analysis capabilities, and published the results to Power BI Service. This dashboard provides executives with the data-driven insights needed to make informed decisions about Copilot expansion and optimization across the organization.
+
 
 ### Congratulations! You have successfully completed the GitHub Copilot for Managers lab series. You now have the skills to measure, analyze, and communicate the business value of GitHub Copilot in your organization.
