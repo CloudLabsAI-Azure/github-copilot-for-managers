@@ -235,14 +235,14 @@ In this task, you will create comprehensive visualizations that transform your d
 
 1. Insert a **Matrix** visual.
 
-   ![](../media/gmang-cor-ex1-g26.png)
+   ![](../media/mang-cor-ex1-g26.png)
 
 1. Configure the matrix:
    - **Rows**: editor_primary
    - **Columns**: language_primary  
    - **Values**: Active Users, Acceptance Rate %
 
-   ![](../media/gmang-cor-ex1-g27.png)
+   ![](../media/mang-cor-ex1-g27.png)
 
    > **Manager Value**: This shows which technology combinations are most successful with Copilot, informing training and tooling decisions.
 
