@@ -1,132 +1,259 @@
-## Exercise 3: Calculate Productivity Improvements
+# Exercise 3: Measure Productivity Impact with PR Analysis
 
 ### Estimated Duration: 15 Minutes
 
 ## Overview
 
-In this exercise, you will translate raw adoption measures into manager-ready productivity indicators. You’ll surface baseline KPI cards (Active Users, Engaged Users, Adoption Rate, Time Saved, Chat Interactions) and introduce slicers that allow stakeholders to segment performance by editor and language. These assets help quantify early value and identify optimization focus areas.
+In this exercise, you will import and analyze pull request (PR) metrics from before and after Copilot adoption to measure concrete productivity improvements. You'll compare baseline metrics with post-adoption metrics to quantify the business impact of GitHub Copilot across development teams.
 
 ## Objectives
 
 You will be able to complete the following tasks:
 
-- Task 1: Establish baseline KPI metrics (create core cards for visibility)
-- Task 2: Compute improvement ratios (add contextual slicers for comparative analysis)
+- Task 1: Import PR baseline and post-adoption data
+- Task 2: Create productivity comparison measures
+- Task 3: Build executive-ready productivity impact visualizations
 
 ## Prerequisites
 
-- Completion of Exercise 2 with core measures already created (Active Users, Engaged Users, Adoption Rate, Time Saved (hrs), Chat Interactions).
-- Power BI report file open with the `copilot_org` dataset loaded.
+- Completion of Exercise 2 with Copilot adoption analysis
+- PR baseline and post-adoption CSV files available
+- Understanding of software development metrics (lead time, cycle time, PR throughput)
 
-## Task 1: Establish Baseline Metrics
+## Task 1: Import and Configure PR Performance Data
 
-In this task, you will build a concise KPI deck using Card visuals to surface the most critical adoption and productivity signals for leadership dashboards.
+In this task, you will load both baseline (pre-Copilot) and post-adoption pull request metrics to establish a comprehensive foundation for measuring concrete productivity improvements. This comparative analysis will provide the quantitative evidence needed to demonstrate Copilot's business impact to stakeholders and executives.
 
-1. On the **Visualizations** pane, switch to **Build visual** and insert a **Card** visual. 
+1. Create a new analysis page by clicking the **+ (plus)** icon next to your existing page tab to add a new sheet.
 
-   ![](../media/git_co_man-e1-g40.png)
+   ![](../media/mang-cor-ex1-g33.png)
 
-1. With the new card selected **(1)**, in **Data** expand your dataset and check **Active Users (2)**. It will land in **Fields (3)** for the card.  
+   >**Organizing Analysis:** Separating adoption metrics from productivity impact analysis helps stakeholders focus on specific aspects of Copilot's value proposition without overwhelming them with too much information at once.
 
-   ![](../media/git_co_man-e1-g41.png)
+1. Rename it to PR Impact.
 
-1. Confirm the card displays the KPI value for **Active Users**.  
+   ![](../media/mang-cor-ex1-g34.png)
 
-   ![](../media/git_co_man-e1-g42.png)
+1. In your existing Power BI report, go to **Home** → **Get data** → **Text/CSV**.
 
-1. Resize the card as needed using the bottom-right drag handle so it reads cleanly on the canvas.  
+   ![](../media/git_co_man-e1-g3.png)
 
-   ![](../media/git_co_man-e1-g43.png)
+1. Browse to **C:\\Copilot_Datasets**, select **pr_baseline.csv**, and click **Open**.
 
-1. Add a second **Card** visual for **Engaged Users** (repeat the insert step).
+   ![](../media/mang-cor-ex1-g35.png)
 
-   ![](../media/git_co_man-e1-g44.png)
+1. In the preview dialog, verify the data looks correct and click **Load**.
 
-1. With the second card selected **(1)**, select **Engaged Users (3)** from **copilot_org (2)** to populate the KPI.  
-   ![](../media/git_co_man-e1-g45.png)
+   ![](../media/mang-cor-ex1-g36.png)
 
-1. Insert a third **Card** visual for **Adoption Rate**. 
+1. Browse to **C:\\Copilot_Datasets**, select **pr_post.csv**, and click **Open**.
 
-   ![](../media/git_co_man-e1-g46.png)
+   ![](../media/mang-cor-ex1-g37.png)
 
-1. Populate the third card with the **Adoption Rate** measure **(3)**. Verify it appears in **Fields (4)** and renders on the canvas **(1)**.  
+1. In the preview dialog, verify the data looks correct and click **Load**.
 
-   ![](../media/git_co_man-e1-g47.png)
+   ![](../media/mang-cor-ex1-g38.png)
 
-1. With the **Adoption Rate** card selected **(1)**, open **Format visual (paint roller) (2)** → **Visual (3)** and set:  
-   - **Display units:** **None (4)**  
-   - **Value decimal places:** **2 (5)**  
-   > **Tip:** Turning off display units avoids “K/M” abbreviations that can hide important precision for percentage KPIs.  
+   > **Understanding Development Productivity Metrics**: 
+> - **Lead Time**: Total time from PR creation to merge, including development work, code reviews, and approval processes - a key indicator of delivery velocity
+> - **Cycle Time**: Active development time spent working on code changes, reflecting developer efficiency and focus
+> - **PR Size**: Lines of code changed per pull request, indicating complexity and scope of individual contributions
+> - **Throughput**: Number of pull requests successfully opened and merged per time period, measuring team delivery capacity
+> 
+> **Manager Value**: These metrics provide objective measures of development team performance that can be tracked over time to demonstrate the concrete business impact of Copilot adoption.## Task 2: Create Comprehensive Productivity Impact Measures
+
+In this task, you'll create sophisticated measures that quantify the concrete productivity improvements achieved through Copilot adoption. These measures will translate development efficiency gains into quantifiable metrics that demonstrate clear business value and ROI to executive stakeholders.
+
+1. Begin creating baseline metrics by right-clicking the **pr_baseline** table in the Data pane and selecting **New measure**. Create the **Baseline Lead Time** measure:
+
+   ![](../media/mang-cor-ex1-g39.png)
+
+   ![](../media/mang-cor-ex2-g1.png)
+
+   >**Understanding Lead Time:** Lead Time measures the total duration from when a pull request is created until it's merged into the main branch. This includes development time, review cycles, and approval processes - a key indicator of delivery velocity.
+
+   ```
+   Baseline Lead Time = AVERAGE('pr_baseline'[lead_time_hours])
+   ```
+
+1. Right-click **pr_post** table → **New measure**. Create **Post-Copilot Lead Time**:
+
+   ![](../media/mang-cor-ex2-g2.png)
+
+
+
+   ```
+   Post-Copilot Lead Time = AVERAGE('pr_post'[lead_time_hours])
+   ```
+
+   ![](../media/mang-cor-ex2-g3.png)
+
+1. Create a **Lead Time Improvement** measure in the **pr_baseline** table:
+
+   ```
+   Lead Time Improvement = [Baseline Lead Time] - [Post-Copilot Lead Time]
+   ```
+
+   ![](../media/mang-cor-ex2-g4.png)
+
+1. Right-click **pr_baseline** table → **New measure**. Create **Lead Time Improvement %**:
+
+   ```
+   Lead Time Improvement % = DIVIDE([Lead Time Improvement], [Baseline Lead Time], 0)
+   ```
+
+   ![](../media/mang-cor-ex2-g5.png)
+
+   Format this as **Percentage** with **1 decimal place**.
+
+   ![](../media/mang-cor-ex2-g6.png)
+
+1. Right-click **pr_baseline** table → **New measure**. Create **Baseline Cycle Time**:
+
+   ```
+   Baseline Cycle Time = AVERAGE('pr_baseline'[cycle_time_hours])
+   ```
+
+   ![](../media/mang-cor-ex2-g7.png)
+
+1. Right-click **pr_post** table → **New measure**. Create **Post-Copilot Cycle Time**:
+
+   ```
+   Post-Copilot Cycle Time = AVERAGE('pr_post'[cycle_time_hours])
+   ```
+
+   ![](../media/mang-cor-ex2-g8.png)
+
+1. Right-click **pr_baseline** table → **New measure**. Create **Cycle Time Improvement %**:
+
+   ```
+   Cycle Time Improvement % = DIVIDE(
+       [Baseline Cycle Time] - [Post-Copilot Cycle Time], 
+       [Baseline Cycle Time], 
+       0
+   )
+   ```
+
+   Format as **Percentage** with **1 decimal place**.
+
+   ![](../media/mang-cor-ex2-g9.png)
+
+1. Right-click **pr_baseline** table → **New measure**. Create **Baseline PRs Merged**:
+
+   ```
+   Baseline PRs Merged = AVERAGE('pr_baseline'[prs_merged])
+   ```
+
+   ![](../media/mang-cor-ex2-g10.png)
+
+1. Right-click **pr_post** table → **New measure**. Create **Post-Copilot PRs Merged**:
+
+   ```
+   Post-Copilot PRs Merged = AVERAGE('pr_post'[prs_merged])
+   ```
+
+   ![](../media/mang-cor-ex2-g11.png)
+
+1. Right-click **pr_baseline** table → **New measure**. Create **Throughput Improvement %**:
+
+   ```
+   Throughput Improvement % = DIVIDE(
+       [Post-Copilot PRs Merged] - [Baseline PRs Merged],
+       [Baseline PRs Merged],
+       0
+   )
+   ```
+
+   ![](../media/mang-cor-ex2-g12.png)
+
+## Task 3: Build Executive-Ready Productivity Impact Dashboard
+
+In this task, you will create compelling visualizations that clearly communicate the tangible productivity improvements achieved through Copilot adoption. These visuals will serve as powerful storytelling tools for executive presentations and business case justifications.
+
+### A. Create High-Impact Productivity KPI Cards
+
+1. Begin by inserting **Card** visuals that highlight your most important productivity metrics. Click the **Card** visual icon in the **Visualizations** pane:
+
+   ![](../media/mang-cor-ex2-g13.png)
+
+   >**Executive Communication:** Card visuals provide immediate visual impact by prominently displaying key metrics. They're perfect for executive dashboards where stakeholders need to quickly grasp performance improvements.
+
+1. Create cards for these measures:
+   - **Lead Time Improvement %**
+
+   ![](../media/mang-cor-ex2-g14.png)
+
+   - **Cycle Time Improvement %** 
+   - **Throughput Improvement %**
+
+   ![](../media/mang-cor-ex2-g15.png)
+
+   > **Manager Value**: These cards immediately show the quantifiable impact of Copilot investment with clear percentage improvements.
+
+### B. Create Team Performance Comparison
+
+1. Insert a **Clustered bar chart**.
+
+   ![](../media/mang-cor-ex2-g16.png)
+
+1. Configure the chart:
+   - **Y-axis**: team (from pr_baseline)
+   - **X-axis**: Lead Time Improvement %
+   - **Legend**: (none needed)
+
+   ![](../media/mang-cor-ex2-g17.png)
+
+   > **Manager Insight**: This shows which teams are benefiting most from Copilot, helping identify best practices to share across the organization.
+
+### C. Create Before/After Metrics Table
+
+1. Insert a **Matrix** visual.
+
+   ![](../media/mang-cor-ex2-g18.png)
+
+1. Configure the matrix:
+   - **Rows**: team
+   - **Values**: 
+     - Baseline Lead Time
+     - Post-Copilot Lead Time
+     - Lead Time Improvement %
+     - Throughput Improvement %
    
-   ![](../media/git_co_man-e1-g48.png)
+      ![](../media/mang-cor-ex2-g19.png)
 
-1. Still on the **Adoption Rate** card, go to **Format visual** → **General (3)**. Under **Apply settings to (4)** make sure **Adoption Rate** is selected, then set:  
-    - **Format:** **Percentage (5)**  
-    - **Decimal places:** **2 (6)**  
-    > **Note:** If your measure already returns a fraction (e.g., 0.42), formatting as **Percentage** renders **42.00%** without changing the underlying calculation.
-    
-    ![](../media/git_co_man-e1-g49.png)
+   > **Executive Value**: This provides a comprehensive view of improvements across all teams in a single table format.
 
-1. **Add “Time Saved (hrs)” KPI card**  
-    In **Visualizations**, keep **Build visual** selected and click the **Card** visual.  
-    
-    ![](../media/git_co_man-e1-g50.png)
+### D. Add Team Performance Slicers
 
-1. **Bind the Time Saved (hrs) measure**  
-    Select the new card, then in **Data** check **Time Saved (hrs)** so it appears in **Fields** and renders on the canvas.  
-    
-    ![](../media/git_co_man-e1-g51.png)
+1. Insert a **Slicer** for **team** from the pr_baseline table with **Tile** style.
 
-1. **Add a “Chat Interactions” KPI card**  
-    With **Build visual** selected, click **Card** again to insert another card.  
-    
-    ![](../media/git_co_man-e1-g52.png)
+   ![](../media/mang-cor-ex2-g20.png)
 
-## Task 2: Compute Improvement Ratios
+   ![](../media/mang-cor-ex2-g21.png)
 
-In this task, you will add interactive slicers enabling comparative analysis (e.g., how adoption differs by editor or language) to contextualize the baseline KPIs and guide targeted enablement strategies.
+1. This allows filtering all visuals by specific teams to focus analysis.
 
-1. In **Visualizations (1)**, click the **Slicer** visual (2) to insert a slicer onto the page.
-
-   ![](../media/git_co_man-e1-g60.png)
-
-1. With the slicer selected (1), set **Field (2)** to **editor_primary** to filter by IDE/editor.
-
-   ![](../media/git_co_man-e1-g61.png)
-
-1. Format the slicer: select the slicer (1) → go to **Format visual (2)** → **Visual (3)** → expand **Slicer settings (4)** → set **Style (5)** to **Tile**.
-
-   ![](../media/git_co_man-e1-g62.png)
-
-1. Insert another **Slicer**: in **Visualizations (1)** choose **Slicer (2)** to add a second slicer.
-
-   ![](../media/git_co_man-e1-g63.png)
-
-1. With the new slicer selected (1), set **Field (2)** to **language_primary** to filter by primary language.
-
-   ![](../media/git_co_man-e1-g64.png)
-
-1. Format the language slicer to tiles: select the slicer (1) → **Format visual (2)** → **Visual (3)** → set **Style (4)** to **Tile**.
-
-   ![](../media/git_co_man-e1-g65.png)
+   ![](../media/mang-cor-ex2-g22.png)
 
 ## Notes
 
-- Ensure all measures come from the same semantic model to avoid duplicated logic.
-- Arrange KPI cards in a consistent left-to-right reading order: Adoption Rate, Active Users, Engaged Users, Time Saved (hrs), Chat Interactions (or adapt to your executive priorities).
-- Consider conditional formatting (color rules) once thresholds for “healthy adoption” are defined.
-- Slicers can be synchronized across pages later if you build a multi-page report.
+- **Positive improvements** in lead time and cycle time reductions indicate faster delivery
+- **Increased throughput** shows teams are completing more work in the same time
+- Use the team slicer to analyze which teams are seeing the most benefit from Copilot
+- Focus on teams with significant improvements to identify success patterns that can be replicated
+- Consider that different teams may show benefits in different areas (some in speed, others in throughput)
 
 <validation step="ex3-validate-productivity" />
 
-> **Validation Instructions**
-> - Click the Validate button for this exercise in the lab environment UI.
-> - Confirm all KPI cards render expected values and slicers filter them dynamically.
-> - If validation fails, verify that prerequisite measures were created in Exercise 2.
-> - For assistance email: cloudlabs-support@spektrasystems.com.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
 ## Summary
 
-In this exercise, you elevated core adoption metrics into a productivity-focused KPI layout and added segmentation controls (editor and language) to support comparative insights. This prepares the ground for advanced efficiency modeling and trend storytelling in subsequent exercises.
+In this exercise, you successfully measured the concrete productivity impact of GitHub Copilot by establishing comprehensive before-and-after comparisons using pull request metrics. You created sophisticated measures that quantify lead time reductions, cycle time improvements, and throughput increases, transforming technical improvements into business-relevant insights. The executive-ready visualizations you built provide compelling evidence of Copilot's value proposition, giving you the quantitative foundation needed for ROI calculations and strategic decision-making. This productivity analysis, combined with your adoption metrics from Exercise 2, creates a comprehensive view of Copilot's organizational impact that will be essential for the final ROI dashboard in Exercise 4.
 
-### You have successfully completed this exercise. Please continue to the next one >>
+### You have successfully completed this exercise, please continue to next one >>
+
+   ![](../media/a-gs-g2.png)
