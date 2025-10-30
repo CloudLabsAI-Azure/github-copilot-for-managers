@@ -224,19 +224,17 @@ In this task, you will create compelling visualizations that clearly communicate
 
 ### A. Create High-Impact Productivity KPI Cards
 
-1. Begin by inserting **Card** visuals that highlight your most important productivity metrics. Click the **Card** visual icon in the **Visualizations** pane:
+1. In the **Visualizations** pane, click the **Card** icon (1) to insert a new card visual (2) onto your report canvas (3).
 
    ![](../media/mang-cor-ex2-g13.png)
 
    >**Executive Communication:** Card visuals provide immediate visual impact by prominently displaying key metrics. They're perfect for executive dashboards where stakeholders need to quickly grasp performance improvements.
 
-1. Create cards for these measures:
-   - **Lead Time Improvement %**
+1. From the **pr_baseline** table (1), select the field **Lead Time Improvement %** (2) to populate the card visual (3).
 
       ![](../media/mang-cor-ex2-g14.png)
 
-   - **Cycle Time Improvement %** 
-   - **Throughput Improvement %**
+1. Repeat the same steps to create additional **Card** visuals for **Cycle Time Improvement %** and **Throughput Improvement %** to display their respective KPI values.
 
    ![](../media/mang-cor-ex2-g15.png)
 
@@ -244,46 +242,54 @@ In this task, you will create compelling visualizations that clearly communicate
 
 ### B. Create Team Performance Comparison
 
-1. Insert a **Clustered bar chart**.
+1. In the **Visualizations** pane, click the **Clustered bar chart** icon (2) to insert a new bar chart visual (3) onto your report canvas.
 
    ![](../media/mang-cor-ex2-g16.png)
 
-1. Configure the chart:
-   - **Y-axis**: team (from pr_baseline)
-   - **X-axis**: Lead Time Improvement %
-   - **Legend**: (none needed)
+1. In the **pr_baseline** table (1), drag **team** (2) to the **Y-axis**.  
 
-   ![](../media/mang-cor-ex2-g17.png)
+   - Drag **Lead Time Improvement %** (3) to the **X-axis**.  
+   - The clustered bar chart (4) will now display **Lead Time Improvement % by team**.
 
-   > **Manager Insight**: This shows which teams are benefiting most from Copilot, helping identify best practices to share across the organization.
+      ![](../media/mang-cor-ex2-g17.png)
+
+      > **Manager Insight**: This shows which teams are benefiting most from Copilot, helping identify best practices to share across the organization.
 
 ### C. Create Before/After Metrics Table
 
-1. Insert a **Matrix** visual.
+1. In the **Visualizations** pane, click the **Matrix** icon (2) to insert a new matrix visual (3) onto your report canvas.
 
    ![](../media/mang-cor-ex2-g18.png)
 
 1. Configure the matrix:
    - **Rows**: team
    - **Values**: 
-     - Baseline Lead Time
-     - Post-Copilot Lead Time
-     - Lead Time Improvement %
-     - Throughput Improvement %
+     - **Baseline Lead Time**
+     - **Post-Copilot Lead Time**
+     - **Lead Time Improvement %**
+     - **Throughput Improvement %**
    
       ![](../media/mang-cor-ex2-g19.png)
 
-   > **Executive Value**: This provides a comprehensive view of improvements across all teams in a single table format.
+      > **Executive Value**: This provides a comprehensive view of improvements across all teams in a single table format.
 
 ### D. Add Team Performance Slicers
 
-1. Insert a **Slicer** for **team** from the pr_baseline table with **Tile** style.
+1. In the **Visualizations** pane, click the **Slicer** icon (1).  
 
-   ![](../media/mang-cor-ex2-g20.png)
+   - From the **pr_baseline** table, select the **team** field (2).  
+   - The slicer visual (3) will appear on the canvas, allowing filtering by team.
 
-   ![](../media/mang-cor-ex2-g21.png)
+      ![](../media/mang-cor-ex2-g20.png)
 
-1. This allows filtering all visuals by specific teams to focus analysis.
+1. Select the **slicer visual (1)**, then click the **Format visual** icon **(2)**.  
+
+   - Under the **Visual (3)** tab, expand **Slicer settings (4)**.  
+   - In **Options**, set the **Style** to **Tile (5)**.
+
+      ![](../media/mang-cor-ex2-g21.png)
+
+1. Select a team tile in the slicer (1) to instantly filter and update all connected visuals (2) on the dashboard.
 
    ![](../media/mang-cor-ex2-g22.png)
 
