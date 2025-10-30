@@ -237,19 +237,10 @@ In this task, you'll publish the dashboard to Power BI Service so it can be shar
 - **Show team-level results** - helps identify where additional training or support might be needed
 - **Consider additional benefits** like improved code quality, reduced bugs, and developer satisfaction in narrative
 
-<validation step="ex4-validate-executive-dashboard" />
-
-> **Validation Instructions**
-> - Click the Validate button for this exercise in the lab environment UI.
-> - Confirm ROI calculations show reasonable results and parameters work correctly
-> - Verify the dashboard publishes successfully to Power BI Service
-> - Check that all measures calculate without errors
-> - If validation fails, verify that all prerequisite measures from Exercises 2-3 are available
-> - For assistance email: cloudlabs-support@spektrasystems.com.
-
 ## Summary
 
 In this exercise, you created a comprehensive executive dashboard that transforms Copilot usage data into clear business value metrics. You calculated ROI based on productivity improvements, created scenario analysis capabilities, and published the results to Power BI Service. This dashboard provides executives with the data-driven insights needed to make informed decisions about Copilot expansion and optimization across the organization.
 
 
 ### Congratulations! You have successfully completed the GitHub Copilot for Managers lab series. You now have the skills to measure, analyze, and communicate the business value of GitHub Copilot in your organization.
+
