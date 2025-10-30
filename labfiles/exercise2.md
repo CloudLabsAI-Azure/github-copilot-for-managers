@@ -269,13 +269,6 @@ In this task, you will create comprehensive visualizations that transform your d
 - Use this data to identify Copilot champions who can help train others
 - Consider the experience level (role) when analyzing adoption - senior developers might use chat more while junior developers might rely more on code suggestions
 
-<validation step="ex2-validate-adoption" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
-
 ## Summary
 
 In this exercise, you successfully transformed raw Copilot usage data into meaningful management insights through comprehensive adoption and engagement analysis. You created strategic measures that help managers identify high-performing teams, understand technology preferences, and spot areas where additional support or training may be needed. The interactive dashboards you built provide the foundation for data-driven decisions about Copilot program optimization. These adoption metrics will now serve as the baseline for measuring productivity improvements in the next exercise, creating a complete picture of Copilot's organizational impact.
