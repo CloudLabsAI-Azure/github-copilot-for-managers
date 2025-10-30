@@ -1,4 +1,4 @@
-# Exercise 1: Enable & Access Copilot Usage Reports
+# Exercise 1: Enable & Access Copilot Usage Reports (Read Only)
 
 ### Estimated Duration: 15 Minutes
 
