@@ -28,7 +28,7 @@ In this task, you will load the GitHub Copilot organization usage data into Powe
 
    ![](../media/git_co_man-e1-g1.png)
 
-   >**Getting Started:** Power BI Desktop is a free application that allows you to connect to, transform, and visualize your data. It's the primary tool for creating interactive reports and dashboards.
+   >**Getting Started:** Power BI Desktop allows you to connect to, transform, and visualize your data. It's the primary tool for creating interactive reports and dashboards.
 
 1. In the app window, click **Sign in** (top-right) to start the login process.
 
@@ -59,7 +59,7 @@ In this task, you will load the GitHub Copilot organization usage data into Powe
 
    ![](../media/mang-cor-ex1-g6.png)
 
-1. Verify that you are signed in successfully — your username will appear in the top-right corner.
+1. Verify that you are signed in successfully your username will appear in the top-right corner.
 
    ![](../media/mang-cor-ex1-g7.png)
 
@@ -96,13 +96,13 @@ In this task, you'll create essential calculated measures that transform raw usa
 
 > **Manager's Perspective:** As a manager, you need metrics that answer critical questions: Who's actively using Copilot? How effectively are they using it? Which teams are seeing the best results? These measures provide those answers in quantifiable terms.
 
-1. In the **Data** pane on the right side of Power BI Desktop, right-click your **copilot_org (1)** table and choose **New measure (2)** from the context menu.
+1. In the **Data (1)** pane on the right side of Power BI Desktop, right-click your **copilot_org (2)** table and choose **New measure (3)** from the context menu.
 
    ![](../media/git_co_man-e1-g20.png)
 
    >**Understanding Measures:** Measures are calculations that Power BI performs on your data in real-time. Unlike columns which store data, measures calculate values dynamically based on your current filters and selections.
 
-1. Create **Active Users** - users with Copilot activity and Click **✔** to confirm the measure.
+1. Create a new measure named **Active Users (1)**: in the formula bar **(1)** paste the DAX below, then select **✔ (2)** to confirm
 
    ```
    Active Users = DISTINCTCOUNT('copilot_org'[user_login])
@@ -110,25 +110,33 @@ In this task, you'll create essential calculated measures that transform raw usa
 
    ![](../media/mang-cor-ex1-g10.png)
 
-1. Add another measure: right-click **copilot_org** → **New measure**. Create **Total Suggestions**:
+1. Add another measure: right-click your **copilot_org (2)** table and choose **New measure (3)** from the context menu.
+
+   ![](../media/git_co_man-e1-g20.png)
+
+1. Create **Total Suggestions** : in the formula bar **(1)** paste the DAX below, then select **✔ (2)** to confirm
 
    ```
    Total Suggestions = SUM('copilot_org'[suggestions])
    ```
 
-   ![](../media/git_co_man-e1-g20.png)
-
    ![](../media/mang-cor-ex1-g11.png)
 
-1. Create **Total Acceptances**:
+1. Add another measure: right-click your **copilot_org (2)** table and choose **New measure (3)** from the context menu.
+
+   ![](../media/git_co_man-e1-g20.png)
+
+1. Create **Total Acceptances**: in the formula bar **(1)** paste the DAX below, then select **✔ (2)** to confirm
 
    ```
    Total Acceptances = SUM('copilot_org'[acceptances])
    ```
 
-   ![](../media/git_co_man-e1-g20.png)
-
    ![](../media/mang-cor-ex1-g12.png)
+
+1. Add another measure: right-click your **copilot_org (2)** table and choose **New measure (3)** from the context menu.
+
+   ![](../media/git_co_man-e1-g20.png)
 
 1. Create **Acceptance Rate %** to measure code suggestion quality:
 
@@ -136,11 +144,13 @@ In this task, you'll create essential calculated measures that transform raw usa
    Acceptance Rate % = DIVIDE([Total Acceptances], [Total Suggestions], 0)
    ```
 
-   ![](../media/git_co_man-e1-g20.png)
-
    ![](../media/mang-cor-ex1-g13.png)
 
    > **Manager Insight**: Acceptance rate indicates how relevant Copilot suggestions are. Higher rates (>50%) typically indicate better user adoption and tool effectiveness.
+
+1. Add measure: right-click your **copilot_org (2)** table and choose **New measure (3)** from the context menu.
+
+   ![](../media/git_co_man-e1-g20.png)
 
 1. Create **Chat Users** to identify users leveraging AI chat:
 
@@ -153,6 +163,10 @@ In this task, you'll create essential calculated measures that transform raw usa
 
    ![](../media/mang-cor-ex1-g14.png)
 
+1. Add measure: right-click your **copilot_org (2)** table and choose **New measure (3)** from the context menu.
+
+   ![](../media/git_co_man-e1-g20.png)
+
 1. Create **Total Chat Interactions**:
 
    ```
@@ -162,6 +176,10 @@ In this task, you'll create essential calculated measures that transform raw usa
    ```
 
    ![](../media/mang-cor-ex1-g15.png)
+
+1. Add measure: right-click your **copilot_org (2)** table and choose **New measure (3)** from the context menu.
+
+   ![](../media/git_co_man-e1-g20.png)
 
 1. Create **Highly Engaged Users** (users with significant activity):
 
@@ -175,6 +193,10 @@ In this task, you'll create essential calculated measures that transform raw usa
    ![](../media/mang-cor-ex1-g16.png)
 
    > **Manager Insight**: Highly engaged users are those accepting 10+ suggestions, indicating they're getting substantial value from Copilot.
+
+1. Add measure: right-click your **copilot_org (2)** table and choose **New measure (3)** from the context menu.
+
+   ![](../media/git_co_man-e1-g20.png)
 
 1. Create **Team Adoption Rate**:
 
@@ -190,7 +212,7 @@ In this task, you will create comprehensive visualizations that transform your d
 
 ### A. Create Team Performance Overview Dashboard
 
-1. First, rename your report page for better organization. Right-click on the page tab at the bottom and select **Rename**. Change it to **Copilot Adoption**.
+1. Rename your report page for better organization. Right-click on the page tab at the bottom and select **Rename**. Change it to **Copilot Adoption**.
 
    ![](../media/mang-cor-ex1-g32.png)
 
@@ -200,21 +222,34 @@ In this task, you will create comprehensive visualizations that transform your d
 
    ![](../media/mang-cor-ex1-g18.png)
 
-1. Add these fields to the table:
-   - **Rows**: team
-   - **Values**: Active Users, Highly Engaged Users, Team Adoption Rate, Total Acceptances
+1. Add these fields to the table under the **Columns**.
 
-   ![](../media/mang-cor-ex1-g19.png)
+   - **team (1)**
+   - **Active Users (2)**
+   - **Highly Engaged Users (3)**
+   - **Team Adoption Rate (4)**
+   - **Total Acceptances (5)**
+
+      ![](../media/mang-cor-ex1-g19.png)
+
+1. Once all columns are added, the table will display the metrics for each team. Review the created table — it should look like the example below.  
 
    ![](../media/mang-cor-ex1-g20.png)
 
    > **Manager Value**: This table shows which teams are adopting Copilot most effectively and where you might need additional training or support.
 
- ![](../media/mang-cor-ex1-g21.png)
+1. Format the **Table** visual for better presentation:
+
+   - Select the **Table** visual **(1)**.
+   - Open the **Visualizations** pane **(2)**.
+   - Under the **Format visual** section, select **General (3)**.
+   - In the **Effects** area, turn **On** the **Background**, **Visual border**, and **Shadow** options **(4)**.   
+
+      ![](../media/mang-cor-ex1-g21.png)
 
 ### B. Create User Engagement Analysis
 
-1. Insert a **Clustered bar chart**.
+1. Insert a **Clustered bar chart**: in the **Visualizations** pane, select the **Bar chart** icon (1), then click **Clustered bar chart** (2). A blank visual will appear on the canvas (3). 
 
    ![](../media/mang-cor-ex1-g22.png)
 
@@ -223,9 +258,13 @@ In this task, you will create comprehensive visualizations that transform your d
    - **X-axis**: Total Acceptances
    - **Legend**: team
 
-   ![](../media/mang-cor-ex1-g23.png)
+      ![](../media/mang-cor-ex1-g23.png)
+
+1. Review the chart — it should resemble the example below.
 
    ![](../media/mang-cor-ex1-g24.png)
+
+1. Notice that when you click a **team** in the bar chart (1), the corresponding data in the **table visual** (2) automatically updates — showing interactive filtering between visuals.
 
    ![](../media/mang-cor-ex1-g25.png)
 
@@ -233,30 +272,34 @@ In this task, you will create comprehensive visualizations that transform your d
 
 ### C. Create Technology Adoption Matrix
 
-1. Insert a **Matrix** visual.
+1. Insert a **Matrix** visual: in the **Visualizations (1)** pane, select the **Matrix (2)** icon; a **blank matrix visual (3)** will appear on the canvas.
 
    ![](../media/mang-cor-ex1-g26.png)
 
-1. Configure the matrix:
-   - **Rows**: editor_primary
-   - **Columns**: language_primary  
-   - **Values**: Active Users, Acceptance Rate %
+1. Configure the **Matrix** visual as shown below:  
+   - **Rows (1):** editor_primary  
+   - **Columns (2):** language_primary  
+   - **Values (3):** Active Users, Acceptance Rate %  
 
-   ![](../media/mang-cor-ex1-g27.png)
+      ![](../media/mang-cor-ex1-g27.png)
 
-   > **Manager Value**: This shows which technology combinations are most successful with Copilot, informing training and tooling decisions.
+      > **Manager Value**: This shows which technology combinations are most successful with Copilot, informing training and tooling decisions.
 
 ### D. Add Interactive Filters
 
-1. Insert a **Slicer** for **team** with **Tile** style.
+1. Insert a **Slicer** for **team**: in the **Visualizations (1)** pane, select the **Slicer (2)** icon; a **blank slicer visual (3)** will appear on the canvas.
 
    ![](../media/mang-cor-ex1-g28.png)
 
-1. Insert a **Slicer** for **role** with **Tile** style.
+1. Configure the **Slicer** visual: add **team (1)** and **role (2)** fields under **Field** to enable filtering by both attributes.
 
    ![](../media/mang-cor-ex1-g29.png)
 
+1. Test the **Slicer** interactivity: select a **team (1)** and a specific **role (2)** — observe that all visuals dynamically update to reflect the selected filters.  
+
    ![](../media/mang-cor-ex1-g30.png)
+
+1. Select another **team (growth)** from the **Slicer** to verify that all visuals update dynamically based on the selected filter. 
 
    ![](../media/mang-cor-ex1-g31.png)
 
@@ -274,5 +317,3 @@ In this task, you will create comprehensive visualizations that transform your d
 In this exercise, you successfully transformed raw Copilot usage data into meaningful management insights through comprehensive adoption and engagement analysis. You created strategic measures that help managers identify high-performing teams, understand technology preferences, and spot areas where additional support or training may be needed. The interactive dashboards you built provide the foundation for data-driven decisions about Copilot program optimization. These adoption metrics will now serve as the baseline for measuring productivity improvements in the next exercise, creating a complete picture of Copilot's organizational impact.
 
 ### You have successfully completed this exercise, please continue to next one >>
-
-   ![](../media/a-gs-g2.png)
