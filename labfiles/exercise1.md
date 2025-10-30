@@ -1,10 +1,10 @@
-# Exercise 1: Enable & Access Copilot Usage Reports
+# Exercise 1: Enable & Access Copilot Usage Reports (Read Only)
 
 ### Estimated Duration: 15 Minutes
 
 ## Overview
 
-In this exercise, you will enable and access GitHub Copilot organization-level usage reports to establish foundational visibility for managers and program owners. You will learn how to request activity reports that provide crucial data about adoption patterns, user engagement, and usage metrics across your organization. These reports form the basis for the comprehensive analytics dashboard you'll build in subsequent exercises, enabling data-driven decisions about Copilot deployment and optimization.
+In this exercise (Read Only), you will enable and access GitHub Copilot organization-level usage reports to establish foundational visibility for managers and program owners. You will learn how to request activity reports that provide crucial data about adoption patterns, user engagement, and usage metrics across your organization. These reports form the basis for the comprehensive analytics dashboard you'll build in subsequent exercises, enabling data-driven decisions about Copilot deployment and optimization.
 
 ## Objectives
 
