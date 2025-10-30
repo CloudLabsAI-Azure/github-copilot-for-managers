@@ -26,38 +26,9 @@ In this task, you will load the GitHub Copilot organization usage data into Powe
 
 1. Launch **Power BI Desktop** from the desktop shortcut in your lab environment.
 
-   ![](../media/git_co_man-e1-g1.png)
+   ![](../media/mang-cor-c1.png)
 
    >**Getting Started:** Power BI Desktop allows you to connect to, transform, and visualize your data. It's the primary tool for creating interactive reports and dashboards.
-
-1. In the app window, click **Sign in** (top-right) to start the login process.
-
-   ![](../media/mang-cor-ex1-g1.png)
-
-1. On **Enter your email address**, type the following and click **Continue**.
-   - Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-      ![](../media/mang-cor-ex1-g2.png)
-
-1. On the **Sign in** screen, enter the following email and click **Next**.
-
-   - Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-      ![](../media/mang-cor-ex1-g3.png)
-
-1. On the **Enter password** screen, type the following password and click **Sign in**.
-
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
-
-      ![](../media/mang-cor-ex1-g4.png)
-
-1. On the **Automatically sign in to all desktop apps and websites** prompt, select **No, this app only**.
-
-   ![](../media/mang-cor-ex1-g5.png)
-
-1. When the **Power BI free license assigned** message appears, click **OK** to continue.
-
-   ![](../media/mang-cor-ex1-g6.png)
 
 1. Verify that you are signed in successfully your username will appear in the top-right corner.
 
