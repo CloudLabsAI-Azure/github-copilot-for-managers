@@ -32,8 +32,6 @@ You'll progress through a comprehensive four-exercise journey:
 
 ## Architecture Diagram
 
-![](../media/arch1.PNG)
-
 ## Explanation of Components
 
 - **GitHub Copilot Usage Reports:** Activity reports providing comprehensive per-user metrics including code suggestions, acceptances, chat interactions, and technology preferences for adoption analysis.
