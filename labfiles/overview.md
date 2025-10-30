@@ -1,4 +1,4 @@
-# GitHub Copilot for Managers
+# Measuring GitHub Copilot Impact for Managers
 
 ### Estimated Duration: 1 Hour
 
