@@ -81,5 +81,3 @@ In this task, you will initiate the report generation process and obtain the CSV
 In this exercise, you successfully enabled GitHub Copilot usage reporting and initiated the Activity report generation process. You learned how to navigate the administrative settings, request comprehensive usage data, and understand the value of this information for management decision-making. The CSV dataset you obtained now serves as the authoritative foundation for all subsequent adoption analysis, engagement metrics, and ROI calculations you'll perform in the following exercises. This data-driven approach ensures your Copilot program decisions are based on concrete evidence rather than assumptions.
 
 ### You have successfully completed this exercise, please continue to next one >>
-
-   ![](../media/a-gs-g2.png)
