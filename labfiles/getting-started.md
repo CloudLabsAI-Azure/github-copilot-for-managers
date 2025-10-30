@@ -45,7 +45,7 @@ You'll progress through a comprehensive four-exercise journey:
 
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](../media/12062025(0)new.png)
+![](../media/mang-cor-c2.png)
 
 ## Virtual Machine & Lab Guide
 
@@ -55,7 +55,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![](../media/power-02new.png)
+![](../media/mang-cor-c3.png)
 
 ## Utilizing the Split Window Feature
 
@@ -67,7 +67,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 On the **Resources (1)** tab, use the **Action buttons (2)** next to your VM. Feel free to **start**, **stop**, or **restart** your Virtual Machine as needed. Your experience is in your hands!
 
-![](../media/power-04new.png)
+![](../media/mang-cor-c4.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
@@ -81,33 +81,35 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
     ![](../media/image105.png)
 
-1. Click the **Sign-in** icon (top-right).
+1. In the app window, click **Sign in** (top-right) to start the login process.
 
     ![](../media/image200.png)
 
-1. In **Enter your email address**, paste:
+1. On **Enter your email address (1)** and click **Continue (2)**
 
     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-1. In Then select **Continue**.
+      ![](../media/mang-cor-ex1-g2.png)
 
-    ![](../media/image106.png)
+1. When prompted again, sign in with the email and click **Next (2)**.
 
-1. When prompted again, sign in with:
+     - **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
 
-     - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+      ![](../media/mang-cor-ex1-g3.png)
 
-        ![](../media/image101.png)
-
-1. Enter the password and **Sign in**.
+1. Enter the **password (1)** and click **Sign in (2)**.
 
     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-        ![](../media/image102.png)
+      ![](../media/mang-cor-ex1-g4.png)
 
 1. For the prompt **Automatically sign in to all desktop apps and websites on this device?**, select **No, this app only**.
 
-    ![](../media/image107.png)
+   ![](../media/mang-cor-ex1-g5.png)
+
+1. If the **Power BI free license assigned** message appears, click **OK** to continue.
+
+   ![](../media/mang-cor-ex1-g6.png)
 
 ## Support Contact
 
