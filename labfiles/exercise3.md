@@ -30,15 +30,19 @@ In this task, you will load both baseline (pre-Copilot) and post-adoption pull r
 
    >**Organizing Analysis:** Separating adoption metrics from productivity impact analysis helps stakeholders focus on specific aspects of Copilot's value proposition without overwhelming them with too much information at once.
 
-1. Rename it to PR Impact.
+1. Rename it to **PR Impact**.
 
    ![](../media/mang-cor-ex1-g34.png)
 
-1. In your existing Power BI report, go to **Home** → **Get data** → **Text/CSV**.
+1. On the **Home** tab (1), click **Get data** (2) to start importing your dataset into Power BI Desktop.
 
    ![](../media/git_co_man-e1-g3.png)
 
-1. Browse to **C:\\Copilot_Datasets**, select **pr_baseline.csv**, and click **Open**.
+1. In **Get Data**, choose **Text/CSV (1)** and select **Connect (2)**.
+
+   ![](../media/git_co_man-e1-g16.png)
+
+1. Navigate to **C:\\Copilot_Datasets** (1), select the file **pr_baseline.csv** (2), and click **Open** (3) to import it into Power BI.
 
    ![](../media/mang-cor-ex1-g35.png)
 
@@ -46,7 +50,15 @@ In this task, you will load both baseline (pre-Copilot) and post-adoption pull r
 
    ![](../media/mang-cor-ex1-g36.png)
 
-1. Browse to **C:\\Copilot_Datasets**, select **pr_post.csv**, and click **Open**.
+1. Again on the **Home** tab (1), click **Get data** (2) to start importing your dataset into Power BI Desktop.
+
+   ![](../media/git_co_man-e1-g3.png)
+
+1. In **Get Data**, choose **Text/CSV (1)** and select **Connect (2)**.
+
+   ![](../media/git_co_man-e1-g16.png)
+
+1. Navigate to **C:\\Copilot_Datasets** (1), select the file **pr_post.csv** (2), and click **Open** (3) to import the post-adoption dataset.
 
    ![](../media/mang-cor-ex1-g37.png)
 
@@ -64,23 +76,25 @@ In this task, you will load both baseline (pre-Copilot) and post-adoption pull r
 
 In this task, you'll create sophisticated measures that quantify the concrete productivity improvements achieved through Copilot adoption. These measures will translate development efficiency gains into quantifiable metrics that demonstrate clear business value and ROI to executive stakeholders.
 
-1. Begin creating baseline metrics by right-clicking the **pr_baseline** table in the Data pane and selecting **New measure**. Create the **Baseline Lead Time** measure:
+1. In the **Data** pane, right-click the **pr_baseline** table (1) and select **New measure** (2) to create a new DAX measure.
 
    ![](../media/mang-cor-ex1-g39.png)
 
-   ![](../media/mang-cor-ex2-g1.png)
+1. In the formula bar, enter the DAX expression for the measure (1) and click **✔** (2) to confirm.
 
-   >**Understanding Lead Time:** Lead Time measures the total duration from when a pull request is created until it's merged into the main branch. This includes development time, review cycles, and approval processes - a key indicator of delivery velocity.
+   ![](../media/mang-cor-ex2-g1.png)
 
    ```
    Baseline Lead Time = AVERAGE('pr_baseline'[lead_time_hours])
    ```
 
-1. Right-click **pr_post** table → **New measure**. Create **Post-Copilot Lead Time**:
+   >**Understanding Lead Time:** Lead Time measures the total duration from when a pull request is created until it's merged into the main branch. This includes development time, review cycles, and approval processes - a key indicator of delivery velocity.
+
+1. In the **Data** pane, right-click the **pr_post** table (1) and choose **New measure** (2) to create a post-adoption measure.
 
    ![](../media/mang-cor-ex2-g2.png)
 
-
+1. In the formula bar, enter the DAX expression for the post-adoption measure (1) and click **✔** (2) to confirm.
 
    ```
    Post-Copilot Lead Time = AVERAGE('pr_post'[lead_time_hours])
@@ -88,7 +102,11 @@ In this task, you'll create sophisticated measures that quantify the concrete pr
 
    ![](../media/mang-cor-ex2-g3.png)
 
-1. Create a **Lead Time Improvement** measure in the **pr_baseline** table:
+1. In the **Data** pane, right-click the **pr_baseline** table (1) and select **New measure** (2) to create a new DAX measure.
+
+   ![](../media/mang-cor-ex1-g39.png)
+
+1. Paste the DAX for **Lead Time Improvement** in the formula bar (1), then click **✔** (2) to create the measure.
 
    ```
    Lead Time Improvement = [Baseline Lead Time] - [Post-Copilot Lead Time]
@@ -96,7 +114,11 @@ In this task, you'll create sophisticated measures that quantify the concrete pr
 
    ![](../media/mang-cor-ex2-g4.png)
 
-1. Right-click **pr_baseline** table → **New measure**. Create **Lead Time Improvement %**:
+1. In the **Data** pane, right-click the **pr_baseline** table (1) and select **New measure** (2) to create a new DAX measure.
+
+   ![](../media/mang-cor-ex1-g39.png)
+
+1. In the formula bar, paste the DAX for **Lead Time Improvement %** (1) given below and click **✔** (2) to save and apply the measure.
 
    ```
    Lead Time Improvement % = DIVIDE([Lead Time Improvement], [Baseline Lead Time], 0)
@@ -104,11 +126,15 @@ In this task, you'll create sophisticated measures that quantify the concrete pr
 
    ![](../media/mang-cor-ex2-g5.png)
 
-   Format this as **Percentage** with **1 decimal place**.
+   - Format this as **Percentage (1)** with **1 (2)** as **decimal place**.
 
-   ![](../media/mang-cor-ex2-g6.png)
+      ![](../media/mang-cor-ex2-g6.png)
 
-1. Right-click **pr_baseline** table → **New measure**. Create **Baseline Cycle Time**:
+1. In the **Data** pane, right-click the **pr_baseline** table (1) and select **New measure** (2) to create a new DAX measure.
+
+   ![](../media/mang-cor-ex1-g39.png)
+
+1. In the formula bar, paste the DAX for **Baseline Cycle Time** (1) given below and click **✔** (2) to save and apply the measure.
 
    ```
    Baseline Cycle Time = AVERAGE('pr_baseline'[cycle_time_hours])
@@ -116,7 +142,11 @@ In this task, you'll create sophisticated measures that quantify the concrete pr
 
    ![](../media/mang-cor-ex2-g7.png)
 
-1. Right-click **pr_post** table → **New measure**. Create **Post-Copilot Cycle Time**:
+1. In the **Data** pane, right-click the **pr_post** table (1) and choose **New measure** (2) to create a post-adoption measure.
+
+   ![](../media/mang-cor-ex2-g2.png)
+
+1. In the formula bar, paste the DAX for **Post-Copilot Cycle Time** (1) given below and click **✔** (2) to save and apply the measure.
 
    ```
    Post-Copilot Cycle Time = AVERAGE('pr_post'[cycle_time_hours])
@@ -124,21 +154,31 @@ In this task, you'll create sophisticated measures that quantify the concrete pr
 
    ![](../media/mang-cor-ex2-g8.png)
 
-1. Right-click **pr_baseline** table → **New measure**. Create **Cycle Time Improvement %**:
+1. In the **Data** pane, right-click the **pr_baseline** table (1) and select **New measure** (2) to create a new DAX measure.
 
-   ```
-   Cycle Time Improvement % = DIVIDE(
-       [Baseline Cycle Time] - [Post-Copilot Cycle Time], 
-       [Baseline Cycle Time], 
-       0
-   )
-   ```
+   ![](../media/mang-cor-ex1-g39.png)
 
-   Format as **Percentage** with **1 decimal place**.
+1. In the formula bar, paste the DAX for **Cycle Time Improvement %** (1).
 
-   ![](../media/mang-cor-ex2-g9.png)
+   - In **Format**, select **Percentage** (2).
+   - Set **Decimal places** to **1** (3).
+   - Click **✔** to save and apply (4).
 
-1. Right-click **pr_baseline** table → **New measure**. Create **Baseline PRs Merged**:
+      ```
+      Cycle Time Improvement % = DIVIDE(
+         [Baseline Cycle Time] - [Post-Copilot Cycle Time], 
+         [Baseline Cycle Time], 
+         0
+      )
+      ```
+
+      ![](../media/mang-cor-ex2-g9.png)
+
+1. In the **Data** pane, right-click the **pr_baseline** table (1) and select **New measure** (2) to create a new DAX measure.
+
+   ![](../media/mang-cor-ex1-g39.png)
+
+1. In the formula bar, paste the DAX for **Baseline PRs Merged** (1) given below and click **✔** (2) to save and apply the measure.
 
    ```
    Baseline PRs Merged = AVERAGE('pr_baseline'[prs_merged])
@@ -146,7 +186,11 @@ In this task, you'll create sophisticated measures that quantify the concrete pr
 
    ![](../media/mang-cor-ex2-g10.png)
 
-1. Right-click **pr_post** table → **New measure**. Create **Post-Copilot PRs Merged**:
+1. In the **Data** pane, right-click the **pr_post** table (1) and choose **New measure** (2) to create a post-adoption measure.
+
+   ![](../media/mang-cor-ex2-g2.png)
+
+1. In the formula bar, paste the DAX for **Post-Copilot PRs Merged** (1) given below and click **✔** (2) to save and apply the measure.
 
    ```
    Post-Copilot PRs Merged = AVERAGE('pr_post'[prs_merged])
@@ -154,17 +198,25 @@ In this task, you'll create sophisticated measures that quantify the concrete pr
 
    ![](../media/mang-cor-ex2-g11.png)
 
-1. Right-click **pr_baseline** table → **New measure**. Create **Throughput Improvement %**:
+1. In the **Data** pane, right-click the **pr_baseline** table (1) and select **New measure** (2) to create a new DAX measure.
 
-   ```
-   Throughput Improvement % = DIVIDE(
-       [Post-Copilot PRs Merged] - [Baseline PRs Merged],
-       [Baseline PRs Merged],
-       0
-   )
-   ```
+   ![](../media/mang-cor-ex1-g39.png)
 
-   ![](../media/mang-cor-ex2-g12.png)
+1. In the formula bar, paste the DAX for **Throughput Improvement %** (1).
+
+   - In **Format**, select **Percentage** (2).
+   - Set **Decimal places** to **1** (3).
+   - Click **✔** to save and apply (4).
+
+      ```
+      Throughput Improvement % = DIVIDE(
+         [Post-Copilot PRs Merged] - [Baseline PRs Merged],
+         [Baseline PRs Merged],
+         0
+      )
+      ```
+
+      ![](../media/mang-cor-ex2-g12.png)
 
 ## Task 3: Build Executive-Ready Productivity Impact Dashboard
 
@@ -181,7 +233,7 @@ In this task, you will create compelling visualizations that clearly communicate
 1. Create cards for these measures:
    - **Lead Time Improvement %**
 
-   ![](../media/mang-cor-ex2-g14.png)
+      ![](../media/mang-cor-ex2-g14.png)
 
    - **Cycle Time Improvement %** 
    - **Throughput Improvement %**
