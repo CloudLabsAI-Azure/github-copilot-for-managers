@@ -32,8 +32,11 @@ In this task, you'll create measures that translate productivity improvements in
 
    ![](../media/mang-cor-ex4-g1.png)
 
+1. In the **Data** pane, right-click the **pr_baseline** table (1) and select **New measure** (2) to create a new DAX measure.
 
-1. Right-click **pr_baseline** table → **New measure**. Create **Hours Saved per Developer per Month**:
+   ![](../media/mang-cor-ex1-g39.png)
+
+1. In the formula bar, paste the DAX for **Hours Saved per Dev per Month** (1) given below and click **✔** (2) to save and apply the measure.
 
    ```
    Hours Saved per Dev per Month = 
@@ -45,7 +48,11 @@ In this task, you'll create measures that translate productivity improvements in
 
    ![](../media/mang-cor-ex4-g2.png)
 
-1. Right-click **pr_baseline** table → **New measure**. Create **Total Hours Saved Organization**:
+1. In the **Data** pane, right-click the **pr_baseline** table (1) and select **New measure** (2) to create a new DAX measure.
+
+   ![](../media/mang-cor-ex1-g39.png)
+
+1. In the formula bar, paste the DAX for **Total Hours Saved Organization** (1) given below and click **✔** (2) to save and apply the measure.
 
    ```
    Total Hours Saved Organization = 
@@ -58,20 +65,24 @@ In this task, you'll create measures that translate productivity improvements in
 
 1. Create **Developer Hourly Rate** parameter for ROI sensitivity analysis:
    
-   Go to **Modeling** → **New parameter** → **Numeric range**:
+1. Go to **Modeling** (1) → **New parameter** → **Numeric range** (2).
 
    ![](../media/co-po-ex4-g3.png)
 
-   - Name: Developer Hourly Rate
-   - Minimum: 50
-   - Maximum: 200  
-   - Increment: 10
-   - Default: 75
-   - Add slicer to page: Yes
+1. Configure the parameter settings as shown:  
+   - **Type:** Numeric range (1)  
+   - **Name:** Developer Hourly Rate (2)  
+   - **Data type:** Whole number (3)  
+   - **Minimum:** 50 (4)  
+   - **Maximum:** 200 (5)  
+   - **Increment:** 10 (6)  
+   - **Default:** 75 (7)  
+   - **Add slicer to this page:** Checked (8)  
+   - Click **Create** (9) to generate the parameter.
 
       ![](../media/mang-cor-ex4-g4.png)
 
-1. Right-click **pr_baseline** table → **New measure**. Create **Monthly Time Savings Value**:
+1. Right-click the **pr_baseline** table and select **New measure**. In the formula bar, paste the DAX for **Monthly Time Savings Value** (1) given below and click **✔** (2) to save and apply the measure.
 
    ```
    Monthly Time Savings Value = 
@@ -84,7 +95,7 @@ In this task, you'll create measures that translate productivity improvements in
 
    > **Note**: Use the full table reference 'Developer Hourly Rate'[Developer Hourly Rate Value] to ensure proper parameter reference.
 
-1. Right-click **pr_baseline** table → **New measure**. Create **Annual Time Savings Value**:
+1. Right-click **pr_baseline** table → **New measure** and in the formula bar, paste the DAX for **Annual Time Savings Value** (1) given below and click **✔** (2) to save and apply the measure.
 
    ```
    Annual Time Savings Value = [Monthly Time Savings Value] * 12
@@ -96,16 +107,20 @@ In this task, you'll create measures that translate productivity improvements in
 
 1. Create **Annual Copilot Cost** parameter:
    
-   Go to **Modeling** → **New parameter** → **Numeric range**:
+1. Go to **Modeling** (1) → select **New parameter** (2) → choose **Numeric range** (3) to create the **Annual Copilot Cost** parameter.
 
    ![](../media/mang-cor-ex4-g7.png)
 
-   - Name: Annual Copilot Cost per User
-   - Minimum: 100
-   - Maximum: 500
-   - Increment: 20
-   - Default: 228 (GitHub Copilot Business annual cost)
-   - Add slicer to page: Yes
+1. Configure the parameter for **Annual Copilot Cost per User** as shown below:  
+   - **Type:** Numeric range (1)  
+   - **Name:** Annual Copilot Cost per User (2)  
+   - **Data type:** Whole number (3)  
+   - **Minimum:** 100 (4)  
+   - **Maximum:** 500 (5)  
+   - **Increment:** 20 (6)  
+   - **Default:** 228 (7)  
+   - **Add slicer to this page:** Checked (8)  
+   - Click **Create** (9) to finalize the parameter.
 
       ![](../media/mang-cor-ex4-g12.png)
 
