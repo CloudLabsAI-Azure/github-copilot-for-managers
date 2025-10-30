@@ -74,14 +74,7 @@ In this task, you will initiate the report generation process and obtain the CSV
 - If you do not see **Activity report (new)**, ensure your organization is on a supported Copilot plan and that you have Owner permissions.
 - The downloaded CSV (often named like `copilot_org.csv`) will be used in Exercise 2 for building analytics measures.
 - Regenerating a report overwrites the previous pending request but does not delete earlier downloaded files you saved locally.
-- Keep the raw CSV unmodified; create a copy for transformation steps in later exercises.
-
-<validation step="ex1-validate-usage-report" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+- Keep the raw CSV unmodified; create a copy for transformation steps in later exercises
 
 ## Summary
 
