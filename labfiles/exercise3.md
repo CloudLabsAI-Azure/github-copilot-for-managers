@@ -243,13 +243,6 @@ In this task, you will create compelling visualizations that clearly communicate
 - Focus on teams with significant improvements to identify success patterns that can be replicated
 - Consider that different teams may show benefits in different areas (some in speed, others in throughput)
 
-<validation step="ex3-validate-productivity" />
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
-
 ## Summary
 
 In this exercise, you successfully measured the concrete productivity impact of GitHub Copilot by establishing comprehensive before-and-after comparisons using pull request metrics. You created sophisticated measures that quantify lead time reductions, cycle time improvements, and throughput increases, transforming technical improvements into business-relevant insights. The executive-ready visualizations you built provide compelling evidence of Copilot's value proposition, giving you the quantitative foundation needed for ROI calculations and strategic decision-making. This productivity analysis, combined with your adoption metrics from Exercise 2, creates a comprehensive view of Copilot's organizational impact that will be essential for the final ROI dashboard in Exercise 4.
