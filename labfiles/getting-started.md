@@ -4,29 +4,31 @@
 
 ## Overview
 
-In this lab, you will configure and visualize organization-level **GitHub Copilot** adoption and impact. Using a pre-prepared report with **Copilot Activity (CSV)** and **Copilot Metrics (JSON)**, you’ll publish to the Power BI Service and assemble an executive-friendly view. You’ll practice essentials like adding KPIs, weekly trends, and cohort slicers, and you’ll use lightweight measures (e.g., adoption rate, estimated time saved) to communicate value clearly. Step-by-step instructions with screenshots guide you throughout.
+In this comprehensive lab series, you will master the essential skills needed to measure, analyze, and communicate the business value of **GitHub Copilot** across your development organization. Starting with enabling GitHub Copilot usage reports, you'll learn to access comprehensive organization-level data that reveals adoption patterns and user engagement. You'll then transform raw usage data into strategic management insights using Power BI, creating sophisticated measures that identify high-performing teams and technology preferences. Next, you'll measure concrete productivity improvements by analyzing pull request metrics before and after Copilot adoption, quantifying lead time reductions and throughput increases. Finally, you'll build executive-ready dashboards that calculate ROI and demonstrate clear business value through compelling visualizations. Step-by-step instructions with screenshots guide you throughout this data-driven journey.
 
 ## Objective
 
-Understand how to measure and communicate Copilot adoption and impact. By the end of this lab, you will be able to:
+Master comprehensive GitHub Copilot analytics and business value measurement. By the end of this lab, you will be able to:
 
-- **Create & Publish a Report:** Build a concise dashboard from Copilot Activity CSV and Metrics JSON and publish it to the Power BI Service.
-- **Build & Organize a Dashboard:** Add KPIs and trends (active vs. engaged, suggestions vs. acceptances, chat usage), plus editor/language filters.
-- **Enhance Presentation:** Apply branding touches (logos/themes optional), use simple ROI and adoption-rate measures, and prepare a one-page executive readout.
+- **Enable & Access Usage Reports:** Navigate GitHub Copilot administrative settings to activate reporting features and download organization-level usage data for analysis.
+- **Analyze Adoption & Engagement:** Transform raw Copilot data into strategic insights using Power BI, creating measures that identify team performance and engagement patterns.
+- **Measure Productivity Impact:** Import and analyze pull request metrics to quantify concrete productivity improvements and demonstrate tangible business value.
+- **Calculate ROI & Build Executive Dashboards:** Create comprehensive dashboards that combine adoption metrics with productivity gains to calculate return on investment and support strategic decision-making.
 
 ## Pre-requisites
 
-- Basic knowledge of Power BI
+- **GitHub Organization Owner** permissions to access Copilot usage reports
+- **GitHub Copilot Business or Enterprise** licensing activated for your organization
 - Access to **Power BI Desktop** and **Power BI Service**
-- Read access to sample **Copilot Activity CSV** and **Copilot Metrics JSON** (provided)
+- Basic familiarity with software development metrics and business analytics concepts
 
 ## Architecture
 
-You’ll start from a pre-created Power BI report wired to two sources:
-1. **Copilot Activity (CSV):** Per-user adoption fields (e.g., suggestions, acceptances, last activity, editor/language cohorts).
-2. **Copilot Metrics (JSON):** Org-level daily metrics (active users, engaged users, suggestions, acceptances, chat, PR summaries).
-
-You’ll add visuals for **KPIs**, **weekly trends**, and **cohorts**, and then publish to the Power BI Service. Optionally, you’ll apply a theme and capture screenshots for an executive readout.
+You'll progress through a comprehensive four-exercise journey:
+1. **Enable Usage Reports (Read Only):** Navigate GitHub administrative settings to generate and download Copilot Activity reports with comprehensive usage data.
+2. **Adoption Analysis:** Import usage data into Power BI, create strategic measures, and build interactive dashboards showing team performance and engagement patterns.
+3. **Productivity Impact:** Load before-and-after pull request metrics to measure concrete improvements in lead time, cycle time, and throughput.
+4. **Executive ROI Dashboard:** Combine adoption and productivity data to calculate return on investment and create compelling executive presentations published to Power BI Service.
 
 ## Architecture Diagram
 
@@ -34,9 +36,10 @@ You’ll add visuals for **KPIs**, **weekly trends**, and **cohorts**, and then 
 
 ## Explanation of Components
 
-- **Copilot Activity (CSV):** Per-user aggregates that support developer-level and cohort charts (acceptances, suggestions, last activity, editor, language).
-- **Copilot Metrics (JSON):** Daily org-level counts for active/engaged users, suggestions vs. acceptances, chat usage, and PR assistant activity.
-- **Power BI Service:** Cloud platform to publish, manage access, and share dashboards with leadership.
+- **GitHub Copilot Usage Reports:** Activity reports providing comprehensive per-user metrics including code suggestions, acceptances, chat interactions, and technology preferences for adoption analysis.
+- **Power BI Desktop & Service:** Business analytics platform for data transformation, visualization, and interactive dashboard creation with publishing capabilities for executive sharing.
+- **Pull Request Metrics:** Development productivity indicators including lead time, cycle time, and throughput that enable before-and-after comparisons to quantify Copilot's impact.
+- **ROI Analysis Framework:** Systematic approach to calculating return on investment by translating productivity improvements into financial value and business justification.
 
 ## Getting Started with the Lab
 

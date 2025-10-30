@@ -4,7 +4,11 @@
 
 ## Overview
 
-In this exercise (Read Only), you will enable and access GitHub Copilot organization-level usage reports to establish foundational visibility for managers and program owners. You will learn how to request activity reports that provide crucial data about adoption patterns, user engagement, and usage metrics across your organization. These reports form the basis for the comprehensive analytics dashboard you'll build in subsequent exercises, enabling data-driven decisions about Copilot deployment and optimization.
+In this exercise (Read Only), you will enable and access GitHub Copilot organization-level usage reports to establish foundational visibility for managers and program owners. You will learn how to request activity reports that provide crucial data about adoption patterns, user engagement, and usage metrics across your organization. 
+
+This exercise demonstrates the complete workflow from report generation to data acquisition, introducing you to the rich analytics possibilities available when Copilot usage data is combined with organizational context. The comprehensive datasets you'll work with showcase advanced analytics scenarios that help managers understand not just who is using Copilot, but how effectively different teams, roles, and technology stacks are leveraging AI assistance.
+
+These reports form the basis for the comprehensive analytics dashboard you'll build in subsequent exercises, enabling data-driven decisions about Copilot deployment and optimization strategies across your development organization.
 
 ## Objectives
 
@@ -15,7 +19,7 @@ You will be able to complete the following tasks:
 
 ## Prerequisites
 
-- You are an **Organization Owner** of the target GitHub organization (e.g., `contoso-impact`).
+- You are an **Organization Owner** of the target GitHub organization `contoso-impact`.
 - GitHub Copilot Business or Enterprise is already licensed for the org.
 - Email access to the owner mailbox (for the report-ready notification).
 
@@ -68,6 +72,8 @@ In this task, you will initiate the report generation process and obtain the CSV
 1. Once downloaded, save the CSV file to a known location on your computer for use in the upcoming exercises.
 
    >**Best Practice:** Keep the original CSV file unmodified as your source of truth. You'll create working copies for analysis in Power BI to preserve data integrity.
+
+   >**Note:** The datasets used in this lab have been enhanced with additional organizational context (teams, roles, technology stacks) to provide comprehensive analytics scenarios. In production environments, enriching GitHub Copilot usage data with organizational metadata may require integration with HR systems, development tool APIs, or manual data collection processes.
 
 ## Notes
 
