@@ -1,10 +1,12 @@
-# Measuring GitHub Copilot Impact for Managers
+# Measuring GitHub Copilot Impact for Managers and Pre-Sales Teams
 
-### Overall Estimated Duration: 1 Hour
+### Overall Estimated Duration: 90 Minutes
 
 ## Overview
 
-In this comprehensive lab series, you will master the essential skills needed to measure, analyze, and communicate the business value of **GitHub Copilot** across your development organization. Starting with enabling GitHub Copilot usage reports, you'll learn to access comprehensive organization-level data that reveals adoption patterns and user engagement. You'll then transform raw usage data into strategic management insights using Power BI, creating sophisticated measures that identify high-performing teams and technology preferences. Next, you'll measure concrete productivity improvements by analyzing pull request metrics before and after Copilot adoption, quantifying lead time reductions and throughput increases. Finally, you'll build executive-ready dashboards that calculate ROI and demonstrate clear business value through compelling visualizations. Step-by-step instructions with screenshots guide you throughout this data-driven journey.
+In this results-driven lab, you’ll learn how to measure, articulate, and showcase the business impact of GitHub Copilot, turning technical insights into persuasive value stories. This lab empowers managers, pre-sales professionals, and solution consultants to analyze real Copilot adoption data and translate it into metrics that resonate with executives and customers.
+
+You’ll start by accessing GitHub Copilot usage reports to uncover adoption patterns and engagement levels across your organization. Next, using Power BI, you’ll transform this data into actionable insights, identifying productivity trends and success stories that can strengthen your sales narrative. Finally, you’ll learn to quantify ROI and build executive dashboards that clearly demonstrate the business case for Copilot adoption an essential skill for both internal champions and customer-facing teams.
 
 ## Objective
 
@@ -15,13 +17,6 @@ Master comprehensive GitHub Copilot analytics and business value measurement. By
 - **Measure Productivity Impact:** Import and analyze pull request metrics to quantify concrete productivity improvements and demonstrate tangible business value.
 - **Calculate ROI & Build Executive Dashboards:** Create comprehensive dashboards that combine adoption metrics with productivity gains to calculate return on investment and support strategic decision-making.
 
-## Pre-requisites
-
-- **GitHub Organization Owner** permissions to access Copilot usage reports
-- **GitHub Copilot Business or Enterprise** licensing activated for your organization
-- Access to **Power BI Desktop** and **Power BI Service**
-- Basic familiarity with software development metrics and business analytics concepts
-
 ## Architecture
 
 You'll progress through a comprehensive four-exercise journey:
@@ -29,8 +24,6 @@ You'll progress through a comprehensive four-exercise journey:
 2. **Adoption Analysis:** Import usage data into Power BI, create strategic measures, and build interactive dashboards showing team performance and engagement patterns.
 3. **Productivity Impact:** Load before-and-after pull request metrics to measure concrete improvements in lead time, cycle time, and throughput.
 4. **Executive ROI Dashboard:** Combine adoption and productivity data to calculate return on investment and create compelling executive presentations published to Power BI Service.
-
-## Architecture Diagram
 
 ## Explanation of Components
 
