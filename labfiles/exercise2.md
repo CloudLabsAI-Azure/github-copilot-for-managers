@@ -14,12 +14,6 @@ You will be able to complete the following tasks:
 - Task 2: Create adoption and engagement measures for management insights
 - Task 3: Build visualizations to identify usage patterns and team performance
 
-## Prerequisites
-
-- Successful completion of Exercise 1 with `copilot_org.csv` downloaded
-- Power BI Desktop installed and signed in
-- Basic familiarity with Power BI interface
-
 ## Task 1: Import and Configure Copilot Usage Data
 
 In this task, you will load the GitHub Copilot organization usage data into Power BI Desktop to begin your analysis journey. This foundational step establishes the data connection that will power all your management insights, allowing you to understand adoption patterns, user engagement levels, and technology preferences across your development teams.
