@@ -14,12 +14,6 @@ You will be able to complete the following tasks:
 - Task 2: Create productivity comparison measures
 - Task 3: Build executive-ready productivity impact visualizations
 
-## Prerequisites
-
-- Completion of Exercise 2 with Copilot adoption analysis
-- PR baseline and post-adoption CSV files available
-- Understanding of software development metrics (lead time, cycle time, PR throughput)
-
 ## Task 1: Import and Configure PR Performance Data
 
 In this task, you will load both baseline (pre-Copilot) and post-adoption pull request metrics to establish a comprehensive foundation for measuring concrete productivity improvements. This comparative analysis will provide the quantitative evidence needed to demonstrate Copilot's business impact to stakeholders and executives.
