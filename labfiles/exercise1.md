@@ -24,24 +24,24 @@ In this task, you will understand the GitHub Copilot and its usecases.
 
 #### What is GitHub Copilot?
 
-**GitHub Copilot** is an AI-powered coding assistant developed by **GitHub** and **OpenAI** that helps developers write code faster, smarter, and with fewer errors.  
-It works directly inside popular development environments like **Visual Studio Code**, **Visual Studio**, **Neovim**, and **JetBrains IDEs**, offering **context-aware code suggestions, explanations, and completions** in real time as developers type.
+**GitHub Copilot** is an AI-powered coding assistant developed by GitHub and OpenAI that helps developers write code faster, smarter, and with fewer errors.  
+It works directly inside popular development environments like Visual Studio Code, Visual Studio, Neovim, and JetBrains IDEs, offering context-aware code suggestions, explanations, and completions in real time as developers type.
 
-Copilot has evolved from being a simple autocomplete tool into an **AI pair programmer** that assists across the entire software lifecycle from writing code to fixing bugs, writing tests, and even explaining complex code logic.  
-It leverages **large language models (LLMs)** trained on billions of lines of code, enabling it to understand natural language prompts and generate corresponding code suggestions instantly.
+Copilot has evolved from being a simple autocomplete tool into an AI pair programmer that assists across the entire software lifecycle from writing code to fixing bugs, writing tests, and even explaining complex code logic.  
+It leverages large language models (LLMs) trained on billions of lines of code, enabling it to understand natural language prompts and generate corresponding code suggestions instantly.
 
 #### Why It Matters for Managers and Sales Teams
 
-GitHub Copilot is not just a developer productivity tool, it’s a **strategic enabler** that transforms how teams deliver software and how organizations measure **engineering efficiency, speed, and innovation**.
+GitHub Copilot is not just a developer productivity tool, it’s a strategic enabler that transforms how teams deliver software and how organizations measure engineering efficiency, speed, and innovation.
 
 ##### For Managers
-Copilot provides visibility into how AI can drive measurable performance gains across teams, **reduced development time, faster onboarding, and improved code quality**.  
-With **Copilot usage reports** and **Power BI analytics**, managers can make **data-driven decisions** to scale AI-assisted development effectively across their organization.
+Copilot provides visibility into how AI can drive measurable performance gains across teams, reduced development time, faster onboarding, and improved code quality.  
+With Copilot usage reports and Power BI analytics, managers can make data-driven decisions to scale AI-assisted development effectively across their organization.
 
 ##### For Pre-Sales & Sales Teams
-Copilot becomes a **business differentiator**.  
-It allows pre-sales engineers to demonstrate tangible customer outcomes such as **faster feature delivery, reduced backlog, and improved developer satisfaction**.  
-The metrics derived from usage and productivity analysis can be turned into **compelling ROI stories and customer success cases** that strengthen business conversations.
+Copilot becomes a business differentiator.  
+It allows pre-sales engineers to demonstrate tangible customer outcomes such as faster feature delivery, reduced backlog, and improved developer satisfaction.  
+The metrics derived from usage and productivity analysis can be turned into compelling ROI stories and customer success cases that strengthen business conversations.
 
 #### How GitHub Copilot Helps Organizations
 
@@ -56,8 +56,7 @@ The metrics derived from usage and productivity analysis can be turned into **co
 
 #### The Business Value of GitHub Copilot
 
-**GitHub Copilot bridges the gap between engineering output and business outcomes.**  
-By combining **usage analytics** with **productivity metrics**, organizations can quantify how AI assistance directly translates into **faster delivery, higher quality, and lower cost**.
+GitHub Copilot bridges the gap between engineering output and business outcomes. By combining usage analytics with productivity metrics, organizations can quantify how AI assistance directly translates into faster delivery, higher quality, and lower cost.
 
 - **Accelerated Delivery:** Teams ship features faster by reducing coding and debugging time.  
 - **Reduced Costs:** Fewer reworks, less time spent on boilerplate code, and improved focus mean lower operational overhead.  
