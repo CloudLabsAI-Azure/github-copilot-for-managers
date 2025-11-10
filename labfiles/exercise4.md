@@ -1,6 +1,6 @@
 # Exercise 4: Build Executive Dashboard & Calculate ROI
 
-### Estimated Duration: 15 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 
