@@ -1,4 +1,4 @@
-# Measuring GitHub Copilot Impact for Managers and Pre-Sales Teams
+# GitHub Copilot Impact for Managers and Pre-Sales Teams
 
 ### Overall Estimated Duration: 90 Minutes
 
