@@ -1,6 +1,6 @@
 # Recommended Changes: GitHub Copilot for Managers Workshop
 
-## 📋 Feedback Summary
+## Feedback Summary
 
 Based on customer feedback from Kedar Paranjape (LTIMindtree) shared on December 30, 2025:
 
@@ -8,7 +8,7 @@ Based on customer feedback from Kedar Paranjape (LTIMindtree) shared on December
 
 ---
 
-## 🎯 Key Issues Identified
+## Key Issues Identified
 
 | Issue | Impact | Priority |
 |-------|--------|----------|
@@ -20,17 +20,17 @@ Based on customer feedback from Kedar Paranjape (LTIMindtree) shared on December
 
 ---
 
-## 📝 Detailed Recommendations
+## Detailed Recommendations
 
 ### 1. Rebalance Content: Add GitHub Copilot-Focused Exercises
 
 #### Current State Analysis:
 | Exercise | Current Focus | Copilot Content | Power BI Content |
 |----------|---------------|-----------------|------------------|
-| Exercise 1 | Enable Usage Reports | ✅ High (GitHub Admin) | ❌ None |
-| Exercise 2 | Adoption & Engagement | ⚠️ Low (data only) | 🔴 Heavy (DAX, visuals) |
-| Exercise 3 | PR Analysis | ⚠️ Low (metrics only) | 🔴 Heavy (DAX, charts) |
-| Exercise 4 | ROI Dashboard | ⚠️ Low (calculations) | 🔴 Heavy (publishing) |
+| Exercise 1 | Enable Usage Reports | High (GitHub Admin) | None |
+| Exercise 2 | Adoption & Engagement | Low (data only) | Heavy (DAX, visuals) |
+| Exercise 3 | PR Analysis | Low (metrics only) | Heavy (DAX, charts) |
+| Exercise 4 | ROI Dashboard | Low (calculations) | Heavy (publishing) |
 
 #### Recommended Changes:
 
@@ -206,7 +206,7 @@ Create new section in `overview.md` or new file `resources.md`:
 
 ---
 
-## 📁 File-by-File Change Summary
+## File-by-File Change Summary
 
 | File | Changes Required | Effort |
 |------|------------------|--------|
@@ -221,7 +221,7 @@ Create new section in `overview.md` or new file `resources.md`:
 
 ---
 
-## ✅ Implementation Checklist
+## Implementation Checklist
 
 ### Phase 1: Quick Wins (Before Next Delivery)
 - [ ] Add "Manager Insight" callouts explaining Copilot relevance in each exercise
@@ -243,7 +243,7 @@ Create new section in `overview.md` or new file `resources.md`:
 
 ---
 
-## 📊 Expected Outcomes After Changes
+## Expected Outcomes After Changes
 
 | Metric | Current State | Target State |
 |--------|--------------|--------------|
@@ -256,7 +256,7 @@ Create new section in `overview.md` or new file `resources.md`:
 
 ---
 
-## 🗣️ Key Talking Points for Stakeholders
+## Key Talking Points for Stakeholders
 
 When presenting these changes to Liz Torres-Ramirez and Microsoft:
 
