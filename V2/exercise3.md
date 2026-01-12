@@ -1,245 +1,186 @@
-# Exercise 3: Analyze Copilot Adoption & User Engagement
+# Exercise 2: Enable & Access Copilot Usage Reports
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 20 Minutes
 
 ## Overview
 
-In this exercise, you will create and interpret visualizations that help you understand Copilot adoption patterns, user engagement levels, and team performance. The focus is on **interpreting insights** rather than building complex formulas - we'll provide streamlined steps so you can focus on what the data tells you about your Copilot program.
+In this exercise, you will enable and access GitHub Copilot organization-level usage reports. These reports provide crucial data about adoption patterns, user engagement, and usage metrics across your organization. You'll learn how to request activity reports and understand the data they contain - setting the foundation for the analytics you'll perform in subsequent exercises.
 
-> **Manager Value:** By the end of this exercise, you'll be able to answer: "Which teams are getting the most value from Copilot?" and "Where should I focus training and support efforts?"
+> **Manager Value:** Usage reports are your primary tool for understanding how Copilot is being adopted across teams. The data you obtain here will drive all your adoption analysis and ROI calculations.
 
 ## Objectives
 
 You will be able to complete the following tasks:
 
-- Task 1: Create essential adoption measures
-- Task 2: Build team performance visualizations
-- Task 3: Identify engagement patterns and take action
+- Task 1: Navigate to GitHub Copilot reporting settings and generate activity reports
+- Task 2: Understand the usage data structure and key metrics
+- Task 3: Prepare data for analysis
 
 ## Prerequisites
 
-- Completion of Exercise 2 with `copilot_org.csv` loaded in Power BI
-- Power BI Desktop open with data imported
+- You are an **Organization Owner** of the target GitHub organization `contoso-impact`.
+- GitHub Copilot Business or Enterprise is already licensed for the org.
+- Completion of Exercise 1 (understanding Copilot features and governance).
 
 ---
 
-## Task 1: Create Essential Adoption Measures
+## Task 1: Generate Copilot Activity Reports
 
-In this task, you'll create the key measures needed for adoption analysis. We've streamlined this to focus on the most impactful metrics.
+In this task, you will navigate to the GitHub Copilot administrative area and initiate the Activity report generation.
 
-> **Why These Measures?** These specific calculations answer the questions executives ask: "How many people are using it?", "Is it actually helpful?", and "Which teams are adopting best?"
+1. In the top-right corner of GitHub, click your **profile picture (1)** and select **Your organizations (2)** from the dropdown menu.
 
-### A. Create Core Metrics
+   ![](../media/gt-co-ex1-g1.png)
 
-1. In the **Data (1)** pane on the right side of Power BI Desktop, right-click your **copilot_org (2)** table and choose **New measure (3)**.
+   > **Note:** You must have Organization Owner permissions to access Copilot usage reports. If you don't see your organization listed, contact your GitHub administrator.
 
-   ![](../media/git_co_man-e1-g20.png)
+1. On the Organizations page, locate and click your organization **contoso-impact** where you have Owner permissions.
 
-1. Create **Active Users** - counts unique users with any Copilot activity:
+   ![](../media/gt-co-ex1-g2.png)
 
-   ```
-   Active Users = DISTINCTCOUNT('copilot_org'[user_login])
-   ```
+1. Navigate to the **Settings** tab from the top navigation menu.
 
-   ![](../media/mang-cor-ex1-g10.png)
+   ![](../media/gt-co-ex1-g3.png)
 
-   > **Manager Insight:** Active Users shows how many people are actually using Copilot vs. how many have licenses. A large gap indicates unused licenses or adoption barriers.
+1. In the left sidebar navigation, locate the **Code, planning, and automation (1)** section, expand **Copilot (2)**, and click on **Access (3)**.
 
-1. Right-click **copilot_org** table and choose **New measure**. Create **Total Acceptances**:
+   ![](../media/gt-co-ex1-g4.png)
 
-   ```
-   Total Acceptances = SUM('copilot_org'[acceptances])
-   ```
+1. On the **Access management** page, locate the **Get Usage report (1)** section and select **Activity report (new) (2)** from the available options.
 
-   ![](../media/mang-cor-ex1-g12.png)
+   ![](../media/gt-co-ex1-g5.png)
 
-   > **Manager Insight:** Total Acceptances represents how much AI-generated code your developers are actually using. Higher numbers indicate Copilot is providing valuable assistance.
+   > **Understanding Activity Reports:** The Activity report provides per-user metrics including code suggestions, acceptances, chat usage, and technology preferences. This data is essential for measuring adoption success and identifying areas for improvement.
 
-1. Right-click **copilot_org** table and choose **New measure**. Create **Acceptance Rate %**:
+1. Confirm that the green notification banner **"Your activity report is being generated…"** appears at the top of the page.
 
-   ```
-   Acceptance Rate % = DIVIDE(SUM('copilot_org'[acceptances]), SUM('copilot_org'[suggestions]), 0)
-   ```
+   ![](../media/gt-co-ex1-g6.png)
 
-   ![](../media/mang-cor-ex1-g13.png)
+   > **Note:** Report generation runs in the background. For large organizations, this may take several minutes.
 
-   - Format this measure as **Percentage** with **1 decimal place**.
+1. You will receive an email notification titled **"Your GitHub Copilot Activity report is ready"** when the report is complete. Download the attached CSV file.
 
-   > **Manager Insight:** Acceptance Rate is your quality indicator. Rates above 30% indicate developers find suggestions useful. Low rates (below 15%) may indicate training needs or technology mismatches.
+   ![](../media/gt-co-ex1-g7.png)
 
-1. Right-click **copilot_org** table and choose **New measure**. Create **Chat Users** - users leveraging AI chat features:
+1. Save the CSV file to `C:\Copilot_Datasets` for use in the upcoming exercises.
 
-   ```
-   Chat Users = CALCULATE(
-       DISTINCTCOUNT('copilot_org'[user_login]),
-       'copilot_org'[ide_chat_interactions] > 0 || 'copilot_org'[dotcom_chat_interactions] > 0
-   )
-   ```
-
-   ![](../media/mang-cor-ex1-g14.png)
-
-   > **Manager Insight:** Chat Users shows advanced feature adoption. If this is low compared to Active Users, developers may not know about or understand how to use Copilot Chat.
-
-1. Right-click **copilot_org** table and choose **New measure**. Create **Highly Engaged Users**:
-
-   ```
-   Highly Engaged Users = CALCULATE(
-       DISTINCTCOUNT('copilot_org'[user_login]),
-       'copilot_org'[acceptances] >= 10
-   )
-   ```
-
-   ![](../media/mang-cor-ex1-g16.png)
-
-   > **Manager Insight:** These are your Copilot champions - developers getting significant value. They can help train others and share best practices.
+   > **Best Practice:** Keep the original CSV file unmodified as your source of truth.
 
 ---
 
-## Task 2: Build Team Performance Visualizations
+## Task 2: Understanding the Usage Data Structure
 
-Now let's create visualizations that reveal adoption patterns across teams.
+Before diving into Power BI, let's understand what the Copilot usage data contains. This knowledge helps you interpret metrics correctly and ask the right questions.
 
-### A. Create the Dashboard Page
+### A. Key Data Fields
 
-1. Rename your report page for better organization. Right-click on the page tab at the bottom and select **Rename**. Change it to **Copilot Adoption**.
+The Activity Report CSV contains these essential columns:
 
-   ![](../media/mang-cor-ex1-g32.png)
+| Field | Description | Manager Use Case |
+|-------|-------------|------------------|
+| `user_login` | GitHub username | Identify individual contributors |
+| `team` | Team assignment | Compare adoption across teams |
+| `role` | Developer seniority | Understand adoption by experience level |
+| `suggestions` | Code suggestions shown | Volume of AI assistance offered |
+| `acceptances` | Suggestions accepted | Quality indicator - are suggestions useful? |
+| `acceptance_rate` | Acceptances ÷ Suggestions | Key efficiency metric |
+| `ide_chat_interactions` | Chat usage in editor | Advanced feature adoption |
+| `dotcom_chat_interactions` | Chat usage on GitHub.com | Web-based assistance usage |
+| `editor_primary` | Main IDE used | VS Code, JetBrains, etc. |
+| `language_primary` | Main programming language | Python, JavaScript, etc. |
+| `last_activity_date` | Most recent Copilot use | Identify inactive users |
+| `pr_summaries_created` | AI PR descriptions used | Documentation automation |
 
-### B. Create Team Performance Table
+> **Manager Insight:** Focus on these metrics for executive reporting:
+> - **Acceptance Rate** - indicates how useful developers find Copilot suggestions
+> - **Active Users** - shows actual adoption vs. licensed seats
+> - **Chat Interactions** - indicates adoption of advanced features
 
-1. Insert a **Table** visual from the Visualizations pane.
+### B. Interpreting Key Metrics
 
-   ![](../media/mang-cor-ex1-g18.png)
+Understanding what "good" looks like:
 
-1. Add these fields to the table under **Columns**:
-   - **team (1)**
-   - **Active Users (2)**
-   - **Highly Engaged Users (3)**
-   - **Acceptance Rate % (4)**
+| Metric | Low (Concern) | Average | High (Excellent) |
+|--------|---------------|---------|------------------|
+| Acceptance Rate | < 15% | 20-35% | > 40% |
+| Users with chat activity | < 30% | 40-60% | > 70% |
+| Daily active rate | < 40% | 50-70% | > 80% |
 
-   ![](../media/mang-cor-ex1-g19.png)
+> **Manager Insight:** If acceptance rates are low, it could indicate:
+> - Developers aren't familiar with how to use Copilot effectively
+> - Code style doesn't match AI suggestions (may need training)
+> - Suggestions aren't relevant to the tech stack (investigate language/editor combinations)
 
-1. Review the table - it should show metrics for each team:
+### C. Team-Level Analysis Questions
 
-   ![](../media/mang-cor-ex1-g20.png)
+When you analyze this data, focus on these management questions:
 
-   > **Manager Action Items:**
-   > - Teams with high Active Users but low Engaged Users → Need training on effective Copilot usage
-   > - Teams with high Acceptance Rate → Identify what they're doing well; share practices
-   > - Teams with low numbers across all metrics → May need 1:1 support or have specific barriers
+1. **Adoption:**
+   - Which teams have the highest active user rates?
+   - Are there teams with licenses but no activity?
+   - How does adoption vary by role (senior vs. junior developers)?
 
-### C. Create User Engagement Chart
+2. **Engagement:**
+   - Who are your "Copilot champions" with highest acceptance rates?
+   - Which teams are using advanced features like chat?
+   - Are there patterns by technology stack (language/editor)?
 
-1. Insert a **Clustered bar chart** from the Visualizations pane.
+3. **Opportunities:**
+   - Which teams might benefit from additional training?
+   - Are there unused licenses that should be reassigned?
+   - What success patterns can be replicated across teams?
 
-   ![](../media/mang-cor-ex1-g22.png)
-
-1. Configure the chart:
-   - **Y-axis**: user_login
-   - **X-axis**: Total Acceptances
-   - **Legend**: team
-
-   ![](../media/mang-cor-ex1-g23.png)
-
-1. Review the chart:
-
-   ![](../media/mang-cor-ex1-g24.png)
-
-   > **Manager Insight:** This identifies your top Copilot users. Consider:
-   > - Asking top users to share tips with their teams
-   > - Understanding what makes them successful (editor, language, workflow)
-   > - Recognizing their adoption in team meetings
-
-### D. Create Technology Adoption Matrix
-
-1. Insert a **Matrix** visual from the Visualizations pane.
-
-   ![](../media/mang-cor-ex1-g26.png)
-
-1. Configure the Matrix:
-   - **Rows (1):** editor_primary
-   - **Columns (2):** language_primary
-   - **Values (3):** Active Users, Acceptance Rate %
-
-   ![](../media/mang-cor-ex1-g27.png)
-
-   > **Manager Insight:** This reveals which technology combinations work best with Copilot:
-   > - High acceptance in VS Code + Python? Consider recommending this setup
-   > - Low adoption in JetBrains? May need specific training for that IDE
-   > - Some languages showing low rates? Copilot may be less mature for those languages
-
-### E. Add Interactive Filters
-
-1. Insert a **Slicer** from the Visualizations pane.
-
-   ![](../media/mang-cor-ex1-g28.png)
-
-1. Add **team** and **role** fields to the slicer for filtering.
-
-   ![](../media/mang-cor-ex1-g29.png)
-
-1. Test the interactivity - select different teams to see metrics update:
-
-   ![](../media/mang-cor-ex1-g30.png)
-
-   > **Manager Benefit:** These filters let you drill into specific teams during reviews or prepare team-specific reports.
+> **Manager Insight:** These questions will guide your dashboard creation and executive presentations.
 
 ---
 
-## Task 3: Interpret Results and Plan Actions
+## Task 3: Prepare Data for Analysis
 
-This task focuses on how to use your dashboard for management decisions.
+In this task, you'll set up Power BI to begin your analysis journey.
 
-### A. Reading Your Dashboard
+1. Launch **Power BI Desktop** from the desktop shortcut in your lab environment.
 
-Look at your completed dashboard and answer these questions:
+   ![](../media/mang-cor-c1.png)
 
-| Question | Where to Look | Action if Low |
-|----------|--------------|---------------|
-| How many people are actively using Copilot? | Active Users card | Check license assignments; follow up with inactive users |
-| Are suggestions actually helpful? | Acceptance Rate % | Provide training on prompt engineering and effective use |
-| Who are our power users? | Bar chart - top users | Engage them as champions and peer trainers |
-| Which teams lead/lag? | Team table | Share best practices from leaders; support lagging teams |
-| Are advanced features adopted? | Chat Users metric | Promote Copilot Chat in team communications |
+1. Verify that you are signed in - your username will appear in the top-right corner.
 
-### B. Identifying Patterns
+   ![](../media/mang-cor-ex1-g7.png)
 
-Common patterns and what they mean:
+1. On the **Home** screen, select **Blank report**.
 
-| Pattern | Possible Cause | Recommended Action |
-|---------|---------------|-------------------|
-| High suggestions, low acceptances | Suggestions not matching coding style | Training on reviewing/editing suggestions |
-| Low chat usage | Unfamiliarity with feature | Demo Copilot Chat in team meetings |
-| Senior devs low adoption | Skepticism or "I don't need help" | Pair with champions; show productivity benefits |
-| Junior devs low adoption | Unsure how to use effectively | Structured onboarding program |
-| One team excelling | Good practices worth sharing | Document and share their workflow |
+   ![](../media/git_co_man-e1-g2.png)
 
-### C. Creating Your Action Plan
+1. Go to the **Home (1)** tab and click **Get data (2)**.
 
-Based on your analysis, document:
+   ![](../media/git_co_man-e1-g3.png)
 
-1. **Quick Wins (This Week)**
-   - Which 3 users should I recognize as Copilot champions?
-   - What one training topic would help most users?
+1. In **Get Data**, choose **Text/CSV (1)** and select **Connect (2)**.
 
-2. **Short-term Actions (This Month)**
-   - Which team needs dedicated support?
-   - Should I reassign unused licenses?
+   ![](../media/git_co_man-e1-g16.png)
 
-3. **Strategic Initiatives (This Quarter)**
-   - What adoption target should I set?
-   - How will I measure progress?
+1. Navigate to **C:\Copilot_Datasets (1)**, select **copilot_org.csv (2)**, and click **Open (3)**.
 
-> **Manager Insight:** This analysis isn't just about creating charts - it's about taking action to improve your team's productivity.
+   ![](../media/mang-cor-ex1-g8.png)
+
+1. In the preview dialog, confirm the delimiter is **Comma (1)** and click **Load (2)**.
+
+   ![](../media/mang-cor-ex1-g9.png)
+
+1. After loading, verify your data appears in the **Data** pane on the right side of Power BI.
+
+   > **Data Quality Check:** Scroll through the data to confirm:
+   > - User names are populated
+   > - Team and role columns have values
+   > - Numeric fields (suggestions, acceptances) contain numbers
 
 ---
 
 ## Notes
 
-- Focus on trends rather than absolute numbers - adoption patterns are more important than raw usage counts
-- Pay attention to acceptance rates by team/technology to identify where Copilot is working best
-- Use this data to identify Copilot champions who can help train others
-- Consider experience level (role) when analyzing adoption - patterns often differ between senior and junior developers
+- If you do not see **Activity report (new)**, ensure your organization is on a supported Copilot plan and that you have Owner permissions.
+- The downloaded CSV will be used in Exercise 3 for building analytics visualizations.
+- Report data typically covers the last 28 days of activity.
+- Keep the raw CSV unmodified; Power BI creates its own data model.
 
 ---
 
@@ -247,14 +188,14 @@ Based on your analysis, document:
 
 In this exercise, you successfully:
 
-- **Created essential adoption measures** - You have the key metrics executives ask about.
+- **Generated a Copilot Activity Report** - You now have comprehensive usage data for your organization.
 
-- **Built team performance visualizations** - You can compare adoption across teams and technologies.
+- **Understood the data structure** - You know what each field means and how to interpret key metrics.
 
-- **Learned to interpret patterns** - You understand what the data means and what actions to take.
+- **Prepared for analysis** - Your data is loaded into Power BI and ready for dashboard creation.
 
-- **Developed an action plan framework** - You have a structure for translating insights into improvements.
+- **Learned management-focused questions** - You have a framework for interpreting results and taking action.
 
-Your adoption dashboard provides the foundation for ongoing Copilot program management. In the next exercise, you'll add productivity impact analysis to quantify the business value of this adoption.
+The usage data you've obtained provides the foundation for all subsequent analysis, enabling data-driven decisions about training, resource allocation, and executive reporting.
 
 ### You have successfully completed this exercise. Click Next >> to continue.

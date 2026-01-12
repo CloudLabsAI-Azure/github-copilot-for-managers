@@ -1,316 +1,245 @@
-# Exercise 4: Measure Productivity Impact with PR Analysis
+# Exercise 3: Analyze Copilot Adoption & User Engagement
 
-### Estimated Duration: 25 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 
-In this exercise, you will import and analyze pull request (PR) metrics from before and after Copilot adoption to measure concrete productivity improvements. This data provides the quantitative evidence executives need to understand Copilot's business impact.
+In this exercise, you will create and interpret visualizations that help you understand Copilot adoption patterns, user engagement levels, and team performance. The focus is on **interpreting insights** rather than building complex formulas - we'll provide streamlined steps so you can focus on what the data tells you about your Copilot program.
 
-> **Manager Value:** This exercise answers the critical question: "Is Copilot actually making our developers more productive?" You'll learn to present measurable improvements in delivery speed and throughput.
+> **Manager Value:** By the end of this exercise, you'll be able to answer: "Which teams are getting the most value from Copilot?" and "Where should I focus training and support efforts?"
 
 ## Objectives
 
 You will be able to complete the following tasks:
 
-- Task 1: Import and understand PR performance data
-- Task 2: Create productivity comparison measures
-- Task 3: Build executive-ready productivity visuals
-- Task 4: Interpret results for stakeholder conversations
+- Task 1: Create essential adoption measures
+- Task 2: Build team performance visualizations
+- Task 3: Identify engagement patterns and take action
 
 ## Prerequisites
 
-- Completion of Exercise 3 with adoption analysis
-- Understanding of software development metrics
+- Completion of Exercise 2 with `copilot_org.csv` loaded in Power BI
+- Power BI Desktop open with data imported
 
 ---
 
-## Understanding Productivity Metrics
+## Task 1: Create Essential Adoption Measures
 
-Before diving in, let's ensure you understand the metrics we're measuring:
+In this task, you'll create the key measures needed for adoption analysis. We've streamlined this to focus on the most impactful metrics.
 
-| Metric | Definition | Why It Matters |
-|--------|------------|----------------|
-| **Lead Time** | Time from PR creation to merge | Measures overall delivery speed |
-| **Cycle Time** | Active development time | Measures developer efficiency |
-| **Throughput** | PRs merged per time period | Measures team delivery capacity |
-| **PR Size** | Lines changed per PR | Smaller = faster reviews, lower risk |
+> **Why These Measures?** These specific calculations answer the questions executives ask: "How many people are using it?", "Is it actually helpful?", and "Which teams are adopting best?"
 
-> **Manager Insight:** These are standard DevOps metrics (DORA-aligned). Improving them demonstrates real business value - faster delivery means faster time-to-market.
+### A. Create Core Metrics
+
+1. In the **Data (1)** pane on the right side of Power BI Desktop, right-click your **copilot_org (2)** table and choose **New measure (3)**.
+
+   ![](../media/git_co_man-e1-g20.png)
+
+1. Create **Active Users** - counts unique users with any Copilot activity:
+
+   ```
+   Active Users = DISTINCTCOUNT('copilot_org'[user_login])
+   ```
+
+   ![](../media/mang-cor-ex1-g10.png)
+
+   > **Manager Insight:** Active Users shows how many people are actually using Copilot vs. how many have licenses. A large gap indicates unused licenses or adoption barriers.
+
+1. Right-click **copilot_org** table and choose **New measure**. Create **Total Acceptances**:
+
+   ```
+   Total Acceptances = SUM('copilot_org'[acceptances])
+   ```
+
+   ![](../media/mang-cor-ex1-g12.png)
+
+   > **Manager Insight:** Total Acceptances represents how much AI-generated code your developers are actually using. Higher numbers indicate Copilot is providing valuable assistance.
+
+1. Right-click **copilot_org** table and choose **New measure**. Create **Acceptance Rate %**:
+
+   ```
+   Acceptance Rate % = DIVIDE(SUM('copilot_org'[acceptances]), SUM('copilot_org'[suggestions]), 0)
+   ```
+
+   ![](../media/mang-cor-ex1-g13.png)
+
+   - Format this measure as **Percentage** with **1 decimal place**.
+
+   > **Manager Insight:** Acceptance Rate is your quality indicator. Rates above 30% indicate developers find suggestions useful. Low rates (below 15%) may indicate training needs or technology mismatches.
+
+1. Right-click **copilot_org** table and choose **New measure**. Create **Chat Users** - users leveraging AI chat features:
+
+   ```
+   Chat Users = CALCULATE(
+       DISTINCTCOUNT('copilot_org'[user_login]),
+       'copilot_org'[ide_chat_interactions] > 0 || 'copilot_org'[dotcom_chat_interactions] > 0
+   )
+   ```
+
+   ![](../media/mang-cor-ex1-g14.png)
+
+   > **Manager Insight:** Chat Users shows advanced feature adoption. If this is low compared to Active Users, developers may not know about or understand how to use Copilot Chat.
+
+1. Right-click **copilot_org** table and choose **New measure**. Create **Highly Engaged Users**:
+
+   ```
+   Highly Engaged Users = CALCULATE(
+       DISTINCTCOUNT('copilot_org'[user_login]),
+       'copilot_org'[acceptances] >= 10
+   )
+   ```
+
+   ![](../media/mang-cor-ex1-g16.png)
+
+   > **Manager Insight:** These are your Copilot champions - developers getting significant value. They can help train others and share best practices.
 
 ---
 
-## Task 1: Import PR Performance Data
+## Task 2: Build Team Performance Visualizations
 
-In this task, you will load baseline (pre-Copilot) and post-adoption pull request metrics.
+Now let's create visualizations that reveal adoption patterns across teams.
 
-### A. Create Analysis Page
+### A. Create the Dashboard Page
 
-1. Click the **+ (plus)** icon next to your existing page tab to create a new sheet.
+1. Rename your report page for better organization. Right-click on the page tab at the bottom and select **Rename**. Change it to **Copilot Adoption**.
 
-   ![](../media/mang-cor-ex1-g33.png)
+   ![](../media/mang-cor-ex1-g32.png)
 
-1. Rename it to **PR Impact**.
+### B. Create Team Performance Table
 
-   ![](../media/mang-cor-ex1-g34.png)
+1. Insert a **Table** visual from the Visualizations pane.
 
-### B. Import Baseline Data
+   ![](../media/mang-cor-ex1-g18.png)
 
-1. On the **Home** tab (1), click **Get data** (2).
+1. Add these fields to the table under **Columns**:
+   - **team (1)**
+   - **Active Users (2)**
+   - **Highly Engaged Users (3)**
+   - **Acceptance Rate % (4)**
 
-   ![](../media/git_co_man-e1-g3.png)
+   ![](../media/mang-cor-ex1-g19.png)
 
-1. Choose **Text/CSV (1)** and select **Connect (2)**.
+1. Review the table - it should show metrics for each team:
 
-   ![](../media/git_co_man-e1-g16.png)
+   ![](../media/mang-cor-ex1-g20.png)
 
-1. Navigate to **C:\Copilot_Datasets (1)**, select **pr_baseline.csv (2)**, and click **Open (3)**.
+   > **Manager Action Items:**
+   > - Teams with high Active Users but low Engaged Users → Need training on effective Copilot usage
+   > - Teams with high Acceptance Rate → Identify what they're doing well; share practices
+   > - Teams with low numbers across all metrics → May need 1:1 support or have specific barriers
 
-   ![](../media/mang-cor-ex1-g35.png)
+### C. Create User Engagement Chart
 
-1. Verify the data preview looks correct and click **Load**.
+1. Insert a **Clustered bar chart** from the Visualizations pane.
 
-   ![](../media/mang-cor-ex1-g36.png)
-
-   > **Understanding Baseline Data:** This represents your team's productivity BEFORE Copilot adoption - your starting point for comparison.
-
-### C. Import Post-Adoption Data
-
-1. Click **Get data** again from the Home tab.
-
-   ![](../media/git_co_man-e1-g3.png)
-
-1. Choose **Text/CSV** and **Connect**.
-
-   ![](../media/git_co_man-e1-g16.png)
-
-1. Navigate to **C:\Copilot_Datasets (1)**, select **pr_post.csv (2)**, and click **Open (3)**.
-
-   ![](../media/mang-cor-ex1-g37.png)
-
-1. Verify the data preview and click **Load**.
-
-   ![](../media/mang-cor-ex1-g38.png)
-
-   > **Understanding Post-Adoption Data:** This shows productivity AFTER Copilot has been adopted. The difference tells the ROI story.
-
----
-
-## Task 2: Create Productivity Comparison Measures
-
-Now we'll create measures that quantify the improvements. These calculations translate developer efficiency gains into metrics executives understand.
-
-### A. Lead Time Measures
-
-1. In the **Data** pane, right-click **pr_baseline** table (1) and select **New measure** (2).
-
-   ![](../media/mang-cor-ex1-g39.png)
-
-1. Create **Baseline Lead Time**:
-
-   ```
-   Baseline Lead Time = AVERAGE('pr_baseline'[lead_time_hours])
-   ```
-
-   ![](../media/mang-cor-ex2-g1.png)
-
-1. Right-click **pr_post** table and create **Post-Copilot Lead Time**:
-
-   ```
-   Post-Copilot Lead Time = AVERAGE('pr_post'[lead_time_hours])
-   ```
-
-   ![](../media/mang-cor-ex2-g3.png)
-
-1. Right-click **pr_baseline** table and create **Lead Time Improvement %**:
-
-   ```
-   Lead Time Improvement % = DIVIDE([Baseline Lead Time] - [Post-Copilot Lead Time], [Baseline Lead Time], 0)
-   ```
-
-   ![](../media/mang-cor-ex2-g5.png)
-
-   - Format as **Percentage** with **1 decimal place**.
-
-   > **Manager Insight:** A 20% improvement in lead time means PRs that took 10 hours now take 8 hours. Over hundreds of PRs, this translates to significant time savings.
-
-### B. Cycle Time Measures
-
-1. Create **Baseline Cycle Time** in pr_baseline table:
-
-   ```
-   Baseline Cycle Time = AVERAGE('pr_baseline'[cycle_time_hours])
-   ```
-
-   ![](../media/mang-cor-ex2-g7.png)
-
-1. Create **Post-Copilot Cycle Time** in pr_post table:
-
-   ```
-   Post-Copilot Cycle Time = AVERAGE('pr_post'[cycle_time_hours])
-   ```
-
-   ![](../media/mang-cor-ex2-g8.png)
-
-1. Create **Cycle Time Improvement %** in pr_baseline table:
-
-   ```
-   Cycle Time Improvement % = DIVIDE([Baseline Cycle Time] - [Post-Copilot Cycle Time], [Baseline Cycle Time], 0)
-   ```
-
-   ![](../media/mang-cor-ex2-g9.png)
-
-   - Format as **Percentage** with **1 decimal place**.
-
-   > **Manager Insight:** Cycle time specifically measures developer coding efficiency - this is where Copilot has the most direct impact.
-
-### C. Throughput Measures
-
-1. Create **Baseline PRs Merged** in pr_baseline table:
-
-   ```
-   Baseline PRs Merged = AVERAGE('pr_baseline'[prs_merged])
-   ```
-
-   ![](../media/mang-cor-ex2-g10.png)
-
-1. Create **Post-Copilot PRs Merged** in pr_post table:
-
-   ```
-   Post-Copilot PRs Merged = AVERAGE('pr_post'[prs_merged])
-   ```
-
-   ![](../media/mang-cor-ex2-g11.png)
-
-1. Create **Throughput Improvement %** in pr_baseline table:
-
-   ```
-   Throughput Improvement % = DIVIDE([Post-Copilot PRs Merged] - [Baseline PRs Merged], [Baseline PRs Merged], 0)
-   ```
-
-   ![](../media/mang-cor-ex2-g12.png)
-
-   - Format as **Percentage** with **1 decimal place**.
-
-   > **Manager Insight:** Increased throughput means your team is delivering more work in the same amount of time - a direct productivity gain.
-
----
-
-## Task 3: Build Productivity Impact Visuals
-
-### A. Create KPI Cards
-
-1. Insert a **Card** visual from the Visualizations pane.
-
-   ![](../media/mang-cor-ex2-g13.png)
-
-1. Add **Lead Time Improvement %** to the card.
-
-   ![](../media/mang-cor-ex2-g14.png)
-
-1. Create additional cards for:
-   - **Cycle Time Improvement %**
-   - **Throughput Improvement %**
-
-   ![](../media/mang-cor-ex2-g15.png)
-
-   > **Executive Communication:** These three cards tell the productivity story at a glance. "Lead time down 25%, cycle time down 30%, throughput up 20%" is a compelling message.
-
-### B. Create Team Comparison Chart
-
-1. Insert a **Clustered bar chart**.
-
-   ![](../media/mang-cor-ex2-g16.png)
+   ![](../media/mang-cor-ex1-g22.png)
 
 1. Configure the chart:
-   - **Y-axis**: team (from pr_baseline)
-   - **X-axis**: Lead Time Improvement %
+   - **Y-axis**: user_login
+   - **X-axis**: Total Acceptances
+   - **Legend**: team
 
-   ![](../media/mang-cor-ex2-g17.png)
+   ![](../media/mang-cor-ex1-g23.png)
 
-   > **Manager Insight:** This shows which teams are seeing the most productivity benefit. Use this to identify success stories and areas needing support.
+1. Review the chart:
 
-### C. Create Before/After Comparison Matrix
+   ![](../media/mang-cor-ex1-g24.png)
 
-1. Insert a **Matrix** visual.
+   > **Manager Insight:** This identifies your top Copilot users. Consider:
+   > - Asking top users to share tips with their teams
+   > - Understanding what makes them successful (editor, language, workflow)
+   > - Recognizing their adoption in team meetings
 
-   ![](../media/mang-cor-ex2-g18.png)
+### D. Create Technology Adoption Matrix
 
-1. Configure the matrix:
-   - **Rows**: team
-   - **Values**: Baseline Lead Time, Post-Copilot Lead Time, Lead Time Improvement %, Throughput Improvement %
+1. Insert a **Matrix** visual from the Visualizations pane.
 
-   ![](../media/mang-cor-ex2-g19.png)
+   ![](../media/mang-cor-ex1-g26.png)
 
-   > **Executive Value:** This provides detailed comparison data for teams who want to dig into the numbers.
+1. Configure the Matrix:
+   - **Rows (1):** editor_primary
+   - **Columns (2):** language_primary
+   - **Values (3):** Active Users, Acceptance Rate %
 
-### D. Add Team Filter
+   ![](../media/mang-cor-ex1-g27.png)
 
-1. Insert a **Slicer** and add the **team** field from pr_baseline.
+   > **Manager Insight:** This reveals which technology combinations work best with Copilot:
+   > - High acceptance in VS Code + Python? Consider recommending this setup
+   > - Low adoption in JetBrains? May need specific training for that IDE
+   > - Some languages showing low rates? Copilot may be less mature for those languages
 
-   ![](../media/mang-cor-ex2-g20.png)
+### E. Add Interactive Filters
 
-1. Format the slicer as **Tile** style for easy selection.
+1. Insert a **Slicer** from the Visualizations pane.
 
-   ![](../media/mang-cor-ex2-g21.png)
+   ![](../media/mang-cor-ex1-g28.png)
 
-1. Test the interactivity by selecting different teams:
+1. Add **team** and **role** fields to the slicer for filtering.
 
-   ![](../media/mang-cor-ex2-g22.png)
+   ![](../media/mang-cor-ex1-g29.png)
+
+1. Test the interactivity - select different teams to see metrics update:
+
+   ![](../media/mang-cor-ex1-g30.png)
+
+   > **Manager Benefit:** These filters let you drill into specific teams during reviews or prepare team-specific reports.
 
 ---
 
-## Task 4: Interpret Results for Stakeholder Conversations
+## Task 3: Interpret Results and Plan Actions
 
-This is the critical management skill: translating data into compelling narratives.
+This task focuses on how to use your dashboard for management decisions.
 
-### A. Building Your Productivity Story
+### A. Reading Your Dashboard
 
-Use this framework for executive conversations:
+Look at your completed dashboard and answer these questions:
 
-**Opening Statement (30 seconds):**
-> "Since adopting GitHub Copilot, our teams have seen a [X]% reduction in lead time and [Y]% increase in throughput. Let me show you what this means for our delivery capacity."
+| Question | Where to Look | Action if Low |
+|----------|--------------|---------------|
+| How many people are actively using Copilot? | Active Users card | Check license assignments; follow up with inactive users |
+| Are suggestions actually helpful? | Acceptance Rate % | Provide training on prompt engineering and effective use |
+| Who are our power users? | Bar chart - top users | Engage them as champions and peer trainers |
+| Which teams lead/lag? | Team table | Share best practices from leaders; support lagging teams |
+| Are advanced features adopted? | Chat Users metric | Promote Copilot Chat in team communications |
 
-**Key Metrics to Highlight:**
+### B. Identifying Patterns
 
-| Metric | Sample Message | Impact |
-|--------|----------------|--------|
-| Lead Time Improvement | "PRs that took 12 hours now take 9 hours" | Faster delivery |
-| Cycle Time Improvement | "Active coding time reduced by 25%" | Developer efficiency |
-| Throughput Improvement | "Teams are completing 20% more PRs per sprint" | Increased capacity |
+Common patterns and what they mean:
 
-**Closing with Business Value:**
-> "This translates to approximately [X] hours saved per developer per month, which we'll quantify in our ROI analysis."
+| Pattern | Possible Cause | Recommended Action |
+|---------|---------------|-------------------|
+| High suggestions, low acceptances | Suggestions not matching coding style | Training on reviewing/editing suggestions |
+| Low chat usage | Unfamiliarity with feature | Demo Copilot Chat in team meetings |
+| Senior devs low adoption | Skepticism or "I don't need help" | Pair with champions; show productivity benefits |
+| Junior devs low adoption | Unsure how to use effectively | Structured onboarding program |
+| One team excelling | Good practices worth sharing | Document and share their workflow |
 
-### B. Handling Common Questions
+### C. Creating Your Action Plan
 
-| Question | How to Answer |
-|----------|---------------|
-| "Is this really from Copilot?" | "We compared the same teams before and after adoption, controlling for other variables. The timing correlates directly with Copilot rollout." |
-| "Which teams see the most benefit?" | Use your team comparison chart to show specific results |
-| "What about code quality?" | "Lead time includes review time - faster reviews suggest code is higher quality and easier to review" |
-| "Can we replicate this?" | "Yes - let me show you which teams are succeeding and what practices they follow" |
+Based on your analysis, document:
 
-### C. Connecting to Adoption Data
+1. **Quick Wins (This Week)**
+   - Which 3 users should I recognize as Copilot champions?
+   - What one training topic would help most users?
 
-Link your findings from Exercise 3:
+2. **Short-term Actions (This Month)**
+   - Which team needs dedicated support?
+   - Should I reassign unused licenses?
 
-| Adoption Metric | Productivity Impact | Insight |
-|-----------------|---------------------|---------|
-| Teams with high acceptance rates | Usually show best lead time improvement | Confirms Copilot effectiveness |
-| Teams with chat usage | Often show cycle time gains | Advanced features add value |
-| Teams with low adoption | Lower productivity gains | Opportunity for training |
+3. **Strategic Initiatives (This Quarter)**
+   - What adoption target should I set?
+   - How will I measure progress?
 
-> **Manager Insight:** The correlation between adoption and productivity is your strongest argument for continued investment in Copilot training and expansion.
+> **Manager Insight:** This analysis isn't just about creating charts - it's about taking action to improve your team's productivity.
 
 ---
 
 ## Notes
 
-- Positive improvements in lead time and cycle time reductions indicate faster delivery
-- Increased throughput shows teams are completing more work
-- Use the team slicer to analyze which teams benefit most
-- Focus on teams with significant improvements to identify replicable success patterns
-- Some teams may show benefits in speed while others show throughput gains
+- Focus on trends rather than absolute numbers - adoption patterns are more important than raw usage counts
+- Pay attention to acceptance rates by team/technology to identify where Copilot is working best
+- Use this data to identify Copilot champions who can help train others
+- Consider experience level (role) when analyzing adoption - patterns often differ between senior and junior developers
 
 ---
 
@@ -318,14 +247,14 @@ Link your findings from Exercise 3:
 
 In this exercise, you successfully:
 
-- **Imported before-and-after PR data** - You have the foundation for measuring concrete impact.
+- **Created essential adoption measures** - You have the key metrics executives ask about.
 
-- **Created productivity comparison measures** - You can quantify lead time, cycle time, and throughput improvements.
+- **Built team performance visualizations** - You can compare adoption across teams and technologies.
 
-- **Built executive-ready visualizations** - Your charts clearly communicate productivity gains.
+- **Learned to interpret patterns** - You understand what the data means and what actions to take.
 
-- **Learned stakeholder communication** - You have frameworks for presenting results and handling questions.
+- **Developed an action plan framework** - You have a structure for translating insights into improvements.
 
-This productivity analysis, combined with your adoption metrics from Exercise 3, creates a comprehensive view of Copilot's organizational impact. In Exercise 5, you'll combine everything to calculate ROI and build your final executive dashboard.
+Your adoption dashboard provides the foundation for ongoing Copilot program management. In the next exercise, you'll add productivity impact analysis to quantify the business value of this adoption.
 
 ### You have successfully completed this exercise. Click Next >> to continue.

@@ -42,18 +42,21 @@ Participants should have:
 |----------|----------|---------------|
 | Getting Started | 15 min | Environment setup and verification |
 | Exercise 1: Copilot Features & Governance | 45 min | **GitHub Copilot Admin** |
-| Exercise 2: Enable & Access Usage Reports | 20 min | **GitHub Copilot Admin** |
-| Exercise 3: Analyze Adoption & Engagement | 30 min | Analytics & Insights |
-| Exercise 4: Measure Productivity with PR Analysis | 25 min | Analytics & Insights |
-| Exercise 5: Build Executive ROI Dashboard | 30 min | Business Value |
-| Q&A and Discussion | 35 min | Real-world Scenarios |
+| Exercise 2: Experience GitHub Copilot Yourself | 12 min | **Hands-On Experience** |
+| Exercise 3: Enable & Access Usage Reports | 20 min | **GitHub Copilot Admin** |
+| Exercise 4: Analyze Adoption & Engagement | 30 min | Analytics & Insights |
+| Exercise 5: Measure Productivity with PR Analysis | 25 min | Analytics & Insights |
+| Exercise 6: Build Executive ROI Dashboard | 30 min | Business Value |
+| Q&A and Discussion | 33 min | Real-world Scenarios |
 | **Total** | **4 hours** | |
 
 ## What's New in This Workshop
 
 Based on participant feedback, this workshop has been redesigned to include:
 
-- **More GitHub Copilot content** - New Exercise 1 covers Copilot features, policies, and governance in depth
+- **More GitHub Copilot content** - Exercise 1 covers Copilot features, policies, and governance in depth
+
+- **Hands-on experience** - NEW Exercise 2 lets managers and sales teams use Copilot directly to understand the developer experience
 
 - **Balanced approach** - Less Power BI formula creation, more focus on interpreting results and taking action
 
@@ -65,23 +68,26 @@ Based on participant feedback, this workshop has been redesigned to include:
 
 ## Architecture
 
-You'll progress through a comprehensive five-exercise journey:
+You'll progress through a comprehensive six-exercise journey:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  Exercise 1: Copilot Features & Governance                      │
 │  └─ Understand capabilities, policies, content exclusions       │
 ├─────────────────────────────────────────────────────────────────┤
-│  Exercise 2: Enable & Access Usage Reports                      │
+│  Exercise 2: Experience GitHub Copilot Yourself                 │
+│  └─ Hands-on coding, build real scripts, demo preparation       │
+├─────────────────────────────────────────────────────────────────┤
+│  Exercise 3: Enable & Access Usage Reports                      │
 │  └─ Generate reports, understand data structure                 │
 ├─────────────────────────────────────────────────────────────────┤
-│  Exercise 3: Analyze Adoption & Engagement                      │
+│  Exercise 4: Analyze Adoption & Engagement                      │
 │  └─ Team performance, user engagement patterns                  │
 ├─────────────────────────────────────────────────────────────────┤
-│  Exercise 4: Measure Productivity with PR Analysis              │
+│  Exercise 5: Measure Productivity with PR Analysis              │
 │  └─ Before/after comparison, productivity metrics               │
 ├─────────────────────────────────────────────────────────────────┤
-│  Exercise 5: Build Executive ROI Dashboard                      │
+│  Exercise 6: Build Executive ROI Dashboard                      │
 │  └─ ROI calculation, executive presentation, publishing         │
 └─────────────────────────────────────────────────────────────────┘
 ```

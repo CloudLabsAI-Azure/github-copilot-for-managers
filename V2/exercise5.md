@@ -1,344 +1,316 @@
-# Exercise 5: Build Executive Dashboard & Calculate ROI
+# Exercise 4: Measure Productivity Impact with PR Analysis
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 25 Minutes
 
 ## Overview
 
-In this exercise, you will create an executive-ready dashboard that combines adoption metrics and productivity improvements to calculate and present the return on investment (ROI) of GitHub Copilot. You'll learn how to translate technical metrics into financial value and present compelling business cases to leadership.
+In this exercise, you will import and analyze pull request (PR) metrics from before and after Copilot adoption to measure concrete productivity improvements. This data provides the quantitative evidence executives need to understand Copilot's business impact.
 
-> **Manager Value:** This is where everything comes together. You'll leave with a dashboard you can present to executives and the skills to articulate Copilot's business value.
+> **Manager Value:** This exercise answers the critical question: "Is Copilot actually making our developers more productive?" You'll learn to present measurable improvements in delivery speed and throughput.
 
 ## Objectives
 
 You will be able to complete the following tasks:
 
-- Task 1: Create ROI calculation measures
-- Task 2: Build an executive summary dashboard
-- Task 3: Present the business case effectively
-- Task 4: Publish and share your dashboard
+- Task 1: Import and understand PR performance data
+- Task 2: Create productivity comparison measures
+- Task 3: Build executive-ready productivity visuals
+- Task 4: Interpret results for stakeholder conversations
 
 ## Prerequisites
 
-- Completion of Exercises 3 and 4 (adoption and productivity analysis)
-- Understanding of basic ROI concepts
+- Completion of Exercise 3 with adoption analysis
+- Understanding of software development metrics
 
 ---
 
-## Task 1: Create ROI Calculation Measures
+## Understanding Productivity Metrics
 
-In this task, you'll create measures that translate productivity improvements into financial value.
+Before diving in, let's ensure you understand the metrics we're measuring:
 
-### A. Create Executive Dashboard Page
+| Metric | Definition | Why It Matters |
+|--------|------------|----------------|
+| **Lead Time** | Time from PR creation to merge | Measures overall delivery speed |
+| **Cycle Time** | Active development time | Measures developer efficiency |
+| **Throughput** | PRs merged per time period | Measures team delivery capacity |
+| **PR Size** | Lines changed per PR | Smaller = faster reviews, lower risk |
 
-1. Click on **(+)** at the bottom tab area to create a new page.
+> **Manager Insight:** These are standard DevOps metrics (DORA-aligned). Improving them demonstrates real business value - faster delivery means faster time-to-market.
 
-1. Rename the page to **Executive Dashboard**.
+---
 
-   ![](../media/mang-cor-ex4-g1.png)
+## Task 1: Import PR Performance Data
 
-### B. Time Savings Calculations
+In this task, you will load baseline (pre-Copilot) and post-adoption pull request metrics.
 
-1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**.
+### A. Create Analysis Page
+
+1. Click the **+ (plus)** icon next to your existing page tab to create a new sheet.
+
+   ![](../media/mang-cor-ex1-g33.png)
+
+1. Rename it to **PR Impact**.
+
+   ![](../media/mang-cor-ex1-g34.png)
+
+### B. Import Baseline Data
+
+1. On the **Home** tab (1), click **Get data** (2).
+
+   ![](../media/git_co_man-e1-g3.png)
+
+1. Choose **Text/CSV (1)** and select **Connect (2)**.
+
+   ![](../media/git_co_man-e1-g16.png)
+
+1. Navigate to **C:\Copilot_Datasets (1)**, select **pr_baseline.csv (2)**, and click **Open (3)**.
+
+   ![](../media/mang-cor-ex1-g35.png)
+
+1. Verify the data preview looks correct and click **Load**.
+
+   ![](../media/mang-cor-ex1-g36.png)
+
+   > **Understanding Baseline Data:** This represents your team's productivity BEFORE Copilot adoption - your starting point for comparison.
+
+### C. Import Post-Adoption Data
+
+1. Click **Get data** again from the Home tab.
+
+   ![](../media/git_co_man-e1-g3.png)
+
+1. Choose **Text/CSV** and **Connect**.
+
+   ![](../media/git_co_man-e1-g16.png)
+
+1. Navigate to **C:\Copilot_Datasets (1)**, select **pr_post.csv (2)**, and click **Open (3)**.
+
+   ![](../media/mang-cor-ex1-g37.png)
+
+1. Verify the data preview and click **Load**.
+
+   ![](../media/mang-cor-ex1-g38.png)
+
+   > **Understanding Post-Adoption Data:** This shows productivity AFTER Copilot has been adopted. The difference tells the ROI story.
+
+---
+
+## Task 2: Create Productivity Comparison Measures
+
+Now we'll create measures that quantify the improvements. These calculations translate developer efficiency gains into metrics executives understand.
+
+### A. Lead Time Measures
+
+1. In the **Data** pane, right-click **pr_baseline** table (1) and select **New measure** (2).
 
    ![](../media/mang-cor-ex1-g39.png)
 
-1. Create **Hours Saved per Dev per Month**:
+1. Create **Baseline Lead Time**:
 
    ```
-   Hours Saved per Dev per Month = 
-   VAR LeadTimeReduction = [Lead Time Improvement]
-   VAR AvgPRsPerMonth = [Post-Copilot PRs Merged] 
-   VAR HoursSaved = LeadTimeReduction * AvgPRsPerMonth
-   RETURN HoursSaved
+   Baseline Lead Time = AVERAGE('pr_baseline'[lead_time_hours])
    ```
 
-   ![](../media/mang-cor-ex4-g2.png)
+   ![](../media/mang-cor-ex2-g1.png)
 
-   > **Manager Insight:** This calculates how many hours each developer saves monthly due to faster PR completion. It's the foundation of your ROI calculation.
-
-1. Create **Lead Time Improvement** measure (if not already created):
+1. Right-click **pr_post** table and create **Post-Copilot Lead Time**:
 
    ```
-   Lead Time Improvement = [Baseline Lead Time] - [Post-Copilot Lead Time]
+   Post-Copilot Lead Time = AVERAGE('pr_post'[lead_time_hours])
    ```
 
-   ![](../media/mang-cor-ex2-g4.png)
+   ![](../media/mang-cor-ex2-g3.png)
 
-1. Create **Total Hours Saved Organization**:
-
-   ```
-   Total Hours Saved Organization = 
-   [Hours Saved per Dev per Month] * [Active Users]
-   ```
-
-   ![](../media/mang-cor-ex4-g3.png)
-
-   > **Manager Insight:** This scales individual time savings to the entire organization - a key number for executive conversations.
-
-### C. Create Dynamic Parameters
-
-Dynamic parameters allow executives to explore different scenarios during presentations.
-
-1. Go to **Modeling (1)** → **New parameter** → **Numeric range (2)**.
-
-   ![](../media/co-po-ex4-g3.png)
-
-1. Configure the **Developer Hourly Rate** parameter:
-   - **Name:** Developer Hourly Rate (2)
-   - **Data type:** Whole number (3)
-   - **Minimum:** 50 (4)
-   - **Maximum:** 200 (5)
-   - **Increment:** 10 (6)
-   - **Default:** 75 (7)
-   - **Add slicer to this page:** Checked (8)
-   - Click **Create** (9)
-
-   ![](../media/mang-cor-ex4-g4.png)
-
-   > **Manager Insight:** This allows executives to see ROI based on their own cost assumptions. Different regions or teams may have different rates.
-
-1. Create **Monthly Time Savings Value**:
+1. Right-click **pr_baseline** table and create **Lead Time Improvement %**:
 
    ```
-   Monthly Time Savings Value = 
-   [Total Hours Saved Organization] * 'Developer Hourly Rate'[Developer Hourly Rate Value]
+   Lead Time Improvement % = DIVIDE([Baseline Lead Time] - [Post-Copilot Lead Time], [Baseline Lead Time], 0)
    ```
 
-   ![](../media/mang-cor-ex4-g11.png)
+   ![](../media/mang-cor-ex2-g5.png)
 
-   Format as **Currency** with **0 decimal places**.
+   - Format as **Percentage** with **1 decimal place**.
 
-1. Create **Annual Time Savings Value**:
+   > **Manager Insight:** A 20% improvement in lead time means PRs that took 10 hours now take 8 hours. Over hundreds of PRs, this translates to significant time savings.
 
-   ```
-   Annual Time Savings Value = [Monthly Time Savings Value] * 12
-   ```
+### B. Cycle Time Measures
 
-   ![](../media/mang-cor-ex4-g6.png)
-
-### D. Create ROI Measures
-
-1. Create another parameter for **Annual Copilot Cost per User**:
-   - Go to **Modeling** → **New parameter** → **Numeric range**
-
-   ![](../media/mang-cor-ex4-g7.png)
-
-1. Configure the cost parameter:
-   - **Name:** Annual Copilot Cost per User (2)
-   - **Data type:** Whole number (3)
-   - **Minimum:** 100 (4)
-   - **Maximum:** 500 (5)
-   - **Increment:** 20 (6)
-   - **Default:** 228 (7) *(Copilot Business annual cost)*
-   - **Add slicer to this page:** Checked (8)
-   - Click **Create** (9)
-
-   ![](../media/mang-cor-ex4-g12.png)
-
-1. Create **Total Annual Copilot Investment**:
+1. Create **Baseline Cycle Time** in pr_baseline table:
 
    ```
-   Total Annual Copilot Investment = 
-   [Active Users] * 'Annual Copilot Cost per User'[Annual Copilot Cost per User Value]
+   Baseline Cycle Time = AVERAGE('pr_baseline'[cycle_time_hours])
    ```
 
-   ![](../media/mang-cor-ex4-g10.png)
+   ![](../media/mang-cor-ex2-g7.png)
 
-1. Create **Copilot ROI %**:
-
-   ```
-   Copilot ROI % = DIVIDE(
-       [Annual Time Savings Value] - [Total Annual Copilot Investment],
-       [Total Annual Copilot Investment],
-       0
-   )
-   ```
-
-   ![](../media/mang-cor-ex4-g14.png)
-
-   Format as **Percentage** with **0 decimal places**.
-
-   > **Manager Insight:** A positive ROI % means the time savings value exceeds the cost of Copilot. For example, 200% ROI means you're getting $3 in value for every $1 spent.
-
-1. Create **ROI Payback Period (months)**:
+1. Create **Post-Copilot Cycle Time** in pr_post table:
 
    ```
-   ROI Payback Period (months) = DIVIDE(
-       [Total Annual Copilot Investment],
-       [Monthly Time Savings Value],
-       0
-   )
+   Post-Copilot Cycle Time = AVERAGE('pr_post'[cycle_time_hours])
    ```
 
-   ![](../media/mang-cor-ex4-g15.png)
+   ![](../media/mang-cor-ex2-g8.png)
 
-   Format as **Decimal number** with **1 decimal place**.
+1. Create **Cycle Time Improvement %** in pr_baseline table:
 
-   > **Manager Insight:** Payback period shows how quickly the investment pays for itself. Less than 6 months is excellent; less than 12 months is good.
+   ```
+   Cycle Time Improvement % = DIVIDE([Baseline Cycle Time] - [Post-Copilot Cycle Time], [Baseline Cycle Time], 0)
+   ```
 
-1. Verify your parameters appear in the Data pane:
+   ![](../media/mang-cor-ex2-g9.png)
 
-   ![](../media/mang-cor-ex4-g16.png)
-   ![](../media/mang-cor-ex4-g17.png)
+   - Format as **Percentage** with **1 decimal place**.
+
+   > **Manager Insight:** Cycle time specifically measures developer coding efficiency - this is where Copilot has the most direct impact.
+
+### C. Throughput Measures
+
+1. Create **Baseline PRs Merged** in pr_baseline table:
+
+   ```
+   Baseline PRs Merged = AVERAGE('pr_baseline'[prs_merged])
+   ```
+
+   ![](../media/mang-cor-ex2-g10.png)
+
+1. Create **Post-Copilot PRs Merged** in pr_post table:
+
+   ```
+   Post-Copilot PRs Merged = AVERAGE('pr_post'[prs_merged])
+   ```
+
+   ![](../media/mang-cor-ex2-g11.png)
+
+1. Create **Throughput Improvement %** in pr_baseline table:
+
+   ```
+   Throughput Improvement % = DIVIDE([Post-Copilot PRs Merged] - [Baseline PRs Merged], [Baseline PRs Merged], 0)
+   ```
+
+   ![](../media/mang-cor-ex2-g12.png)
+
+   - Format as **Percentage** with **1 decimal place**.
+
+   > **Manager Insight:** Increased throughput means your team is delivering more work in the same amount of time - a direct productivity gain.
 
 ---
 
-## Task 2: Build the Executive Dashboard
+## Task 3: Build Productivity Impact Visuals
 
-Now let's create a dashboard designed for executive audiences.
+### A. Create KPI Cards
 
-### A. Create Key Metric Cards
+1. Insert a **Card** visual from the Visualizations pane.
 
-1. Insert **Card** visuals for these priority metrics:
+   ![](../media/mang-cor-ex2-g13.png)
 
-   ![](../media/mang-cor-ex4-g19.png)
+1. Add **Lead Time Improvement %** to the card.
 
-1. Add **Copilot ROI %** - make this prominent:
+   ![](../media/mang-cor-ex2-g14.png)
 
-   ![](../media/mang-cor-ex4-g20.png)
+1. Create additional cards for:
+   - **Cycle Time Improvement %**
+   - **Throughput Improvement %**
 
-1. Add additional cards for:
-   - **ROI Payback Period (months)**
-   - **Annual Time Savings Value**
-   - **Active Users**
+   ![](../media/mang-cor-ex2-g15.png)
 
-   ![](../media/mang-cor-ex4-g21.png)
+   > **Executive Communication:** These three cards tell the productivity story at a glance. "Lead time down 25%, cycle time down 30%, throughput up 20%" is a compelling message.
 
-   > **Executive Value:** These four cards immediately communicate the business case in terms executives understand: ROI, payback, savings, and scale.
+### B. Create Team Comparison Chart
 
-### B. Create Adoption vs. Impact Matrix
+1. Insert a **Clustered bar chart**.
 
-1. Insert a **Scatter chart** to show the relationship between adoption and productivity:
+   ![](../media/mang-cor-ex2-g16.png)
 
-   ![](../media/mang-cor-ex4-g22.png)
+1. Configure the chart:
+   - **Y-axis**: team (from pr_baseline)
+   - **X-axis**: Lead Time Improvement %
 
-1. Configure the scatter chart:
-   - **X-axis**: Active Users (from copilot_org, by team)
-   - **Y-axis**: Lead Time Improvement % (from pr_baseline)
-   - **Legend**: team
+   ![](../media/mang-cor-ex2-g17.png)
 
-   ![](../media/mang-cor-ex4-g23.png)
+   > **Manager Insight:** This shows which teams are seeing the most productivity benefit. Use this to identify success stories and areas needing support.
 
-   > **Executive Insight:** This shows which teams are both adopting Copilot well AND seeing productivity benefits. Teams in the upper-right quadrant are your success stories.
+### C. Create Before/After Comparison Matrix
 
-### C. Add Improvement Summary
+1. Insert a **Matrix** visual.
 
-1. Insert a **Clustered column chart** showing key improvements:
+   ![](../media/mang-cor-ex2-g18.png)
 
-   ![](../media/mang-cor-ex4-g24.png)
+1. Configure the matrix:
+   - **Rows**: team
+   - **Values**: Baseline Lead Time, Post-Copilot Lead Time, Lead Time Improvement %, Throughput Improvement %
 
-1. Your completed dashboard should look similar to:
+   ![](../media/mang-cor-ex2-g19.png)
 
-   ![](../media/mang-cor-ex4-g25.png)
+   > **Executive Value:** This provides detailed comparison data for teams who want to dig into the numbers.
 
-### D. Dashboard Layout Best Practices
+### D. Add Team Filter
 
-Arrange your dashboard with executive viewing in mind:
+1. Insert a **Slicer** and add the **team** field from pr_baseline.
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  [ROI %]    [Payback]    [Annual Savings]  [Users]     │  ← Key metrics at top
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  [Adoption vs Impact Scatter Chart]                     │  ← Main insight visual
-│                                                         │
-├───────────────────────────┬─────────────────────────────┤
-│  [Improvement Summary]    │  [Parameter Sliders]        │  ← Details & interactivity
-│                           │  - Developer Rate           │
-│                           │  - Copilot Cost             │
-└───────────────────────────┴─────────────────────────────┘
-```
+   ![](../media/mang-cor-ex2-g20.png)
 
-> **Manager Insight:** Executives scan from top-left to bottom-right. Put your most important metrics where they look first.
+1. Format the slicer as **Tile** style for easy selection.
+
+   ![](../media/mang-cor-ex2-g21.png)
+
+1. Test the interactivity by selecting different teams:
+
+   ![](../media/mang-cor-ex2-g22.png)
 
 ---
 
-## Task 3: Present the Business Case
+## Task 4: Interpret Results for Stakeholder Conversations
 
-This task covers how to use your dashboard in executive presentations.
+This is the critical management skill: translating data into compelling narratives.
 
-### A. The Executive Presentation Framework
+### A. Building Your Productivity Story
 
-**Opening (1 minute):**
-> "We invested in GitHub Copilot to improve developer productivity. I'm here to show you the results."
+Use this framework for executive conversations:
 
-**Key Metrics (2 minutes):**
-> "Our Copilot investment is generating [ROI %] return. We're seeing annual time savings valued at [Annual Savings], with a payback period of just [X] months."
+**Opening Statement (30 seconds):**
+> "Since adopting GitHub Copilot, our teams have seen a [X]% reduction in lead time and [Y]% increase in throughput. Let me show you what this means for our delivery capacity."
 
-**Adoption Story (2 minutes):**
-> "We have [Active Users] developers actively using Copilot. The scatter chart shows our top-performing teams are achieving [X]% lead time improvement."
+**Key Metrics to Highlight:**
 
-**Productivity Impact (2 minutes):**
-> "Across the organization, we've reduced cycle time by [X]% and increased throughput by [Y]%. This means faster delivery without adding headcount."
+| Metric | Sample Message | Impact |
+|--------|----------------|--------|
+| Lead Time Improvement | "PRs that took 12 hours now take 9 hours" | Faster delivery |
+| Cycle Time Improvement | "Active coding time reduced by 25%" | Developer efficiency |
+| Throughput Improvement | "Teams are completing 20% more PRs per sprint" | Increased capacity |
 
-**Scenario Exploration (2 minutes):**
-> "Let me show you what happens if we expand adoption..." *[Adjust sliders to show expanded scenarios]*
+**Closing with Business Value:**
+> "This translates to approximately [X] hours saved per developer per month, which we'll quantify in our ROI analysis."
 
-**Call to Action (1 minute):**
-> "Based on these results, I recommend [expanding to more teams / investing in training / continued monitoring]."
+### B. Handling Common Questions
 
-### B. Handling Executive Questions
+| Question | How to Answer |
+|----------|---------------|
+| "Is this really from Copilot?" | "We compared the same teams before and after adoption, controlling for other variables. The timing correlates directly with Copilot rollout." |
+| "Which teams see the most benefit?" | Use your team comparison chart to show specific results |
+| "What about code quality?" | "Lead time includes review time - faster reviews suggest code is higher quality and easier to review" |
+| "Can we replicate this?" | "Yes - let me show you which teams are succeeding and what practices they follow" |
 
-| Question | Response Strategy |
-|----------|-------------------|
-| "Is this sustainable?" | "We're tracking trends over time. Early data suggests improvements compound as developers become more proficient." |
-| "What about code quality?" | "Faster lead times include review time - the data suggests reviewers are finding code easier to approve." |
-| "Should we expand?" | Use sliders to show ROI at larger scale: "If we add 50 more developers, projected ROI increases to..." |
-| "What's the risk?" | "The main risk is low adoption. We're addressing this through training programs and identifying team champions." |
-| "How does this compare to industry?" | "GitHub reports average 55% faster coding with Copilot. Our results at [X]% are [above/in line with] expectations." |
+### C. Connecting to Adoption Data
 
-### C. Connecting to Strategic Goals
+Link your findings from Exercise 3:
 
-Frame Copilot benefits in terms of business objectives:
+| Adoption Metric | Productivity Impact | Insight |
+|-----------------|---------------------|---------|
+| Teams with high acceptance rates | Usually show best lead time improvement | Confirms Copilot effectiveness |
+| Teams with chat usage | Often show cycle time gains | Advanced features add value |
+| Teams with low adoption | Lower productivity gains | Opportunity for training |
 
-| Business Goal | Copilot Contribution | Your Data Point |
-|---------------|---------------------|-----------------|
-| Faster time-to-market | Reduced lead time | "X% improvement" |
-| Developer retention | Better tooling, less tedious work | "Y% using advanced features" |
-| Cost efficiency | More output per developer | "Z hours saved monthly" |
-| Innovation capacity | Less time on boilerplate | "W% throughput increase" |
-
-> **Manager Insight:** Executives care about business outcomes, not technology. Always connect your metrics to what the business is trying to achieve.
-
----
-
-## Task 4: Publish to Power BI Service
-
-Make your dashboard accessible to stakeholders.
-
-1. In Power BI Desktop, select **File** → **Publish** → **Publish to Power BI**.
-
-   ![](../media/gt-co-ex1-g8.png)
-
-1. Choose **My workspace** and click **Select**.
-
-   ![](../media/gt-co-ex1-g12.png)
-
-1. When prompted, save with a meaningful filename like: `Copilot_ROI_Dashboard`
-
-   ![](../media/gt-co-ex1-g11.png)
-
-1. After successful publish, click **Got it**.
-
-   ![](../media/gt-co-ex1-g13.png)
-
-### Sharing Options
-
-Once published, you can:
-- **Share direct link** - Send URL to specific executives
-- **Embed in Teams** - Add to management team channel
-- **Schedule refresh** - Keep data current automatically
-- **Export to PDF** - For offline presentations
+> **Manager Insight:** The correlation between adoption and productivity is your strongest argument for continued investment in Copilot training and expansion.
 
 ---
 
 ## Notes
 
-- ROI calculations focus on time savings - the primary quantifiable benefit
-- Parameters make the dashboard interactive for different scenarios
-- Executives need "so what" not "how" - focus on business impact
-- Payback period is often more compelling than ROI percentage
-- Always have team-level detail available for drill-down questions
+- Positive improvements in lead time and cycle time reductions indicate faster delivery
+- Increased throughput shows teams are completing more work
+- Use the team slicer to analyze which teams benefit most
+- Focus on teams with significant improvements to identify replicable success patterns
+- Some teams may show benefits in speed while others show throughput gains
 
 ---
 
@@ -346,63 +318,14 @@ Once published, you can:
 
 In this exercise, you successfully:
 
-- **Created ROI calculation measures** - You can quantify the financial value of Copilot adoption.
+- **Imported before-and-after PR data** - You have the foundation for measuring concrete impact.
 
-- **Built an executive dashboard** - Your visualizations communicate business value clearly.
+- **Created productivity comparison measures** - You can quantify lead time, cycle time, and throughput improvements.
 
-- **Learned presentation strategies** - You have frameworks for executive conversations.
+- **Built executive-ready visualizations** - Your charts clearly communicate productivity gains.
 
-- **Published for sharing** - Your dashboard is accessible to stakeholders.
+- **Learned stakeholder communication** - You have frameworks for presenting results and handling questions.
 
----
+This productivity analysis, combined with your adoption metrics from Exercise 3, creates a comprehensive view of Copilot's organizational impact. In Exercise 5, you'll combine everything to calculate ROI and build your final executive dashboard.
 
-## Workshop Completion
-
-### Congratulations!
-
-You have successfully completed the **Measuring GitHub Copilot Impact for Managers** workshop.
-
-### What You've Learned:
-
-| Exercise | Key Skill |
-|----------|-----------|
-| Exercise 1 | Copilot features, governance, and policy management |
-| Exercise 2 | Accessing and understanding usage reports |
-| Exercise 3 | Analyzing adoption patterns and team performance |
-| Exercise 4 | Measuring productivity impact with PR metrics |
-| Exercise 5 | Calculating ROI and presenting to executives |
-
-### Your Toolkit:
-
-You now have:
-- An adoption dashboard to track team engagement
-- A productivity dashboard showing before/after impact  
-- An ROI dashboard for executive presentations
-- Frameworks for stakeholder conversations
-- Governance best practices for your organization
-
-### Recommended Next Steps:
-
-1. **This Week:** Share your dashboard with your leadership team
-2. **This Month:** Identify 2-3 teams for focused adoption improvement
-3. **This Quarter:** Establish regular reporting cadence for Copilot metrics
-4. **Ongoing:** Update dashboards monthly and track trends over time
-
-### Additional Resources
-
-- [GitHub Copilot Documentation](https://docs.github.com/copilot)
-- [Copilot for Business Admin Guide](https://docs.github.com/copilot/managing-copilot-business)
-- [Copilot Trust Center](https://resources.github.com/copilot-trust-center/)
-- [GitHub Administration Certification](https://resources.github.com/learn/certifications/)
-
-### Support
-
-If you have questions after the workshop:
-- **CloudLabs Support:** cloudlabs-support@spektrasystems.com
-- **GitHub Documentation:** docs.github.com/copilot
-
----
-
-## Thank you for participating! 
-
-We hope this workshop has equipped you with the skills to effectively measure and communicate GitHub Copilot's business value in your organization.
+### You have successfully completed this exercise. Click Next >> to continue.
