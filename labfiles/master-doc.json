@@ -4,28 +4,24 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/labfiles/overview.md",
-        "Order": 1
-      },
-      {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/labfiles/getting-started.md",
-        "Order": 2
+        "Order": 1
       },
             {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/labfiles/exercise1.md",
-        "Order": 3
+        "Order": 2
       },
             {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/labfiles/exercise2.md",
-        "Order": 4
+        "Order": 3
       },
             {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/labfiles/exercise3.md",
-        "Order": 5
+        "Order": 4
       },
             {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/labfiles/exercise4.md",
-        "Order": 6
+        "Order": 5
       }    
     ]
   }

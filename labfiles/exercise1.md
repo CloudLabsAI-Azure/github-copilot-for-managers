@@ -14,16 +14,56 @@ These reports form the basis for the comprehensive analytics dashboard you'll bu
 
 You will be able to complete the following tasks:
 
-- Task 1: Navigate to GitHub Copilot administrative settings and activate reporting features
-- Task 2: Request and download organization-level usage data for analysis
+- Task 1: Product Overview for Managers and Pre-Sales
+- Task 2: Navigate to GitHub Copilot administrative settings and activate reporting features
+- Task 3: Request and download organization-level usage data for analysis
 
-## Prerequisites
+## Task 1: Product Overview for Managers and Pre-Sales
 
-- You are an **Organization Owner** of the target GitHub organization `contoso-impact`.
-- GitHub Copilot Business or Enterprise is already licensed for the org.
-- Email access to the owner mailbox (for the report-ready notification).
+In this task, you will understand the GitHub Copilot and its usecases.
 
-## Task 1: Navigate to GitHub Copilot Administrative Settings
+#### What is GitHub Copilot?
+
+**GitHub Copilot** is an AI-powered coding assistant developed by GitHub and OpenAI that helps developers write code faster, smarter, and with fewer errors.  
+It works directly inside popular development environments like Visual Studio Code, Visual Studio, Neovim, and JetBrains IDEs, offering context-aware code suggestions, explanations, and completions in real time as developers type.
+
+Copilot has evolved from being a simple autocomplete tool into an AI pair programmer that assists across the entire software lifecycle from writing code to fixing bugs, writing tests, and even explaining complex code logic.  
+It leverages large language models (LLMs) trained on billions of lines of code, enabling it to understand natural language prompts and generate corresponding code suggestions instantly.
+
+#### Why It Matters for Managers and Sales Teams
+
+GitHub Copilot is not just a developer productivity tool, it’s a strategic enabler that transforms how teams deliver software and how organizations measure engineering efficiency, speed, and innovation.
+
+##### For Managers
+Copilot provides visibility into how AI can drive measurable performance gains across teams, reduced development time, faster onboarding, and improved code quality.  
+With Copilot usage reports and Power BI analytics, managers can make data-driven decisions to scale AI-assisted development effectively across their organization.
+
+##### For Pre-Sales & Sales Teams
+Copilot becomes a business differentiator.  
+It allows pre-sales engineers to demonstrate tangible customer outcomes such as faster feature delivery, reduced backlog, and improved developer satisfaction.  
+The metrics derived from usage and productivity analysis can be turned into compelling ROI stories and customer success cases that strengthen business conversations.
+
+#### How GitHub Copilot Helps Organizations
+
+| **Benefit Area** | **Description** | **Why It Matters for Business** |
+|-------------------|------------------|---------------------------------|
+| **Developer Productivity** | Suggests entire lines or functions, helping developers complete work faster. | Reduces coding time, enabling faster release cycles and innovation. |
+| **Quality and Consistency** | Generates consistent, standards-aligned code patterns. | Improves maintainability and reduces rework costs. |
+| **Onboarding Efficiency** | Helps new developers understand unfamiliar codebases with inline explanations. | Speeds up onboarding and reduces time-to-productivity. |
+| **Cross-Technology Enablement** | Supports dozens of languages and frameworks, helping teams explore new stacks. | Expands organizational technical agility. |
+| **Innovation Enablement** | Frees developers from repetitive work, letting them focus on solving business problems. | Drives innovation and higher business impact per developer. |
+| **Data-Driven Insights** | Usage reports show real adoption, engagement, and productivity trends. | Enables clear ROI justification for management and customers. |
+
+#### The Business Value of GitHub Copilot
+
+GitHub Copilot bridges the gap between engineering output and business outcomes. By combining usage analytics with productivity metrics, organizations can quantify how AI assistance directly translates into faster delivery, higher quality, and lower cost.
+
+- **Accelerated Delivery:** Teams ship features faster by reducing coding and debugging time.  
+- **Reduced Costs:** Fewer reworks, less time spent on boilerplate code, and improved focus mean lower operational overhead.  
+- **Higher Developer Satisfaction:** Developers report feeling more focused, creative, and less fatigued, leading to lower attrition and higher retention.  
+- **Competitive Advantage:** Organizations adopting Copilot early can demonstrate measurable improvements in velocity and innovation to clients and stakeholders.  
+
+## Task 2: Navigate to GitHub Copilot Administrative Settings
 
 In this task, you will navigate to the GitHub Copilot administrative area within your organization settings and initiate the Activity report generation. This report provides comprehensive usage data that managers need to understand Copilot adoption across their development teams.
 
@@ -53,7 +93,7 @@ In this task, you will navigate to the GitHub Copilot administrative area within
 
    >**Understanding Activity Reports:** The Activity report provides per-user metrics including code suggestions, acceptances, chat usage, and technology preferences. This data is essential for measuring adoption success and identifying areas for improvement.
 
-## Task 2: Request and Download Organization Usage Data
+## Task 3: Request and Download Organization Usage Data
 
 In this task, you will initiate the report generation process and obtain the CSV file containing your organization's Copilot usage data. This data will serve as the foundation for all subsequent analysis and dashboard creation.
 

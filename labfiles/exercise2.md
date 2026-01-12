@@ -1,6 +1,6 @@
 # Exercise 2: Analyze Copilot Adoption & User Engagement
 
-### Estimated Duration: 15 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 
@@ -13,12 +13,6 @@ You will be able to complete the following tasks:
 - Task 1: Import Copilot usage data and understand the data structure
 - Task 2: Create adoption and engagement measures for management insights
 - Task 3: Build visualizations to identify usage patterns and team performance
-
-## Prerequisites
-
-- Successful completion of Exercise 1 with `copilot_org.csv` downloaded
-- Power BI Desktop installed and signed in
-- Basic familiarity with Power BI interface
 
 ## Task 1: Import and Configure Copilot Usage Data
 

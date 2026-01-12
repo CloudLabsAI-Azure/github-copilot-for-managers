@@ -1,6 +1,6 @@
 # Exercise 4: Build Executive Dashboard & Calculate ROI
 
-### Estimated Duration: 15 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 
@@ -13,12 +13,6 @@ You will be able to complete the following tasks:
 - Task 1: Create ROI calculation measures using productivity improvements
 - Task 2: Build an executive summary dashboard with key insights
 - Task 3: Publish the dashboard to Power BI Service for sharing
-
-## Prerequisites
-
-- Completion of Exercise 2 (adoption metrics) and Exercise 3 (productivity impact analysis)
-- Understanding of basic ROI calculation concepts
-- Access to Power BI Service (provided in lab environment)
 
 ## Task 1: Create ROI Calculation Measures
 
@@ -258,4 +252,5 @@ In this exercise, you created a comprehensive executive dashboard that transform
 
 
 ### Congratulations! You have successfully completed the Measuring GitHub Copilot Impact for Managers lab series. You now have the skills to measure, analyze, and communicate the business value of GitHub Copilot in your organization.
+
 
