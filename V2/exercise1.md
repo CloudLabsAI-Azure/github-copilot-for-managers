@@ -45,7 +45,15 @@ GitHub Copilot provides several AI-powered capabilities that help developers wri
 
 ### B. Understanding the Developer Experience
 
-1. In your browser, navigate to **GitHub.com** and sign in with your organization credentials.
+1. In your browser, navigate to **GitHub.com**.
+
+   ```
+   https://github.com/login
+   ```
+
+   ![](../media/v2-ex1-github-signin.png)
+
+1. And sign in with the organization credentials provided in the lab enviornement page.
 
    ![](../media/v2-ex1-github-signin.png)
 
@@ -54,6 +62,30 @@ GitHub Copilot provides several AI-powered capabilities that help developers wri
    ![](../media/v2-ex1-copilot-chat-icon.png)
 
    > **What Developers See:** This chat interface allows developers to ask questions about code, get explanations, and receive coding assistance directly on GitHub.com - even when they're not in their IDE.
+
+1. Try asking Copilot some questions to see how it responds. Type any of these example questions in the chat:
+
+   **For understanding code:**
+   ```
+   Explain what a pull request is and why it's important
+   ```
+
+   **For business scenarios:**
+   ```
+   How can I automate sales report generation using Python?
+   ```
+
+   **For learning:**
+   ```
+   What's the difference between GitHub Copilot Business and Enterprise?
+   ```
+
+   **For practical tasks:**
+   ```
+   Write a function to calculate ROI based on time saved and cost
+   ```
+
+   > **Manager Insight:** Notice how Copilot provides clear, contextual answers. This is what your developers experience hundreds of times per day - instant assistance without leaving their workflow.
 
 1. Explore the Copilot Chat interface:
    - Notice the **context awareness** - Copilot understands which repository you're viewing

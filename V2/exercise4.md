@@ -1,4 +1,4 @@
-# Exercise 3: Analyze Copilot Adoption & User Engagement
+# Exercise 4: Analyze Copilot Adoption & User Engagement
 
 ### Estimated Duration: 30 Minutes
 
