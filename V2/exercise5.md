@@ -19,7 +19,7 @@ You will be able to complete the following tasks:
 
 ## Prerequisites
 
-- Completion of Exercise 3 with adoption analysis
+- Completion of Exercise 4 with adoption analysis
 - Understanding of software development metrics
 
 ---
@@ -292,7 +292,7 @@ Use this framework for executive conversations:
 
 ### C. Connecting to Adoption Data
 
-Link your findings from Exercise 3:
+Link your findings from Exercise 4:
 
 | Adoption Metric | Productivity Impact | Insight |
 |-----------------|---------------------|---------|
@@ -326,6 +326,6 @@ In this exercise, you successfully:
 
 - **Learned stakeholder communication** - You have frameworks for presenting results and handling questions.
 
-This productivity analysis, combined with your adoption metrics from Exercise 3, creates a comprehensive view of Copilot's organizational impact. In Exercise 5, you'll combine everything to calculate ROI and build your final executive dashboard.
+This productivity analysis, combined with your adoption metrics from Exercise 4, creates a comprehensive view of Copilot's organizational impact. In Exercise 6, you'll combine everything to calculate ROI and build your final executive dashboard.
 
 ### You have successfully completed this exercise. Click Next >> to continue.

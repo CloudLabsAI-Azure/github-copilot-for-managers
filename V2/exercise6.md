@@ -19,7 +19,7 @@ You will be able to complete the following tasks:
 
 ## Prerequisites
 
-- Completion of Exercises 3 and 4 (adoption and productivity analysis)
+- Completion of Exercises 4 and 5 (adoption and productivity analysis)
 - Understanding of basic ROI concepts
 
 ---
@@ -116,6 +116,8 @@ Dynamic parameters allow executives to explore different scenarios during presen
 
    ![](../media/mang-cor-ex4-g6.png)
 
+   Format as **Currency** with **0 decimal places**.
+
 ### D. Create ROI Measures
 
 1. Create another parameter for **Annual Copilot Cost per User**:
@@ -143,6 +145,8 @@ Dynamic parameters allow executives to explore different scenarios during presen
    ```
 
    ![](../media/mang-cor-ex4-g10.png)
+
+   Format as **Currency** with **0 decimal places**.
 
 1. Create **Copilot ROI %**:
 
@@ -367,10 +371,11 @@ You have successfully completed the **Measuring GitHub Copilot Impact for Manage
 | Exercise | Key Skill |
 |----------|-----------|
 | Exercise 1 | Copilot features, governance, and policy management |
-| Exercise 2 | Accessing and understanding usage reports |
-| Exercise 3 | Analyzing adoption patterns and team performance |
-| Exercise 4 | Measuring productivity impact with PR metrics |
-| Exercise 5 | Calculating ROI and presenting to executives |
+| Exercise 2 | Hands-on experience with GitHub Copilot |
+| Exercise 3 | Accessing and understanding usage reports |
+| Exercise 4 | Analyzing adoption patterns and team performance |
+| Exercise 5 | Measuring productivity impact with PR metrics |
+| Exercise 6 | Calculating ROI and presenting to executives |
 
 ### Your Toolkit:
 

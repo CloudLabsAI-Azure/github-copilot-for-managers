@@ -178,7 +178,7 @@ In this task, you'll set up Power BI to begin your analysis journey.
 ## Notes
 
 - If you do not see **Activity report (new)**, ensure your organization is on a supported Copilot plan and that you have Owner permissions.
-- The downloaded CSV will be used in Exercise 3 for building analytics visualizations.
+- The downloaded CSV will be used in Exercise 4 for building analytics visualizations.
 - Report data typically covers the last 28 days of activity.
 - Keep the raw CSV unmodified; Power BI creates its own data model.
 

@@ -18,7 +18,7 @@ You will be able to complete the following tasks:
 
 ## Prerequisites
 
-- Completion of Exercise 2 with `copilot_org.csv` loaded in Power BI
+- Completion of Exercise 3 with `copilot_org.csv` loaded in Power BI
 - Power BI Desktop open with data imported
 
 ---

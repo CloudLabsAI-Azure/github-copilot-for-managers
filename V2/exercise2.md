@@ -176,7 +176,7 @@ In this task, you'll use the conversational Copilot Chat feature to ask question
 
 ### B. Ask Copilot to Explain Code
 
-Let's use a real-world scenario: explaining complex Power BI DAX formulas (which you'll encounter in Exercise 4).
+Let's use a real-world scenario: explaining complex Power BI DAX formulas (which you'll encounter in Exercise 5).
 
 1. In the Copilot Chat, type:
 
