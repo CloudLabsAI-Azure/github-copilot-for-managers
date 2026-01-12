@@ -31,21 +31,43 @@ In this task, you'll verify that GitHub Copilot is active and understand the two
 
 ### A. Verify Copilot is Active
 
-1. Open **Visual Studio Code** from your desktop or taskbar.
+1. Open **Visual Studio Code** from your desktop.
 
-   ![](../media/v2-ex2-open-vscode.png)
+   ![](../media/ex2-lab3-g8.png)
 
-1. Look at the bottom-right corner of VS Code for the **GitHub Copilot icon** (1). It should show a checkmark indicating Copilot is active.
+1. In the bottom-left corner of VS Code, click the **Account** icon (1), then select **Sign in to use AI features... (2)** from the menu to authenticate and enable Copilot/AI features.
 
-   ![](../media/v2-ex2-copilot-active.png)
+   ![](../media/git-man-26-t2-ex2-g1.png)
 
-   > **Troubleshooting:** If you see a warning icon or "Copilot: Inactive", click the icon and sign in with your GitHub account. Contact your lab instructor if issues persist.
+1. In the bottom-left corner of VS Code, click the **Account** icon, then select **Sign in to use AI features...** from the menu to authenticate and enable Copilot/AI features.
 
-1. Open the worspace folder in the vscode.
+   ![](../media/git-man-26-t2-ex2-g2.png)
+
+1. Then sign in using the **credentials** provided in the lab **environment** section of the lab guide.
+
+1. On the "Authorize Visual Studio Code" page, confirm the account shown and click **Continue** to grant VS Code access.
+
+   ![](../media/git-man-26-t2-ex2-g3.png)
+
+1. When the browser shows "This site is trying to open Visual Studio Code", click **Open** to allow the link to launch VS Code.
+
+   ![](../media/git-man-26-t2-ex2-g4.png)
+
+1. In the top-right corner of the window, click the **Copilot** icon to open Copilot and access suggestions or the chat panel.
+
+   ![](../media/git-man-26-t2-ex2-g5.png)
+
+1. This is how the Copilot Chat (Agent) panel looks when opened the sidebar.
+
+   ![](../media/git-man-26-t2-ex2-g6.png)
+
+1. Open the **worspace** folder in the vscode.
 
    ```
    C:\Copilot_Datasets\workspace
    ```
+
+   ![](../media/git-man-26-t2-ex2-g8.png)
 
 1. Create a new file by pressing **Ctrl+N** (Windows) or **Cmd+N** (Mac).
 
