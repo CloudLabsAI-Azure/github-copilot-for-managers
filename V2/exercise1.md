@@ -51,15 +51,15 @@ GitHub Copilot provides several AI-powered capabilities that help developers wri
    https://github.com/login
    ```
 
-   ![](../media/v2-ex1-github-signin.png)
+   ![](../media/git-man-26-tt-g1.png)
 
 1. And sign in with the organization credentials provided in the lab enviornement page.
 
-   ![](../media/v2-ex1-github-signin.png)
+1. Let's explore what Copilot Chat looks like on GitHub.com.
 
-1. Let's explore what Copilot Chat looks like on GitHub.com. Click the **Copilot icon** in the top navigation bar (if available for your organization).
+1. Once signed in, you will see the **GitHub Dashboard**. Locate the **Copilot icon** in the top-right corner of the navigation bar.
 
-   ![](../media/v2-ex1-copilot-chat-icon.png)
+   ![](../media/git-man-26-tt-g2.png)
 
    > **What Developers See:** This chat interface allows developers to ask questions about code, get explanations, and receive coding assistance directly on GitHub.com - even when they're not in their IDE.
 
@@ -69,6 +69,8 @@ GitHub Copilot provides several AI-powered capabilities that help developers wri
    ```
    Explain what a pull request is and why it's important
    ```
+
+   ![](../media/git-man-26-tt-g3.png)
 
    **For business scenarios:**
    ```
@@ -92,7 +94,7 @@ GitHub Copilot provides several AI-powered capabilities that help developers wri
    - See how developers can ask **natural language questions** about code
    - Observe the **code suggestion format** with syntax highlighting
 
-   > **Manager Insight:** Developers who use Copilot Chat (both IDE and web) tend to show higher engagement levels. If your usage reports show low chat interactions, it may indicate a training opportunity.
+      > **Manager Insight:** Developers who use Copilot Chat (both IDE and web) tend to show higher engagement levels. If your usage reports show low chat interactions, it may indicate a training opportunity.
 
 ### C. Copilot Business vs. Enterprise Features
 
@@ -134,7 +136,7 @@ In this task, you will navigate the GitHub Copilot administrative area and under
 
 1. In the left sidebar, locate the **Code, planning, and automation** section and expand **Copilot**.
 
-   ![](../media/gt-co-ex1-g4.png)
+   ![](../media/git-man-26-tt-g4.png)
 
    You'll see several sub-sections:
 
@@ -143,6 +145,8 @@ In this task, you will navigate the GitHub Copilot administrative area and under
    | **Access** | Manage who can use Copilot | License allocation, team enablement |
    | **Policies** | Configure feature permissions | Security controls, feature rollout |
    | **Content exclusions** | Exclude files/repos from Copilot | IP protection, sensitive code |
+
+   ![](../media/git-man-26-tt-g5.png)
 
    > **Manager Insight:** These three areas give you complete control over how Copilot is used in your organization. Understanding them is essential for governance discussions with security and compliance teams.
 
