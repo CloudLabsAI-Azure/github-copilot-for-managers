@@ -69,11 +69,10 @@ In this task, you'll verify that GitHub Copilot is active and understand the two
 
    ![](../media/git-man-26-t2-ex2-g8.png)
 
-1. Create a new file by pressing **Ctrl+N** (Windows) or **Cmd+N** (Mac).
 
-1. Save the file as `test_copilot.py` by pressing **Ctrl+S** (Windows) or **Cmd+S** (Mac). Choose a location like your Desktop.
+1. In the Explorer sidebar, click the **New File** icon (1), type the filename `test_copilot.py` (2), and press Enter to create the file.
 
-   > **Why .py extension?** Python is widely understood and great for quick demos. Copilot works with 40+ languages, but Python is perfect for business automation examples.
+   ![](../media/git-man-26-t2-ex2-g29.png)
 
 ### B. Understand the Two Copilot Interfaces
 
@@ -83,10 +82,6 @@ GitHub Copilot provides two ways to assist you:
 |-----------|--------------|----------|
 | **Inline Suggestions** | AI suggests code as you type (gray text) | Writing code quickly, autocomplete on steroids |
 | **Copilot Chat** | Conversational AI in a sidebar panel | Asking questions, explaining code, generating templates |
-
-You'll use both in this exercise!
-
----
 
 ## Task 2: Build Business Automation with Copilot
 
@@ -98,7 +93,7 @@ Let's build a Python script that analyzes sales data from a CSV file - a common 
 
 1. In your `test_copilot.py` file, press **Ctrl+I**.
 
-   ![](../media/v2-ex2-inline-suggestion.png)
+   ![](../media/git-man-26-t2-ex2-g10.png)
 
 1. type the following comment and press **Enter**:
 
