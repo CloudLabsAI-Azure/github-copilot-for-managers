@@ -4,31 +4,31 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/getting-started.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/getting-started.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise1.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise1.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise2.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise3.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise3.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise4.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise4.md",
         "Order": 5
       }  
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise5.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise5.md",
         "Order": 6
       }
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise6.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/github-copilot-for-managers/refs/heads/main/V2/exercise6.md",
         "Order": 7
       } 
     ]
