@@ -14,7 +14,7 @@ You will be able to complete the following tasks:
 
 - Task 1: Verify GitHub Copilot is active and understand the interface
 - Task 2: Build business automation scripts with Copilot assistance
-- Task 3: Use Copilot Chat for explanations and demo scenarios
+- Task 3: Use Copilot Chat for explanations
 
 ## Prerequisites
 
@@ -22,8 +22,6 @@ You will be able to complete the following tasks:
 - GitHub Copilot license assigned to your account
 - Basic familiarity with VS Code interface
 - Completion of Exercise 1 (understanding Copilot features)
-
----
 
 ## Task 1: Setup and Verify Your Copilot Experience
 
@@ -108,38 +106,24 @@ Let's build a Python script that analyzes sales data from a CSV file - a common 
 
    > **Note:** Copilot generates complete functions with error handling, documentation, and proper structure based on natural language descriptions.
 
-1. Continue by typing another comment and letting Copilot suggest:
-
-   ```python
-   # Function to generate a sales report with charts
-   ```
-
-1. Again, press **Tab** to accept Copilot's suggestion.
-
-   > **Observation:** Copilot translates natural language descriptions into functional code, potentially reducing development time for routine tasks.
-
-**What Just Happened?**
-- You wrote ~2 lines of comments
-- Copilot generated ~20-40 lines of working code
-- The code includes imports, error handling, and best practices
-- **Time saved**: ~10-15 minutes of manual coding
-
 ### B. Scenario 2: Email Template Generator
 
-Now let's create something that resonates with business users - automated email generation.
+Now let's create something that resonates with business users: automated email generation.
 
 1. Create a new file: Press **Ctrl+N** and save as `email_automation.py`
 
-1. Type this comment:
+1. Type the following **prompt (1)** in the editor, then click the **Send (2)**.
 
    ```python
    # Function to generate professional follow-up email template for a sales meeting
    # Include: greeting, meeting recap, next steps, call to action
    ```
 
-1. Press **Enter** and let Copilot generate the function. Accept with **Tab**.
+   ![](../media/git-man-26-t2-ex2-g16.png)
 
-   ![](../media/v2-ex2-email-template.png)
+1. Review the generated code suggestion in the editor (1), then click **Keep (2)** to accept and insert the code, or click **Undo (3)** to reject it.
+
+   ![](../media/git-man-26-t2-ex2-g17.png)
 
 1. Below that, type:
 
@@ -147,7 +131,9 @@ Now let's create something that resonates with business users - automated email 
    # Function to personalize the email with customer name and company
    ```
 
-1. Accept Copilot's suggestion.
+   ![](../media/git-man-26-t2-ex2-g18.png)
+
+1. Review the generated code suggestion in the editor, then click **Keep (2)**
 
    > **Note:** Copilot can assist with business logic implementation, including templates and structured content generation beyond pure code.
 
@@ -157,7 +143,13 @@ This scenario demonstrates Copilot's ability to generate complex business logic.
 
 1. Create a new file: `roi_calculator.py`
 
-1. Type:
+   ![](../media/git-man-26-t2-ex2-g20.png)
+
+1. In the Explorer sidebar under WORKSPACE, click **roi_calculator.py** to open the file.
+
+   ![](../media/git-man-26-t2-ex2-g21.png)
+
+1. In the Copilot Chat panel, ensure **roi_calculator.py (1)** is selected, type the below prompt **(2)**, select **Agent (3)** from the dropdown, then click the **Send button (4)** to generate the ROI calculation function.
 
    ```
     Function to calculate GitHub Copilot ROI based on:
@@ -168,17 +160,11 @@ This scenario demonstrates Copilot's ability to generate complex business logic.
     Return: Annual ROI percentage, payback period in months
    ```
 
-1. Let Copilot generate the complete function. You'll see it creates a sophisticated calculation.
+   ![](../media/git-man-26-t2-ex2-g23.png)
 
-1. Now type:
+1. Review the generated ROI calculation function in the editor (1), then click **Keep (2)** to accept and insert the code into `roi_calculator.py`.
 
-   ```
-   Example usage with sample data
-   ```
-
-1. Copilot will even generate test code showing how to use the function!
-
-   ![](../media/v2-ex2-roi-calculator.png)
+   ![](../media/git-man-26-t2-ex2-g24.png)
 
    > **Note:** Copilot generates test code and usage examples alongside the main function implementation.
 
@@ -188,50 +174,28 @@ This scenario demonstrates Copilot's ability to generate complex business logic.
 - Each script addresses common business automation needs
 - This demonstrates the typical developer experience with Copilot assistance
 
----
+## Task 3: Use Copilot Chat for Explanations
 
-## Task 3: Use Copilot Chat for Explanations and Demos
+In this task, you'll use the conversational Copilot Chat feature to ask questions and get explanations of complex code or formulas.
 
-In this task, you'll use the conversational Copilot Chat feature to ask questions, get explanations, and prepare demo scenarios.
-
-### A. Open Copilot Chat
-
-1. In VS Code, click the **Chat icon** in the left sidebar (it looks like a conversation bubble) or press **Ctrl+Alt+I** (Windows) or **Cmd+Alt+I** (Mac).
-
-   ![](../media/v2-ex2-open-chat.png)
-
-1. The Copilot Chat panel will open on the left side of your screen.
-
-### B. Ask Copilot to Explain Code
+### A. Ask Copilot to Explain a Formula
 
 Let's use a real-world scenario: explaining complex Power BI DAX formulas (which you'll encounter in Exercise 5).
 
-1. In the Copilot Chat, type:
+1. In the Copilot Chat panel, type the following prompt in the text area **(1)**, select **Ask (2)** from the dropdown, then click the **Send button (3)** to get an explanation.
 
    ```
    Explain this Power BI DAX formula in simple terms: 
    Hours Saved per Dev = DIVIDE([Total Acceptances], [Active Users], 0) * 0.5
    ```
 
-1. Press **Enter** and watch Copilot provide a clear explanation.
+   ![](../media/git-man-26-t2-ex2-g27.png)
 
-   ![](../media/v2-ex2-chat-explain.png)
+1. Review the explanation provided by Copilot Chat, which breaks down the formula, provides a simple example, and explains key assumptions about time savings.
+
+   ![](../media/git-man-26-t2-ex2-g28.png)
 
    > **Note:** Copilot Chat can provide explanations of complex code, formulas, and technical concepts without requiring external documentation.
-
-### C. Generate Documentation
-
-1. Go back to your `roi_calculator.py` file and highlight the ROI function code.
-
-1. Right-click and select **Copilot** → **Generate Docs** (or type `/doc` in Chat).
-
-   ![](../media/v2-ex2-generate-docs.png)
-
-1. Copilot will generate professional documentation with parameter descriptions and examples.
-
-   > **Note:** Copilot can automatically generate documentation, reducing the manual effort required for code documentation.
-
-## Notes
 
 ### Key Observations
 
