@@ -4,9 +4,9 @@
 
 ## Overview
 
-In this exercise, you will use GitHub Copilot hands-on to understand what your developers (or customers' developers) experience daily. This personal experience is invaluable - whether you're a manager evaluating Copilot for your team or a sales professional demonstrating it to prospects. You'll build real scripts, generate code with AI assistance, and discover the "aha moments" that make Copilot compelling.
+In this exercise, you will use GitHub Copilot hands-on to understand the developer experience with AI-powered code assistance. You'll build practical scripts, generate code with AI assistance, and observe how Copilot integrates into development workflows.
 
-> **Why This Matters:** People who have used Copilot speak authentically about its value. This 12-minute investment transforms you from someone who "knows about Copilot" to someone who can say "When I used Copilot, I experienced..." - a powerful shift in credibility.
+> **Purpose:** Direct experience with Copilot provides insight into its capabilities, limitations, and practical applications in software development contexts.
 
 ## Objectives
 
@@ -69,7 +69,6 @@ In this task, you'll verify that GitHub Copilot is active and understand the two
 
    ![](../media/git-man-26-t2-ex2-g8.png)
 
-
 1. In the Explorer sidebar, click the **New File** icon (1), type the filename `test_copilot.py` (2), and press Enter to create the file.
 
    ![](../media/git-man-26-t2-ex2-g29.png)
@@ -93,19 +92,21 @@ Let's build a Python script that analyzes sales data from a CSV file - a common 
 
 1. In your `test_copilot.py` file, press **Ctrl+I**.
 
-   ![](../media/git-man-26-t2-ex2-g10.png)
+   ![](../media/git-man-26-t2-ex2-g13.png)
 
-1. type the following comment and press **Enter**:
+1. Type the prompt in the **editor (1)**, open the **model dropdown (2)** and choose the model or agent that fits your workflow, then click the **Run (3)** button to generate the suggestion.
 
    ```python
    # Function to read a CSV file and calculate total sales by region
    ```
 
-1. **Watch the magic!** Copilot will suggest code in gray text. Press **Tab** to accept the suggestion.
+   ![](../media/git-man-26-t2-ex2-g14.png)
 
-   ![](../media/v2-ex2-inline-suggestion.png)
+1. Review the generated suggestion shown in the editor for `test_copilot.py` (1), then click **Keep** (2) to accept and insert the code or **Undo** (3) to reject it.
 
-   > **Manager/Sales Insight:** This is the moment customers get excited. In seconds, Copilot generated a complete function with error handling, comments, and proper structure. This isn't just autocomplete - it understood business intent from a simple comment.
+   ![](../media/git-man-26-t2-ex2-g15.png)
+
+   > **Note:** Copilot generates complete functions with error handling, documentation, and proper structure based on natural language descriptions.
 
 1. Continue by typing another comment and letting Copilot suggest:
 
@@ -115,7 +116,7 @@ Let's build a Python script that analyzes sales data from a CSV file - a common 
 
 1. Again, press **Tab** to accept Copilot's suggestion.
 
-   > **Key Talking Point:** "I described what I wanted in plain English, and Copilot wrote the code. Imagine this across thousands of developers for months - the time savings compound dramatically."
+   > **Observation:** Copilot translates natural language descriptions into functional code, potentially reducing development time for routine tasks.
 
 **What Just Happened?**
 - You wrote ~2 lines of comments
@@ -148,11 +149,11 @@ Now let's create something that resonates with business users - automated email 
 
 1. Accept Copilot's suggestion.
 
-   > **Sales/Manager Talking Point:** "This shows Copilot isn't just for 'coding' - it understands business processes. It helped me build a tool that my sales team could actually use."
+   > **Note:** Copilot can assist with business logic implementation, including templates and structured content generation beyond pure code.
 
-### C. Scenario 3: ROI Calculator (Perfect for Demos!)
+### C. Scenario 3: ROI Calculator
 
-This one is gold for customer conversations or executive presentations.
+This scenario demonstrates Copilot's ability to generate complex business logic.
 
 1. Create a new file: `roi_calculator.py`
 
@@ -179,13 +180,13 @@ This one is gold for customer conversations or executive presentations.
 
    ![](../media/v2-ex2-roi-calculator.png)
 
-   > **Pro Tip for Sales/Managers:** This ROI calculator you just built? Use it in actual customer meetings! You created a real tool in under 2 minutes.
+   > **Note:** Copilot generates test code and usage examples alongside the main function implementation.
 
-**Reflection Moment:**
-- You created 3 working scripts in ~5 minutes
-- No deep Python knowledge required
-- Each script solves a real business problem
-- This is what developers experience all day, every day with Copilot
+**Key Observations:**
+- Three functional scripts were created in approximately 5 minutes
+- Limited programming expertise was required
+- Each script addresses common business automation needs
+- This demonstrates the typical developer experience with Copilot assistance
 
 ---
 
@@ -216,9 +217,7 @@ Let's use a real-world scenario: explaining complex Power BI DAX formulas (which
 
    ![](../media/v2-ex2-chat-explain.png)
 
-   > **Manager Insight:** When reviewing analytics with your team, you can quickly get explanations of complex formulas without hunting through documentation.
-   
-   > **Sales Insight:** Customers often ask "How does this work?" - Copilot helps you provide instant, accurate answers during demos.
+   > **Note:** Copilot Chat can provide explanations of complex code, formulas, and technical concepts without requiring external documentation.
 
 ### C. Generate Documentation
 
@@ -230,58 +229,35 @@ Let's use a real-world scenario: explaining complex Power BI DAX formulas (which
 
 1. Copilot will generate professional documentation with parameter descriptions and examples.
 
-   > **Key Talking Point:** "Developer documentation is often an afterthought because it's tedious. Copilot makes it effortless, improving code quality across the organization."
+   > **Note:** Copilot can automatically generate documentation, reducing the manual effort required for code documentation.
 
 ## Notes
 
-### What You Just Experienced
+### Key Observations
 
-- **Speed**: Tasks that take 10-30 minutes were reduced to seconds  
-- **Quality**: Generated code includes error handling, comments, best practices  
-- **Accessibility**: You didn't need deep programming expertise to be productive  
-- **Versatility**: Works for data analysis, automation, documentation, learning  
-- **Business Value**: Every script you created solves real business problems  
+- **Speed**: Tasks that typically take 10-30 minutes can be completed in seconds with AI assistance
+- **Quality**: Generated code includes error handling, comments, and follows best practices
+- **Accessibility**: Limited programming expertise is required to generate functional code
+- **Versatility**: Copilot supports data analysis, automation, documentation, and learning scenarios
+- **Practical Applications**: Each script addresses common business automation requirements
 
-### Key Talking Points for Your Next Conversation
-
-**For Managers:**
-- "I used Copilot myself to build data analysis scripts in minutes"
-- "Now I understand why my developers are so enthusiastic about it"
-- "The ROI isn't just about speed - it's about empowering everyone"
-
-**For Sales Professionals:**
-- "When I first tried Copilot, I was skeptical. But then I built a sales data analyzer in 2 minutes..."
-- "I'm not a developer, but Copilot made me productive with Python immediately"
-- "Let me show you something I built with Copilot just this morning..."
-- "The moment that convinced me was when it predicted my entire function from a comment"
-
-### Objections You Can Now Handle Authentically
-
-| Objection | Your Response (Based on Experience) |
-|-----------|-------------------------------------|
-| "Is it really that helpful?" | "Yes - I built 3 working scripts in 5 minutes. Let me show you my ROI calculator..." |
-| "Will developers trust AI-generated code?" | "The code includes error handling and best practices. I reviewed it and it's production-ready." |
-| "Isn't it just autocomplete?" | "No - I described a complex ROI calculator in English and it wrote sophisticated logic." |
-| "What if it's wrong?" | "Developers still review and test. But I found Copilot gives me a great starting point every time." |
-| "Do you need to be an expert coder?" | "I'm not! I used simple comments and Copilot did the heavy lifting." |
-
-### Files You Created (Keep These!)
+### Files Created
 
 - `test_copilot.py` - Sales data analysis functions
 - `email_automation.py` - Professional email templates
-- `roi_calculator.py` - **Use this in actual ROI discussions!**
+- `roi_calculator.py` - ROI calculation with business metrics
 
-These are now **your demo assets** - real code you created with Copilot.
+These files demonstrate Copilot's code generation capabilities across different use cases.
 
 ---
 
 ## Summary
 
-In just 12 minutes, you experienced what makes GitHub Copilot transformative. You built practical business tools, learned how AI assistance works in real-time, and discovered compelling demo scenarios. More importantly, you can now speak from experience - whether you're a manager evaluating Copilot's value or a sales professional building customer trust.
+In this exercise, you gained hands-on experience with GitHub Copilot's core capabilities. You built practical automation scripts, learned how AI assistance integrates into development workflows, and observed code generation across different scenarios.
 
-This hands-on experience transforms your credibility. You're no longer repeating marketing claims - you're sharing personal discoveries. In the next exercises, you'll analyze data that measures these productivity improvements at scale across entire development teams.
+This direct experience provides context for understanding Copilot's role in development processes. In the following exercises, you'll analyze quantitative data measuring productivity improvements across development teams.
 
-**Pro Tip:** Keep these Python files! When someone asks "Have you actually used Copilot?", open these files and say "Yes - here's what I built..."
+**Note:** The files created in this exercise serve as reference examples of Copilot's code generation capabilities.
 
 ---
 

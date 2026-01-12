@@ -4,9 +4,9 @@
 
 ## Overview
 
-In this exercise, you will explore GitHub Copilot's administrative capabilities from a manager's perspective. You'll learn how to configure organizational policies, manage feature access, understand the different Copilot capabilities, and implement governance best practices. This foundational knowledge is essential for effectively managing Copilot adoption across your development teams.
+In this exercise, you will explore GitHub Copilot's administrative capabilities. You'll learn how to configure organizational policies, manage feature access, understand the different Copilot capabilities, and implement governance best practices.
 
-> **Why This Matters for Managers:** Before measuring Copilot's impact, you need to understand what you're managing. This exercise ensures you can confidently answer questions from leadership about security, compliance, and feature controls.
+> **Purpose:** Understanding Copilot's administrative features enables informed decision-making regarding security policies, compliance requirements, and feature management.
 
 ## Objectives
 
@@ -41,7 +41,7 @@ GitHub Copilot provides several AI-powered capabilities that help developers wri
 | **CLI Suggestions** | Command-line assistance | Helps with DevOps tasks and terminal commands |
 | **Copilot in GitHub Mobile** | AI assistance on mobile app | On-the-go code review and chat |
 
-> **Manager Insight:** When reviewing adoption metrics, you'll see data for each of these features. Understanding what they do helps you interpret whether your teams are using Copilot effectively or only scratching the surface.
+> **Note:** Adoption metrics provide data for each feature category. Understanding feature capabilities enables accurate interpretation of usage patterns and team adoption levels.
 
 ### B. Understanding the Developer Experience
 
@@ -61,7 +61,7 @@ GitHub Copilot provides several AI-powered capabilities that help developers wri
 
    ![](../media/git-man-26-tt-g2.png)
 
-   > **What Developers See:** This chat interface allows developers to ask questions about code, get explanations, and receive coding assistance directly on GitHub.com - even when they're not in their IDE.
+   > **Developer Interface:** This chat interface provides code assistance, explanations, and guidance directly within GitHub.com, accessible without IDE integration.
 
 1. Try asking Copilot some questions to see how it responds. Type any of these example questions in the chat:
 
@@ -87,14 +87,14 @@ GitHub Copilot provides several AI-powered capabilities that help developers wri
    Write a function to calculate ROI based on time saved and cost
    ```
 
-   > **Manager Insight:** Notice how Copilot provides clear, contextual answers. This is what your developers experience hundreds of times per day - instant assistance without leaving their workflow.
+   > **Note:** Copilot provides contextual responses to natural language queries, enabling developers to receive assistance without interrupting their workflow.
 
 1. Explore the Copilot Chat interface:
    - Notice the **context awareness** - Copilot understands which repository you're viewing
    - See how developers can ask **natural language questions** about code
    - Observe the **code suggestion format** with syntax highlighting
 
-      > **Manager Insight:** Developers who use Copilot Chat (both IDE and web) tend to show higher engagement levels. If your usage reports show low chat interactions, it may indicate a training opportunity.
+      > **Note:** Chat feature usage correlates with overall engagement levels. Low chat interaction rates may indicate need for additional training resources.
 
 ### C. Copilot Business vs. Enterprise Features
 
@@ -146,7 +146,7 @@ In this task, you will navigate the GitHub Copilot administrative area and under
    | **Policies** | Configure feature permissions | Security controls, feature rollout |
    | **Content exclusions** | Exclude files/repos from Copilot | IP protection, sensitive code |
 
-   > **Manager Insight:** These three areas give you complete control over how Copilot is used in your organization. Understanding them is essential for governance discussions with security and compliance teams.
+   > **Note:** These three administrative areas provide comprehensive control over Copilot usage, supporting governance requirements and compliance discussions.
 
 ### B. Explore Access Management
 
@@ -161,17 +161,17 @@ In this task, you will navigate the GitHub Copilot administrative area and under
 
       ![](../media/git-man-26-tt-g5.png)
 
-      > **Manager Insight:** This is where you'll come to understand license utilization. If you have seats purchased but not assigned, that's wasted budget. If all seats are used but you have developers waiting, you may need to expand licensing.
+      > **Note:** The Access management page displays license utilization metrics. Unassigned seats represent unutilized budget, while full capacity with pending requests indicates potential need for license expansion.
 
 1. Review the user list and note:
    - Which team members have access
    - Their last activity date
    - Whether they've accepted the invitation
 
-   > **Best Practice:** Regularly review this list to identify:
-   > - Users with access but no activity (potential training need)
-   > - Active users who could be Copilot champions
-   > - Pending invitations that need follow-up
+   > **Recommendation:** Regular review of user access enables identification of:
+   > - Inactive users who may require training support
+   > - High-engagement users suitable for knowledge sharing
+   > - Outstanding invitations requiring follow-up
 
 ---
 
@@ -207,7 +207,7 @@ Enterprise (if applicable)
             └── Repository (can override)
 ```
 
-> **Manager Insight:** As an Organization Owner, your policy settings become the default for all repositories. Repository admins can be allowed to override these settings or be locked into your organizational policy.
+> **Note:** Organization-level policy settings establish defaults for all repositories. Repository administrators may be granted override permissions or restricted to organizational policies based on configuration.
 
 ### C. Feature Rollout Strategy
 
@@ -219,7 +219,7 @@ When rolling out Copilot features, consider a phased approach:
 | Expand (Week 3-4) | Add Copilot Chat | Early adopters (20-30) |
 | Full Rollout | All features | Organization-wide |
 
-> **Manager Insight:** Starting with code completions allows developers to get comfortable with AI suggestions before introducing chat and other advanced features. This builds confidence and reduces resistance.
+> **Note:** Phased feature rollout enables gradual adoption, allowing developers to become familiar with core functionality before advanced features are introduced.
 
 ---
 
@@ -267,7 +267,7 @@ Here are recommended exclusion patterns for most organizations:
 **/pci/**
 ```
 
-> **Manager Insight:** Content exclusions don't prevent developers from using Copilot - they just ensure Copilot doesn't train on or suggest code from these protected areas. This is a key talking point for security discussions.
+> **Note:** Content exclusions restrict Copilot access to specified files or repositories while maintaining general functionality. Excluded content is not used for training or suggestions.
 
 ---
 
@@ -294,7 +294,7 @@ Work with your legal and compliance teams to establish:
    - Are there resources for learning best practices?
    - How do you handle developers who are resistant?
 
-> **Manager Insight:** Having a written policy helps answer questions from auditors, new employees, and leadership. It also sets clear expectations for developers.
+> **Note:** Documented policies provide clear guidance for audits, onboarding, and leadership inquiries while establishing consistent expectations.
 
 ### B. Addressing Common Developer Concerns
 
@@ -318,7 +318,7 @@ Establish realistic metrics for your teams:
 | Acceptance rate | 20%+ | 30%+ | 40%+ |
 | Chat feature usage | 25% | 50% | 60%+ |
 
-> **Manager Insight:** These targets help you identify teams that need additional support or training. Don't expect immediate high adoption - it takes time for developers to integrate Copilot into their workflow.
+> **Note:** These metrics enable identification of teams requiring additional support. Adoption rates typically increase gradually as developers integrate Copilot into established workflows.
 
 ---
 
