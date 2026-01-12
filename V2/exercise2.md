@@ -41,6 +41,12 @@ In this task, you'll verify that GitHub Copilot is active and understand the two
 
    > **Troubleshooting:** If you see a warning icon or "Copilot: Inactive", click the icon and sign in with your GitHub account. Contact your lab instructor if issues persist.
 
+1. Open the worspace folder in the vscode.
+
+   ```
+   C:\Copilot_Datasets\workspace
+   ```
+
 1. Create a new file by pressing **Ctrl+N** (Windows) or **Cmd+N** (Mac).
 
 1. Save the file as `test_copilot.py` by pressing **Ctrl+S** (Windows) or **Cmd+S** (Mac). Choose a location like your Desktop.
@@ -68,7 +74,11 @@ In this task, you'll create practical business scripts that demonstrate Copilot'
 
 Let's build a Python script that analyzes sales data from a CSV file - a common business need.
 
-1. In your `test_copilot.py` file, type the following comment and press **Enter**:
+1. In your `test_copilot.py` file, press **Ctrl+I**.
+
+   ![](../media/v2-ex2-inline-suggestion.png)
+
+1. type the following comment and press **Enter**:
 
    ```python
    # Function to read a CSV file and calculate total sales by region
@@ -131,13 +141,13 @@ This one is gold for customer conversations or executive presentations.
 
 1. Type:
 
-   ```python
-   # Function to calculate GitHub Copilot ROI based on:
-   # - Number of developers
-   # - Average hourly rate
-   # - Time saved per developer per day (hours)
-   # - Copilot cost per user per month
-   # Return: Annual ROI percentage, payback period in months
+   ```
+    Function to calculate GitHub Copilot ROI based on:
+    - Number of developers
+    - Average hourly rate
+    - Time saved per developer per day (hours)
+    - Copilot cost per user per month
+    Return: Annual ROI percentage, payback period in months
    ```
 
 1. Let Copilot generate the complete function. You'll see it creates a sophisticated calculation.
