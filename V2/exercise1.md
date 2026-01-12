@@ -146,8 +146,6 @@ In this task, you will navigate the GitHub Copilot administrative area and under
    | **Policies** | Configure feature permissions | Security controls, feature rollout |
    | **Content exclusions** | Exclude files/repos from Copilot | IP protection, sensitive code |
 
-   ![](../media/git-man-26-tt-g5.png)
-
    > **Manager Insight:** These three areas give you complete control over how Copilot is used in your organization. Understanding them is essential for governance discussions with security and compliance teams.
 
 ### B. Explore Access Management
@@ -161,7 +159,9 @@ In this task, you will navigate the GitHub Copilot administrative area and under
    - **List of users** with Copilot access
    - **Pending invitations**
 
-   > **Manager Insight:** This is where you'll come to understand license utilization. If you have seats purchased but not assigned, that's wasted budget. If all seats are used but you have developers waiting, you may need to expand licensing.
+      ![](../media/git-man-26-tt-g5.png)
+
+      > **Manager Insight:** This is where you'll come to understand license utilization. If you have seats purchased but not assigned, that's wasted budget. If all seats are used but you have developers waiting, you may need to expand licensing.
 
 1. Review the user list and note:
    - Which team members have access
@@ -183,7 +183,7 @@ In this task, you will explore and configure Copilot policies that control which
 
 1. In the left sidebar under Copilot, click **Policies**.
 
-   ![](../media/v2-ex1-policies-nav.png)
+   ![](../media/git-man-26-tt-g6.png)
 
 1. Review the available policy settings:
 
@@ -231,7 +231,7 @@ Content exclusions allow you to prevent Copilot from accessing specific files or
 
 1. In the left sidebar under Copilot, click **Content exclusions**.
 
-   ![](../media/v2-ex1-content-exclusions.png)
+   ![](../media/git-man-26-tt-g10.png)
 
 1. Review the content exclusion options:
 
