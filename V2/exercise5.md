@@ -1,6 +1,6 @@
 # Exercise 5: Measure Productivity Impact with PR Analysis
 
-### Estimated Duration: 25 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 

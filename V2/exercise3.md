@@ -1,6 +1,6 @@
 # Exercise 3: Enable & Access Copilot Usage Reports
 
-### Estimated Duration: 20 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 

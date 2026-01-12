@@ -1,6 +1,6 @@
 # Exercise 1: Understanding GitHub Copilot Features & Governance
 
-### Estimated Duration: 45 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 

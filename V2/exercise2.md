@@ -1,6 +1,6 @@
 # Exercise 2: Experience GitHub Copilot Yourself
 
-### Estimated Duration: 12 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 
@@ -154,8 +154,8 @@ This one is gold for customer conversations or executive presentations.
 
 1. Now type:
 
-   ```python
-   # Example usage with sample data
+   ```
+   Example usage with sample data
    ```
 
 1. Copilot will even generate test code showing how to use the function!
@@ -214,37 +214,6 @@ Let's use a real-world scenario: explaining complex Power BI DAX formulas (which
 1. Copilot will generate professional documentation with parameter descriptions and examples.
 
    > **Key Talking Point:** "Developer documentation is often an afterthought because it's tedious. Copilot makes it effortless, improving code quality across the organization."
-
-### D. Practice Demo Scenarios
-
-These are three powerful demos you can show to anyone:
-
-**Demo 1: The "Autocomplete Magic" (30 seconds)**
-1. Create a new Python file
-2. Type: `# Function to send a Slack notification when a PR is approved`
-3. Press Enter and watch Copilot generate the entire function
-4. **Talking point:** "This used to take 10 minutes. Now it's 10 seconds."
-
-**Demo 2: The "Complex Logic Generator" (2 minutes)**
-1. In Chat, ask: "Write a Python function to detect anomalies in daily sales data using statistical methods"
-2. Watch Copilot generate sophisticated statistical code
-3. **Talking point:** "Even experienced developers would spend 20-30 minutes researching this. Copilot provides it instantly."
-
-**Demo 3: The "Learning Assistant" (1 minute)**
-1. Copy any complex code (use your ROI calculator)
-2. In Chat, ask: "Explain this code to a non-technical manager"
-3. Watch Copilot provide a clear business-friendly explanation
-4. **Talking point:** "Copilot doesn't just write code - it democratizes understanding. Anyone can learn what code does."
-
-### E. (Optional) Record Your Demo
-
-If you have screen recording software:
-
-1. Record yourself doing one of the demos above
-2. Save the video for customer meetings or internal presentations
-3. Having your own "live" footage is more authentic than generic marketing videos
-
----
 
 ## Notes
 
