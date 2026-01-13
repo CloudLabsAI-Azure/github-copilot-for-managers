@@ -1,4 +1,4 @@
-# Exercise 2: Experience GitHub Copilot Yourself `Read Only`
+# Exercise 2: Experience GitHub Copilot Yourself
 
 ### Estimated Duration: 30 Minutes
 
