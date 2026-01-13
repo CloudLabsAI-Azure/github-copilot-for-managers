@@ -93,7 +93,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
    - **Add slicer to this page:** Checked (8)
    - Click **Create** (9)
 
-   ![](../media/mang-cor-ex4-g4.png)
+      ![](../media/mang-cor-ex4-g4.png)
 
    > **Manager Insight:** This allows executives to see ROI based on their own cost assumptions. Different regions or teams may have different rates.
 
@@ -123,7 +123,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
 1. Create another parameter for **Annual Copilot Cost per User**:
    - Go to **Modeling** → **New parameter** → **Numeric range**
 
-   ![](../media/mang-cor-ex4-g7.png)
+      ![](../media/mang-cor-ex4-g7.png)
 
 1. Configure the cost parameter:
    - **Name:** Annual Copilot Cost per User (2)
@@ -135,7 +135,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
    - **Add slicer to this page:** Checked (8)
    - Click **Create** (9)
 
-   ![](../media/mang-cor-ex4-g12.png)
+      ![](../media/mang-cor-ex4-g12.png)
 
 1. Create **Total Annual Copilot Investment**:
 
@@ -206,7 +206,7 @@ Now let's create a dashboard designed for executive audiences.
    - **Annual Time Savings Value**
    - **Active Users**
 
-   ![](../media/mang-cor-ex4-g21.png)
+      ![](../media/mang-cor-ex4-g21.png)
 
    > **Executive Value:** These four cards immediately communicate the business case in terms executives understand: ROI, payback, savings, and scale.
 
@@ -221,9 +221,9 @@ Now let's create a dashboard designed for executive audiences.
    - **Y-axis**: Lead Time Improvement % (from pr_baseline)
    - **Legend**: team
 
-   ![](../media/mang-cor-ex4-g23.png)
+      ![](../media/mang-cor-ex4-g23.png)
 
-   > **Executive Insight:** This shows which teams are both adopting Copilot well AND seeing productivity benefits. Teams in the upper-right quadrant are your success stories.
+      > **Executive Insight:** This shows which teams are both adopting Copilot well AND seeing productivity benefits. Teams in the upper-right quadrant are your success stories.
 
 ### C. Add Improvement Summary
 

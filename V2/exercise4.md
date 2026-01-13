@@ -93,8 +93,6 @@ In this task, you'll create the key measures needed for adoption analysis. We've
 
    > **Manager Insight:** These are your Copilot champions - developers getting significant value. They can help train others and share best practices.
 
----
-
 ## Task 2: Build Team Performance Visualizations
 
 Now let's create visualizations that reveal adoption patterns across teams.
@@ -117,7 +115,7 @@ Now let's create visualizations that reveal adoption patterns across teams.
    - **Highly Engaged Users (3)**
    - **Acceptance Rate % (4)**
 
-   ![](../media/mang-cor-ex1-g19.png)
+      ![](../media/mang-cor-ex1-g19.png)
 
 1. Review the table - it should show metrics for each team:
 
@@ -139,7 +137,7 @@ Now let's create visualizations that reveal adoption patterns across teams.
    - **X-axis**: Total Acceptances
    - **Legend**: team
 
-   ![](../media/mang-cor-ex1-g23.png)
+      ![](../media/mang-cor-ex1-g23.png)
 
 1. Review the chart:
 
@@ -161,7 +159,7 @@ Now let's create visualizations that reveal adoption patterns across teams.
    - **Columns (2):** language_primary
    - **Values (3):** Active Users, Acceptance Rate %
 
-   ![](../media/mang-cor-ex1-g27.png)
+      ![](../media/mang-cor-ex1-g27.png)
 
    > **Manager Insight:** This reveals which technology combinations work best with Copilot:
    > - High acceptance in VS Code + Python? Consider recommending this setup
@@ -230,9 +228,7 @@ Based on your analysis, document:
    - What adoption target should I set?
    - How will I measure progress?
 
-> **Manager Insight:** This analysis isn't just about creating charts - it's about taking action to improve your team's productivity.
-
----
+   > **Manager Insight:** This analysis isn't just about creating charts - it's about taking action to improve your team's productivity.
 
 ## Notes
 
@@ -240,8 +236,6 @@ Based on your analysis, document:
 - Pay attention to acceptance rates by team/technology to identify where Copilot is working best
 - Use this data to identify Copilot champions who can help train others
 - Consider experience level (role) when analyzing adoption - patterns often differ between senior and junior developers
-
----
 
 ## Summary
 

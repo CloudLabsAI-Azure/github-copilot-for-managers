@@ -211,9 +211,9 @@ Now we'll create measures that quantify the improvements. These calculations tra
    - **Cycle Time Improvement %**
    - **Throughput Improvement %**
 
-   ![](../media/mang-cor-ex2-g15.png)
+      ![](../media/mang-cor-ex2-g15.png)
 
-   > **Executive Communication:** These three cards tell the productivity story at a glance. "Lead time down 25%, cycle time down 30%, throughput up 20%" is a compelling message.
+      > **Executive Communication:** These three cards tell the productivity story at a glance. "Lead time down 25%, cycle time down 30%, throughput up 20%" is a compelling message.
 
 ### B. Create Team Comparison Chart
 
@@ -225,7 +225,7 @@ Now we'll create measures that quantify the improvements. These calculations tra
    - **Y-axis**: team (from pr_baseline)
    - **X-axis**: Lead Time Improvement %
 
-   ![](../media/mang-cor-ex2-g17.png)
+      ![](../media/mang-cor-ex2-g17.png)
 
    > **Manager Insight:** This shows which teams are seeing the most productivity benefit. Use this to identify success stories and areas needing support.
 
@@ -239,9 +239,9 @@ Now we'll create measures that quantify the improvements. These calculations tra
    - **Rows**: team
    - **Values**: Baseline Lead Time, Post-Copilot Lead Time, Lead Time Improvement %, Throughput Improvement %
 
-   ![](../media/mang-cor-ex2-g19.png)
+      ![](../media/mang-cor-ex2-g19.png)
 
-   > **Executive Value:** This provides detailed comparison data for teams who want to dig into the numbers.
+      > **Executive Value:** This provides detailed comparison data for teams who want to dig into the numbers.
 
 ### D. Add Team Filter
 
