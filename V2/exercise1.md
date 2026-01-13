@@ -1,4 +1,4 @@
-# Exercise 1: Understanding GitHub Copilot Features & Governance
+# Exercise 1: Understanding GitHub Copilot Features & Governance `Read Only`
 
 ### Estimated Duration: 30 Minutes
 
