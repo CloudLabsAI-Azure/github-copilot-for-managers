@@ -65,7 +65,9 @@ In this task, you'll create the key measures needed for adoption analysis. We've
 
    - Format this measure as **Percentage** with **1 decimal place**.
 
-   > **Manager Insight:** Acceptance Rate is your quality indicator. Rates above 30% indicate developers find suggestions useful. Low rates (below 15%) may indicate training needs or technology mismatches.
+      ![](../media/git-man-26-t4-ex4-g1.png)
+
+      > **Manager Insight:** Acceptance Rate is your quality indicator. Rates above 30% indicate developers find suggestions useful. Low rates (below 15%) may indicate training needs or technology mismatches.
 
 1. Right-click **copilot_org** table and choose **New measure**. Create **Chat Users** - users leveraging AI chat features:
 
@@ -115,11 +117,11 @@ Now let's create visualizations that reveal adoption patterns across teams.
    - **Highly Engaged Users (3)**
    - **Acceptance Rate % (4)**
 
-      ![](../media/mang-cor-ex1-g19.png)
+      ![](../media/git-man-26-t4-ex4-g2.png)
 
 1. Review the table - it should show metrics for each team:
 
-   ![](../media/mang-cor-ex1-g20.png)
+   ![](../media/git-man-26-t4-ex4-g3.png)
 
    > **Manager Action Items:**
    > - Teams with high Active Users but low Engaged Users → Need training on effective Copilot usage
