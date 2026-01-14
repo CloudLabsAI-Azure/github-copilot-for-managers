@@ -263,27 +263,7 @@ Arrange your dashboard with executive viewing in mind:
 
 This task covers how to use your dashboard in executive presentations.
 
-### A. The Executive Presentation Framework
-
-**Opening (1 minute):**
-> "We invested in GitHub Copilot to improve developer productivity. I'm here to show you the results."
-
-**Key Metrics (2 minutes):**
-> "Our Copilot investment is generating [ROI %] return. We're seeing annual time savings valued at [Annual Savings], with a payback period of just [X] months."
-
-**Adoption Story (2 minutes):**
-> "We have [Active Users] developers actively using Copilot. The scatter chart shows our top-performing teams are achieving [X]% lead time improvement."
-
-**Productivity Impact (2 minutes):**
-> "Across the organization, we've reduced cycle time by [X]% and increased throughput by [Y]%. This means faster delivery without adding headcount."
-
-**Scenario Exploration (2 minutes):**
-> "Let me show you what happens if we expand adoption..." *[Adjust sliders to show expanded scenarios]*
-
-**Call to Action (1 minute):**
-> "Based on these results, I recommend [expanding to more teams / investing in training / continued monitoring]."
-
-### B. Handling Executive Questions
+### A. Handling Executive Questions
 
 | Question | Response Strategy |
 |----------|-------------------|
@@ -293,7 +273,7 @@ This task covers how to use your dashboard in executive presentations.
 | "What's the risk?" | "The main risk is low adoption. We're addressing this through training programs and identifying team champions." |
 | "How does this compare to industry?" | "GitHub reports average 55% faster coding with Copilot. Our results at [X]% are [above/in line with] expectations." |
 
-### C. Connecting to Strategic Goals
+### b. Connecting to Strategic Goals
 
 Frame Copilot benefits in terms of business objectives:
 
