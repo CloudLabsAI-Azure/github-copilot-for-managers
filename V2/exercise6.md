@@ -22,8 +22,6 @@ You will be able to complete the following tasks:
 - Completion of Exercises 4 and 5 (adoption and productivity analysis)
 - Understanding of basic ROI concepts
 
----
-
 ## Task 1: Create ROI Calculation Measures
 
 In this task, you'll create measures that translate productivity improvements into financial value.
@@ -57,14 +55,18 @@ In this task, you'll create measures that translate productivity improvements in
    ```
    Hours Saved per Dev per Month = 
    VAR LeadTimeReduction = [Lead Time Improvement]
-   VAR AvgPRsPerMonth = [Post-Copilot PRs Merged] 
-   VAR HoursSaved = LeadTimeReduction * AvgPRsPerMonth
+   VAR TotalPRs = [Post-Copilot PRs Merged]
+   VAR MonthsOfData = DISTINCTCOUNT(pr_post[period_start].[Month])
+   VAR MonthlyPRs = DIVIDE(TotalPRs, MonthsOfData, 0)
+   VAR ActiveDevs = [Active Users]
+   VAR PRsPerDev = DIVIDE(MonthlyPRs, ActiveDevs, 0)
+   VAR HoursSaved = LeadTimeReduction * PRsPerDev
    RETURN HoursSaved
    ```
 
    ![](../media/mang-cor-ex4-g2.png)
 
-   > **Manager Insight:** This calculates how many hours each developer saves monthly due to faster PR completion. It's the foundation of your ROI calculation.
+   > **Manager Insight:** This calculates how many hours each developer saves monthly. It divides total PRs by the number of months in your dataset to get monthly average, then divides by active users to get per-developer savings. This is multiplied by the time saved per PR to get total hours saved per developer per month.
 
 1. Create **Total Hours Saved Organization**:
 
@@ -185,9 +187,9 @@ Dynamic parameters allow executives to explore different scenarios during presen
 1. Verify your parameters appear in the Data pane:
 
    ![](../media/mang-cor-ex4-g16.png)
+
    ![](../media/mang-cor-ex4-g17.png)
 
----
 
 ## Task 2: Build the Executive Dashboard
 
