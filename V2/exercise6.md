@@ -50,7 +50,7 @@ In this task, you'll create measures that translate productivity improvements in
 
    > **Manager Insight:** This measures the time reduction in hours between your baseline and post-Copilot periods. It's the foundation for calculating time savings.
 
-1. Create **Hours Saved per Dev per Month**:
+1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**. Create **Hours Saved per Dev per Month**:
 
    ```
    Hours Saved per Dev per Month = 
@@ -68,7 +68,7 @@ In this task, you'll create measures that translate productivity improvements in
 
    > **Manager Insight:** This calculates how many hours each developer saves monthly. It divides total PRs by the number of months in your dataset to get monthly average, then divides by active users to get per-developer savings. This is multiplied by the time saved per PR to get total hours saved per developer per month.
 
-1. Create **Total Hours Saved Organization**:
+1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**. Create **Total Hours Saved Organization**:
 
    ```
    Total Hours Saved Organization = 
@@ -101,7 +101,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
 
    > **Manager Insight:** This allows executives to see ROI based on their own cost assumptions. Different regions or teams may have different rates.
 
-1. Create **Monthly Time Savings Value**:
+1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**. Create **Monthly Time Savings Value**:
 
    ```
    Monthly Time Savings Value = 
@@ -112,7 +112,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
 
    Format as **Currency** with **0 decimal places**.
 
-1. Create **Annual Time Savings Value**:
+1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**. Create **Annual Time Savings Value**:
 
    ```
    Annual Time Savings Value = [Monthly Time Savings Value] * 12
@@ -141,7 +141,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
 
       ![](../media/mang-cor-ex4-g12.png)
 
-1. Create **Total Annual Copilot Investment**:
+1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**. Create **Total Annual Copilot Investment**:
 
    ```
    Total Annual Copilot Investment = 
@@ -152,7 +152,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
 
    Format as **Currency** with **0 decimal places**.
 
-1. Create **Copilot ROI %**:
+1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**. Create **Copilot ROI %**:
 
    ```
    Copilot ROI % = DIVIDE(
@@ -168,7 +168,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
 
    > **Manager Insight:** A positive ROI % means the time savings value exceeds the cost of Copilot. For example, 200% ROI means you're getting $3 in value for every $1 spent.
 
-1. Create **ROI Payback Period (months)**:
+1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**. Create **ROI Payback Period (months)**:
 
    ```
    ROI Payback Period (months) = DIVIDE(
