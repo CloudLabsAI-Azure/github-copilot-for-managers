@@ -88,6 +88,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
    ![](../media/co-po-ex4-g3.png)
 
 1. Configure the **Developer Hourly Rate** parameter:
+
    - **Name:** Developer Hourly Rate (2)
    - **Data type:** Whole number (3)
    - **Minimum:** 50 (4)
@@ -130,6 +131,7 @@ Dynamic parameters allow executives to explore different scenarios during presen
       ![](../media/mang-cor-ex4-g7.png)
 
 1. Configure the cost parameter:
+
    - **Name:** Annual Copilot Cost per User (2)
    - **Data type:** Whole number (3)
    - **Minimum:** 100 (4)
@@ -212,7 +214,7 @@ Now let's create a dashboard designed for executive audiences.
 
       ![](../media/mang-cor-ex4-g21.png)
 
-   > **Executive Value:** These four cards immediately communicate the business case in terms executives understand: ROI, payback, savings, and scale.
+      > **Executive Value:** These four cards immediately communicate the business case in terms executives understand: ROI, payback, savings, and scale.
 
 ### B. Create Adoption vs. Impact Matrix
 
