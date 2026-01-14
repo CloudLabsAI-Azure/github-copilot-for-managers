@@ -64,7 +64,7 @@ In this task, you'll create measures that translate productivity improvements in
    RETURN HoursSaved
    ```
 
-   ![](../media/mang-cor-ex4-g2.png)
+   ![](../media/git-man-26-t4-ex4-g4.png)
 
    > **Manager Insight:** This calculates how many hours each developer saves monthly. It divides total PRs by the number of months in your dataset to get monthly average, then divides by active users to get per-developer savings. This is multiplied by the time saved per PR to get total hours saved per developer per month.
 
@@ -111,6 +111,8 @@ Dynamic parameters allow executives to explore different scenarios during presen
 
    ![](../media/mang-cor-ex4-g11.png)
 
+   ![](../media/git-man-26-t4-ex4-g6.png)
+
    Format as **Currency** with **0 decimal places**.
 
 1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**. Create **Annual Time Savings Value**:
@@ -152,6 +154,8 @@ Dynamic parameters allow executives to explore different scenarios during presen
 
    ![](../media/mang-cor-ex4-g10.png)
 
+   ![](../media/git-man-26-t4-ex4-g7.png)
+
    Format as **Currency** with **0 decimal places**.
 
 1. In the **Data** pane, right-click **pr_baseline** table and select **New measure**. Create **Copilot ROI %**:
@@ -165,6 +169,8 @@ Dynamic parameters allow executives to explore different scenarios during presen
    ```
 
    ![](../media/mang-cor-ex4-g14.png)
+
+   ![](../media/git-man-26-t4-ex4-g8.png)
 
    Format as **Percentage** with **0 decimal places**.
 
@@ -192,7 +198,6 @@ Dynamic parameters allow executives to explore different scenarios during presen
 
    ![](../media/mang-cor-ex4-g17.png)
 
-
 ## Task 2: Build the Executive Dashboard
 
 Now let's create a dashboard designed for executive audiences.
@@ -205,14 +210,14 @@ Now let's create a dashboard designed for executive audiences.
 
 1. Add **Copilot ROI %** - make this prominent:
 
-   ![](../media/mang-cor-ex4-g20.png)
+   ![](../media/git-man-26-t4-ex4-g5.png)
 
 1. Add additional cards for:
    - **ROI Payback Period (months)**
    - **Annual Time Savings Value**
    - **Active Users**
 
-      ![](../media/mang-cor-ex4-g21.png)
+      ![](../media/git-man-26-t4-ex4-g9.png)
 
       > **Executive Value:** These four cards immediately communicate the business case in terms executives understand: ROI, payback, savings, and scale.
 
