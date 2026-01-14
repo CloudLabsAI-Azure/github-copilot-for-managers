@@ -42,6 +42,16 @@ In this task, you'll create measures that translate productivity improvements in
 
    ![](../media/mang-cor-ex1-g39.png)
 
+1. First, create **Lead Time Improvement** measure:
+
+   ```
+   Lead Time Improvement = [Baseline Lead Time] - [Post-Copilot Lead Time]
+   ```
+
+   ![](../media/mang-cor-ex2-g4.png)
+
+   > **Manager Insight:** This measures the time reduction in hours between your baseline and post-Copilot periods. It's the foundation for calculating time savings.
+
 1. Create **Hours Saved per Dev per Month**:
 
    ```
