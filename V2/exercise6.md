@@ -225,7 +225,7 @@ Now let's create a dashboard designed for executive audiences.
 
 1. Insert a **Scatter chart** to show the relationship between adoption and productivity:
 
-   ![](../media/mang-cor-ex4-g22.png)
+   ![](../media/git-man-26-t4-ex4-g12.png)
 
 1. Configure the scatter chart:
    - **X-axis**: Active Users (from copilot_org, by team)
@@ -240,11 +240,11 @@ Now let's create a dashboard designed for executive audiences.
 
 1. Insert a **Clustered column chart** showing key improvements:
 
-   ![](../media/mang-cor-ex4-g24.png)
+   ![](../media/git-man-26-t4-ex4-g10.png)
 
 1. Your completed dashboard should look similar to:
 
-   ![](../media/mang-cor-ex4-g25.png)
+   ![](../media/git-man-26-t4-ex4-g11.png)
 
 ### D. Dashboard Layout Best Practices
 
