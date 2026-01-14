@@ -66,14 +66,6 @@ In this task, you'll create measures that translate productivity improvements in
 
    > **Manager Insight:** This calculates how many hours each developer saves monthly due to faster PR completion. It's the foundation of your ROI calculation.
 
-1. Create **Lead Time Improvement** measure (if not already created):
-
-   ```
-   Lead Time Improvement = [Baseline Lead Time] - [Post-Copilot Lead Time]
-   ```
-
-   ![](../media/mang-cor-ex2-g4.png)
-
 1. Create **Total Hours Saved Organization**:
 
    ```
